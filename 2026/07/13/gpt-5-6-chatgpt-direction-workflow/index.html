@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+  <!--pjax：防止跳转页面音乐暂停-->
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-viewu.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-viewu.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-viewu.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="一篇关于 GPT-5.6、Codex、ChatGPT Work 与个人 AI 工作流方向的观察。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向">
+<meta property="og:url" content="http://example.com/2026/07/13/gpt-5-6-chatgpt-direction-workflow/index.html">
+<meta property="og:site_name" content="vieWu&#39;s world">
+<meta property="og:description" content="一篇关于 GPT-5.6、Codex、ChatGPT Work 与个人 AI 工作流方向的观察。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/gpt-5-6-chatgpt-direction-workflow/6.png">
+<meta property="og:image" content="http://example.com/images/gpt-5-6-chatgpt-direction-workflow/5.png">
+<meta property="og:image" content="http://example.com/images/gpt-5-6-chatgpt-direction-workflow/7.png">
+<meta property="og:image" content="http://example.com/images/gpt-5-6-chatgpt-direction-workflow/3.png">
+<meta property="article:published_time" content="2026-07-12T19:07:03.000Z">
+<meta property="article:modified_time" content="2026-07-12T19:23:57.406Z">
+<meta property="article:author" content="viewu">
+<meta property="article:tag" content="AI Coding">
+<meta property="article:tag" content="Codex">
+<meta property="article:tag" content="数字工作流">
+<meta property="article:tag" content="ChatGPT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/gpt-5-6-chatgpt-direction-workflow/6.png">
+
+
+<link rel="canonical" href="http://example.com/2026/07/13/gpt-5-6-chatgpt-direction-workflow/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2026/07/13/gpt-5-6-chatgpt-direction-workflow/","path":"2026/07/13/gpt-5-6-chatgpt-direction-workflow/","title":"GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向 | vieWu's world</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">vieWu's world</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">YOLO</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+
+          <!-- require APlayer -->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+          <!-- require MetingJS-->
+          <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+          <!--网易云-->
+          <meting-js
+            server="netease"
+            id="46702907"
+      	  type="artist"
+      	  mini="false"
+            fixed="false"
+            list-folded="true"
+            autoplay="false"
+            volume="0.4"
+            theme="#42aaf0"
+            order="random"
+      	  loop="all"
+            preload="auto"
+            mutex="true">
+          </meting-js>
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GPT-5-6-%E6%B2%A1%E6%9C%89%E6%94%B9%E5%8F%98%E6%88%91%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%EF%BC%8C%E4%BD%86%E8%AE%A9%E6%88%91%E7%9C%8B%E6%B8%85%E4%BA%86-ChatGPT-%E7%9A%84%E6%96%B9%E5%90%91"><span class="nav-number">1.</span> <span class="nav-text">GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E5%B7%B2%E7%BB%8F%E6%8F%90%E5%89%8D%E6%8A%8A%E8%81%8A%E5%A4%A9%E6%A1%86%E7%94%A8%E6%88%90%E4%BA%86%E5%B7%A5%E4%BD%9C%E5%8F%B0"><span class="nav-number">1.1.</span> <span class="nav-text">我已经提前把聊天框用成了工作台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%AC%A1%E5%8F%98%E5%8C%96%EF%BC%8C%E6%9B%B4%E5%83%8F%E6%98%AF%E5%AE%98%E6%96%B9%E6%8A%8A%E6%96%B9%E5%90%91%E8%AE%B2%E6%B8%85%E6%A5%9A%E4%BA%86"><span class="nav-number">1.2.</span> <span class="nav-text">这次变化，更像是官方把方向讲清楚了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%91%E5%8D%B3%E6%98%AF%E5%A4%9A%EF%BC%8C%E7%94%9F%E4%BA%A7%E5%8A%9B%E6%9C%89%E6%97%B6%E6%9D%A5%E8%87%AA%E5%B0%91%E4%B8%80%E7%82%B9%E6%91%A9%E6%93%A6"><span class="nav-number">1.3.</span> <span class="nav-text">少即是多，生产力有时来自少一点摩擦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E8%83%BD%E5%8A%9B%E5%8F%98%E5%BC%BA%E4%BB%A5%E5%90%8E%EF%BC%8C%E6%9D%83%E9%99%90%E8%BE%B9%E7%95%8C%E8%A6%81%E6%8F%90%E5%89%8D%E6%83%B3%E6%B8%85%E6%A5%9A"><span class="nav-number">1.4.</span> <span class="nav-text">执行能力变强以后，权限边界要提前想清楚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E9%98%B6%E6%AE%B5%E6%80%A7%E5%88%A4%E6%96%AD"><span class="nav-number">1.5.</span> <span class="nav-text">我的阶段性判断</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="viewu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">viewu</p>
+  <div class="site-description" itemprop="description">welcome to my world</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/07/13/gpt-5-6-chatgpt-direction-workflow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="viewu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="vieWu's world">
+      <meta itemprop="description" content="welcome to my world">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向 | vieWu's world">
+      <meta itemprop="description" content="一篇关于 GPT-5.6、Codex、ChatGPT Work 与个人 AI 工作流方向的观察。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-13 03:07:03 / 修改时间：03:23:57" itemprop="dateCreated datePublished" datetime="2026-07-13T03:07:03+08:00">2026-07-13</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">一篇关于 GPT-5.6、Codex、ChatGPT Work 与个人 AI 工作流方向的观察。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="GPT-5-6-没有改变我的工作流，但让我看清了-ChatGPT-的方向"><a href="#GPT-5-6-没有改变我的工作流，但让我看清了-ChatGPT-的方向" class="headerlink" title="GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向"></a>GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向</h1><p>这几天刷到几篇关于 GPT-5.6、Codex 和 ChatGPT Work 的文章。</p>
+<p>一篇在讲 GPT-5.6 的 prompting 变化，一篇在拆 Codex 和 Work 的新功能，还有一篇写得更有情绪，直接把这次更新理解成 ChatGPT 和 Codex 合并、Agent 时代的正式到来。</p>
+<p>我看完以后，第一反应并没有那么震撼。</p>
+<p>这倒不是说这次更新不重要，只是因为我自己形成的工作流，早在 GPT-5.5 high 和 Codex 阶段就已经跑起来了。</p>
+<p>我平时经常使用 AI 工具，也学过一些计算机基础知识，比如计算机网络、计算机组成原理、数据结构与算法、操作系统等，当然我是非科班学生，跨考的计算机。而且我不是研究大模型底层的人，也没有能力从训练、推理、架构这些角度判断 GPT-5.6 到底提升了多少。</p>
+<p>所以我更关心的，是它在我真实工作流里的体感。</p>
+<p>任务能不能推进得更顺，沟通成本有没有下降，结果是不是更少返工。</p>
+<p>从这个角度看，GPT-5.6 没有立刻改变我的工作方式，但它让我更清楚地看到了 ChatGPT 接下来想往哪里走。</p>
+<h2 id="我已经提前把聊天框用成了工作台"><a href="#我已经提前把聊天框用成了工作台" class="headerlink" title="我已经提前把聊天框用成了工作台"></a>我已经提前把聊天框用成了工作台</h2><p>这次很多文章都在说，ChatGPT 正在从聊天框变成工作台。</p>
+<p>如果一个人平时还只是把 GPT 当成问答机器人，那这个变化会很明显。</p>
+<p>以前是打开一个聊天窗口，问一个问题，等一个回答。现在官方更希望你把资料、文件、网页、表格、文档、项目任务放进去，让它帮你处理一段完整工作。</p>
+<p>这个方向我能理解。</p>
+<p>但我没有特别强烈的新鲜感，因为我之前已经在 Codex 里这么用了。</p>
+<p>比如我现在写公众号文章，就不是简单让 AI “帮我写一篇”。我会先给它外部文章链接，让它读原文，做事实确认，再围绕原文不断追问我，等讨论足够以后，再形成初稿。</p>
+<p>初稿出来以后，还要经过一些语言表达上的处理，去掉太像 AI 的表达，再保存成 Markdown 文件。然后我还会再审一遍稿，因为我的博客文章肯定希望是我的写作风格，我也借此机会在形成自己的语言风格的skill。</p>
+<p>文章定稿后，还会单独生成内容强相关的、数量适中的配图提示词，用来增加文章的可读性，毕竟现在大段大段的纯文字很能让人坚持读下去，需要一些配图调节一下阅读节奏。</p>
+<p>最后把每一次的写作过程里的经验沉淀到流程文档里。</p>
+<p>这整套流程已经被我放进了项目文件里。</p>
+<p>有 <code>PUBLICATION_WORKFLOW.md</code>，有 <code>START_HERE.md</code>，有 <code>WRITING_STYLE.md</code>，也有以前文章留下来的案例沉淀。</p>
+<p>所以对我来说，Codex 早就超出了“写代码工具”的范围。更准确地说，我是在用 Codex 维护一套写作系统。</p>
+<p><img src="/images/gpt-5-6-chatgpt-direction-workflow/6.png"></p>
+<p>这也是为什么我看到 Work 和 Codex 的区分时，反而没有太多惊讶。</p>
+<p>如果只是一次性的日常任务，比如整理资料、写一篇文章、做一个表格、生成一份 PPT，Work 可能会更顺手。</p>
+<p>但如果已经围绕某类任务搭出了一套长期流程，比如我现在的公众号写作流程，Codex 仍然很适合。因为在这个工作流中，我需要 AI 写文字，也需要它读取项目里的流程文件、遵守写作风格、保存阶段文件、对照历史案例、后续继续更新规则。</p>
+<p>确实，OpenAI在不只是希望ChatGPT 还仅仅作为一个chatbot的方向上更推进了一步，或者说OpenAI把原来体量很大的、只把ChatGPT当作chatbot的群体，迁移到了Work模式中去，丝滑的让ChatGPT 从很多人的聊天框变成了工作台。</p>
+<p>而我意识到这件事的时候，发现自己已经提前把它这么用了。</p>
+<h2 id="这次变化，更像是官方把方向讲清楚了"><a href="#这次变化，更像是官方把方向讲清楚了" class="headerlink" title="这次变化，更像是官方把方向讲清楚了"></a>这次变化，更像是官方把方向讲清楚了</h2><p>GPT-5.6 对我最直接的影响，目前还谈不上巨大。</p>
+<p>我没有突然发现它能做一件以前完全做不了的事。</p>
+<p>我现在这套公众号写作流程，在 GPT-5.5 high 加 Codex 的阶段也能跑。读材料、追问、整理结构、保存文件、根据流程推进，这些都不是 GPT-5.6 才出现的能力。</p>
+<p>但这次更新让我更清楚地看到，官方正在引导更多人改变 GPT 的使用方式。</p>
+<p>它不再只想让你在聊天框里问问题。</p>
+<p>它希望你把 GPT 当成一个可以承接任务的环境：给它资料，给它目标，给它边界，让它调工具、读文件、生成成果、持续推进。</p>
+<p><img src="/images/gpt-5-6-chatgpt-direction-workflow/5.png"></p>
+<p>这个变化对大众用户可能很重要。</p>
+<p>毕竟，很多人仍然停留在“我问一句，它答一句”的使用方式里。这样当然也有价值，但很容易把 GPT 用成一个更聪明的搜索框，或者一个会写套话的聊天机器人。</p>
+<p>工作台的思路不一样。</p>
+<p>它要求你先把任务放清楚，再把资料放进去，然后允许 AI 沿着一个流程往前走。</p>
+<p>对我来说，这个转变没有那么戏剧化，因为我已经在做类似的事。但从产品方向看，这次更新等于把这种用法推到了台前。</p>
+<p>以前我还没有意识到，用 Codex 写公众号文章有点奇怪。毕竟 Codex 给人的第一印象还是写代码。直到这次更新有了Work模式，我回过头才发现，自己之前的用法是不是有点奇怪？</p>
+<p>但是，现在看 Work 和 Codex 的分工，我反而更能解释自己的用法。</p>
+<p>视角拉远了来看，我不是拿一个代码工具在硬写一篇文章，我是在用一个能读文件、能遵守流程、能产出结果的任务环境，维护自己的写作系统。</p>
+<h2 id="少即是多，生产力有时来自少一点摩擦"><a href="#少即是多，生产力有时来自少一点摩擦" class="headerlink" title="少即是多，生产力有时来自少一点摩擦"></a>少即是多，生产力有时来自少一点摩擦</h2><p>这次对话里，我有一个很明显的体感。</p>
+<p>gpt5.6的回答变得更简洁、更有力了。不太像以前那样绕很多圈，也更少给一堆看起来全面但不一定有用的选项。</p>
+<p>这件事不够震撼，但对长期使用 AI 的我来说很重要。</p>
+<p><strong>生产力提升不一定表现为 AI 帮我多做了什么，也可能表现为任务推进过程里的摩擦减少了。</strong></p>
+<p>少一点废话，少一点反复确认，少一点跑偏，少一点返工。</p>
+<p>这些东西单独看都不大，但放进一条长期工作流里，就会影响整个任务的手感。</p>
+<p>我在社交媒体上也看到有人提到另一个现象：GPT-5.6 能力增强后，以前一些 skill 可能没那么必要了。</p>
+<p>比如之前很多人包括我，会用 superpower 这类 skill，给模型补流程、补判断、补执行习惯。<strong>但现在模型本身能力更强，某些额外脚手架可能反而会增加上下文负担，也会让额度消耗更快。</strong></p>
+<p>这个说法我还没有系统测试过，只能先当成一种用户体感。</p>
+<p>但它确实提醒我，<strong>工具不是越多越好，流程也不是越复杂越专业。</strong></p>
+<p>过去我们给 AI 加很多 skill、规则、模板，很多时候是因为模型本身不够稳定，需要外部结构来约束它。</p>
+<p>当模型能力提升后，这些外部结构就需要重新审视。</p>
+<p>哪些规则还在减少返工，哪些规则已经变成负担。</p>
+<p>哪些 skill 还在帮模型理解任务，哪些 skill 只是让每次调用变得更重。</p>
+<p>我自己也有一点类似感受：升级之后，额度的消耗速度似乎比以前更快。这里面可能有模型能力、工具调用、skill、上下文长度、推理强度等很多因素，我现在没法下确定结论。</p>
+<p>但至少有一点可以先记下来。</p>
+<p><strong>如果 AI 已经能更直接地理解任务，就没有必要把每个任务都包上一层又一层规则。</strong></p>
+<p><strong>少即是多。</strong></p>
+<p>对 AI 工作流来说，这句话可能越来越现实。</p>
+<h2 id="执行能力变强以后，权限边界要提前想清楚"><a href="#执行能力变强以后，权限边界要提前想清楚" class="headerlink" title="执行能力变强以后，权限边界要提前想清楚"></a>执行能力变强以后，权限边界要提前想清楚</h2><p>还有一个风险也值得写下来。</p>
+<p>我在社交媒体上看到有人说，升级 GPT-5.6 之后，在执行项目过程中可能因为模型能力太强、获取权限能力也更强，误删了本地的重要文件。</p>
+<p>这个例子听起来有点吓人，但我不想把它写成“AI 太危险了，所以不要给权限”。</p>
+<p>我的看法更朴素一点。</p>
+<p>如果我们希望 AI 帮我们执行很多任务，它就必须有一定权限。</p>
+<p>它要读文件，就得访问文件。</p>
+<p>它要改项目，就得写入目录。</p>
+<p>它要运行命令，就得接触真实环境。</p>
+<p><strong>执行能力和权限风险本来就是连在一起的。</strong></p>
+<p>AI 可以碰文件，前提是我们提前做好安全隔离。</p>
+<p>重要文件不要直接暴露在工作区里。</p>
+<p>高风险项目要有备份。</p>
+<p>能用副本就用副本。</p>
+<p>能用 Git 管理就用 Git 管理。</p>
+<p>能把权限限制在项目目录，就不要让它碰到整个本地磁盘。</p>
+<p>哪些文件重要，哪些目录不能动，这类判断不能完全交给 AI。</p>
+<p>模型再强，也不应该替我判断哪些资料对我来说不可丢失。</p>
+<p><strong>它可以帮我执行，但边界要由我提前画好。</strong></p>
+<p><img src="/images/gpt-5-6-chatgpt-direction-workflow/7.png"></p>
+<p>这也是从聊天框走向工作台以后，每个长期使用者都要面对的问题。</p>
+<p>聊天的时候，风险主要是回答错了。</p>
+<p>工作台里，风险变成了它真的会做事。能做事，这当然更有用，但也更需要我们认真对待。</p>
+<h2 id="我的阶段性判断"><a href="#我的阶段性判断" class="headerlink" title="我的阶段性判断"></a>我的阶段性判断</h2><p>所以，GPT-5.6 这次更新对我来说，并不是一次“我的工作流被彻底改变了”的体验。</p>
+<p>我的公众号写作流程已经存在了。</p>
+<p>我已经在用 Codex 读材料、追问、写稿、保存 Markdown、沉淀风格。</p>
+<p>这次更新更像是让我看清了 ChatGPT 的产品方向。</p>
+<p>它正在把聊天能力往后放一点，把任务、工具、文件、成果和工作流往前推。</p>
+<p>对于还停留在问答模式的人来说，这可能是一次很明显的变化。</p>
+<p>对于我这种已经把 Codex 用成写作系统的人来说，它更像是一次确认。</p>
+<p><img src="/images/gpt-5-6-chatgpt-direction-workflow/3.png"></p>
+<p>我接下来可能会尝试把一次性的日常任务放到 Work 里处理，比如整理资料、做表格、生成文档或 PPT。</p>
+<p>但像公众号写作这种长期任务，我暂时仍然会留在 Codex 里。</p>
+<p>因为我需要 AI 生成文字，也需要一套能沿着本地流程持续工作的系统，而且这个系统还在我每一次的产出中，不断地迭代优化。</p>
+<p>最后，GPT-5.6 没有改变我的工作流。但它让我更确定，对于更多的人，ChatGPT 正在从“会回答问题的工具”，变成“能承接任务的环境”。</p>
+<p>这个变化不一定会让人眼前一亮。它更像是你用着用着，突然发现，自己和 AI 的关系，原来已经不太一样了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/AI-Coding/" rel="tag"># AI Coding</a>
+              <a href="/tags/Codex/" rel="tag"># Codex</a>
+              <a href="/tags/%E6%95%B0%E5%AD%97%E5%B7%A5%E4%BD%9C%E6%B5%81/" rel="tag"># 数字工作流</a>
+              <a href="/tags/ChatGPT/" rel="tag"># ChatGPT</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/07/08/tasks-not-system-procrastination/" rel="prev" title="任务还没变成系统，人就容易拖延">
+                  <i class="fa fa-angle-left"></i> 任务还没变成系统，人就容易拖延
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">viewu</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">28k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">26 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
