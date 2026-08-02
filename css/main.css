@@ -3025,3 +3025,44 @@ body {
 .links-of-author-item a[href='/wechat/'] i {
   background: linear-gradient(135deg, #20c978, #07a85a);
 }
+.social-brand-assets {
+  display: block;
+}
+.links-of-author-item a[href*='space.bilibili.com'] i {
+  background-color: rgba(255,255,255,0.92);
+  background-image: url("/images/social/bilibili.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 17px;
+  border: 1px solid rgba(0,174,236,0.28);
+}
+.links-of-author-item a[href*='music.163.com'] i {
+  background-color: rgba(255,255,255,0.92);
+  background-image: url("/images/social/neteasecloudmusic.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 17px;
+  border: 1px solid rgba(212,60,51,0.24);
+}
+.links-of-author-item a[href*='xiaohongshu.com'] i {
+  background-color: rgba(255,255,255,0.92);
+  background-image: url("/images/social/xiaohongshu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 17px;
+  border: 1px solid rgba(255,36,66,0.24);
+}
+.links-of-author-item a[href='/wechat/'] i {
+  background-color: rgba(255,255,255,0.92);
+  background-image: url("/images/social/wechat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 17px;
+  border: 1px solid rgba(7,193,96,0.24);
+}
+.links-of-author-item a[href*='space.bilibili.com'] .bilibili-icon::before {
+  display: none;
+}
+.links-of-author-item a[href*='space.bilibili.com'] .bilibili-icon::after {
+  display: none;
+}
