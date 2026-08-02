@@ -2936,3 +2936,92 @@ body {
   border-bottom: 0.1em solid #00aeec;
   border-radius: 0 0 0.3em 0.3em;
 }
+.social-brand-icons {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 0;
+}
+.links-of-author {
+  margin-top: 14px;
+}
+.links-of-author-item {
+  width: 50%;
+  margin: 0;
+  padding: 0 3px;
+  box-sizing: border-box;
+}
+.links-of-author-item a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 5px 7px 5px 6px;
+  border: 1px solid rgba(126,149,159,0.2);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.58);
+  box-shadow: 0 5px 14px rgba(62,87,96,0.06);
+  color: var(--text-color);
+  font-size: 0.82em;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+.links-of-author-item a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(92,135,156,0.42);
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 9px 20px rgba(62,87,96,0.12);
+}
+.links-of-author-item a i {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  margin-right: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.9em;
+  line-height: 1;
+  box-shadow: 0 3px 8px rgba(34,56,64,0.16);
+}
+.links-of-author-item a[href*='space.bilibili.com'] i {
+  background: linear-gradient(135deg, #00aeec, #2389db);
+}
+.links-of-author-item a[href*='space.bilibili.com'] .bilibili-icon {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00aeec, #2389db);
+  vertical-align: middle;
+}
+.links-of-author-item a[href*='space.bilibili.com'] .bilibili-icon::before {
+  content: 'B';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 800;
+  line-height: 24px;
+  text-align: center;
+}
+.links-of-author-item a[href*='space.bilibili.com'] .bilibili-icon::after {
+  display: none;
+}
+.links-of-author-item a[href*='music.163.com'] i {
+  background: linear-gradient(135deg, #f14d6c, #c52d55);
+}
+.links-of-author-item a[href*='xiaohongshu.com'] i {
+  background: linear-gradient(135deg, #ff4b4b, #e12d62);
+}
+.links-of-author-item a[href='/wechat/'] i {
+  background: linear-gradient(135deg, #20c978, #07a85a);
+}
