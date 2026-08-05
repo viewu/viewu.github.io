@@ -99,6 +99,7 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Added a weekly/manual `Audit production health` workflow, scheduled Mondays at 03:23 UTC (11:23 Asia/Taipei). It runs pinned Lighthouse 13.4.1 transiently under Node 24, without adding Lighthouse to the blog dependency tree, and remains separate from the required PR/build/deploy path.
 - Calibrated alert severity: critical contract failures and confirmed external 404/410 responses fail; bot rejection, rate limiting, transient network errors, and Lighthouse availability remain warnings.
 - Local production baseline on 2026-08-05: all seven critical checks passed; nine unique external URLs had no confirmed 404/410; three endpoints were unconfirmed due to 403/network policy. The first hosted audit (run `30985141217`) passed the production contracts but confirmed that the public PageSpeed API returned HTTP 429, motivating the direct Lighthouse runner.
+- Direct Lighthouse validation succeeded in branch run `30987884469`: Performance 80, Accessibility 95, Best Practices 100, SEO 100; FCP 3.1s, LCP 4.2s, TBT 50ms, CLS 0, and Speed Index 3.1s. All seven critical contracts passed and no external 404/410 was found.
 
 ### 2026-08-01
 
