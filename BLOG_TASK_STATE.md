@@ -84,6 +84,7 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Preserved the former static `main` exactly on remote branch `legacy-static-2026-08-05` and preserved the original local source-bootstrap history on `bootstrap-source-history-2026-08-05`.
 - Configured GitHub Pages `build_type: workflow`; PRs build/verify without deploying, while pushes to `main` deploy the verified artifact.
 - Fixed Linux CI date-permalink drift by setting `TZ=Asia/Taipei` and added regression checks for the two affected established URLs.
+- Upgraded the official Pages Actions to `configure-pages@v6`, `upload-pages-artifact@v5`, and `deploy-pages@v5` so all use the supported Node 24 runtime.
 - Verified a successful Hexo build: 42 HTML pages generated and the generated-site verifier passed.
 ### 2026-08-01
 
