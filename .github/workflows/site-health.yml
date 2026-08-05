@@ -23,9 +23,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version-file: .nvmrc
+          node-version: 24
 
-      - name: Audit live site, external links, and mobile PageSpeed
+      - name: Capture mobile Lighthouse baseline
+        continue-on-error: true
+        run: >-
+          npx --yes lighthouse@13.4.1 https://viewu.github.io/
+          --quiet
+          --form-factor=mobile
+          --only-categories=performance,accessibility,best-practices,seo
+          --output=json
+          --output-path="${RUNNER_TEMP}/lighthouse-report.json"
+          --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage"
+
+      - name: Audit live site, external links, and Lighthouse report
         run: npm run audit:production
         env:
-          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+          LIGHTHOUSE_REPORT_PATH: ${{ runner.temp }}/lighthouse-report.json

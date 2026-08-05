@@ -50,13 +50,13 @@ GitHub Pages is configured for Actions publishing. The pre-migration generated s
 
 ## Production health monitoring
 
-`npm run audit:production` checks the live site rather than the generated local output. It verifies the homepage, discovery endpoints, a representative article and WebP asset, then checks external URLs referenced by published Markdown and requests a mobile PageSpeed baseline.
+`npm run audit:production` checks the live site rather than the generated local output. It verifies the homepage, discovery endpoints, a representative article and WebP asset, then checks external URLs referenced by published Markdown and records a mobile Lighthouse baseline when a report is available.
 
-The `Audit production health` GitHub Actions workflow runs every Monday at 03:23 UTC (11:23 Asia/Taipei) and can also be started manually. Its job summary contains the endpoint table, external-link results, and Lighthouse scores/metrics.
+The `Audit production health` GitHub Actions workflow runs every Monday at 03:23 UTC (11:23 Asia/Taipei) and can also be started manually. It runs the pinned Lighthouse 13.4.1 CLI on Node 24 without adding it to the blog dependency tree, then writes endpoint, external-link, score, and metric tables to the job summary.
 
 - Broken critical contracts and confirmed external HTTP 404/410 responses fail the audit.
-- Bot rejection, rate limiting, transient network errors, and an unavailable PageSpeed API are warnings so they do not create noisy false failures.
-- Set the optional repository secret `PAGESPEED_API_KEY` if Google API quota becomes unreliable; the audit works without a key when public quota is available.
+- Bot rejection, rate limiting, transient network errors, and an unavailable Lighthouse report are warnings so they do not create noisy false failures.
+- Local runs without a Lighthouse report can use the PageSpeed Insights API and the optional `PAGESPEED_API_KEY` environment variable; the scheduled workflow does not depend on that API quota.
 - Run `node tools/audit-production.mjs --skip-pagespeed` for a faster endpoint and link-only check.
 
 ## Theme provenance

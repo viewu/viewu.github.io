@@ -95,10 +95,10 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Preserved the removed PNG files and a conversion manifest locally at ignored `.agents/backups/image-originals-2026-08-05-lossless-webp/`; the originals also remain recoverable from Git history.
 - Added `npm run verify:images` to reject legacy nested raster formats, invalid WebP files, and article images above 2 MiB. Extended intrinsic-dimension detection to WebP and tightened generated budgets to 2 MiB per file and 55 MiB total.
 - Verified a successful Hexo build: 42 HTML pages generated and the generated-site verifier passed.
-- Added a dependency-free production health audit covering seven critical live contracts, external URLs extracted from source Markdown, and report-only mobile PageSpeed/Lighthouse metrics.
-- Added a weekly/manual `Audit production health` workflow, scheduled Mondays at 03:23 UTC (11:23 Asia/Taipei), with an optional `PAGESPEED_API_KEY` secret. It remains separate from the required PR/build/deploy path.
-- Calibrated alert severity: critical contract failures and confirmed external 404/410 responses fail; bot rejection, rate limiting, transient network errors, and PageSpeed API availability remain warnings.
-- Local production baseline on 2026-08-05: all seven critical checks passed; nine unique external URLs had no confirmed 404/410; three endpoints were unconfirmed due to 403/network policy. The local environment could not connect to Google's PageSpeed API, so the first Lighthouse baseline must be recorded by the GitHub-hosted workflow.
+- Added a dependency-free production health audit covering seven critical live contracts, external URLs extracted from source Markdown, and report-only mobile Lighthouse metrics.
+- Added a weekly/manual `Audit production health` workflow, scheduled Mondays at 03:23 UTC (11:23 Asia/Taipei). It runs pinned Lighthouse 13.4.1 transiently under Node 24, without adding Lighthouse to the blog dependency tree, and remains separate from the required PR/build/deploy path.
+- Calibrated alert severity: critical contract failures and confirmed external 404/410 responses fail; bot rejection, rate limiting, transient network errors, and Lighthouse availability remain warnings.
+- Local production baseline on 2026-08-05: all seven critical checks passed; nine unique external URLs had no confirmed 404/410; three endpoints were unconfirmed due to 403/network policy. The first hosted audit (run `30985141217`) passed the production contracts but confirmed that the public PageSpeed API returned HTTP 429, motivating the direct Lighthouse runner.
 
 ### 2026-08-01
 

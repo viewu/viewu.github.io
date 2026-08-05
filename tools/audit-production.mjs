@@ -167,6 +167,16 @@ async function auditExternalLinks() {
 async function auditPageSpeed() {
   if (skipPageSpeed) return { skipped: true };
 
+  if (process.env.LIGHTHOUSE_REPORT_PATH) {
+    try {
+      const data = JSON.parse(readFileSync(process.env.LIGHTHOUSE_REPORT_PATH, 'utf8'));
+      return summarizeLighthouse(data, 'GitHub-hosted Lighthouse');
+    } catch (error) {
+      warnings.push(`Lighthouse report could not be read: ${error.message}`);
+      return { error: 'local Lighthouse report unavailable' };
+    }
+  }
+
   const endpoint = new URL('https://www.googleapis.com/pagespeedonline/v5/runPagespeed');
   endpoint.searchParams.set('url', `${productionOrigin}/`);
   endpoint.searchParams.set('strategy', 'MOBILE');
@@ -181,28 +191,33 @@ async function auditPageSpeed() {
       warnings.push(`PageSpeed API returned HTTP ${response.status}; scores were not recorded.`);
       return { error: `HTTP ${response.status}` };
     }
-    const data = await response.json();
-    const categories = data.lighthouseResult?.categories || {};
-    const audits = data.lighthouseResult?.audits || {};
-    return {
-      fetchedAt: data.lighthouseResult?.fetchTime,
-      lighthouseVersion: data.lighthouseResult?.lighthouseVersion,
-      scores: Object.fromEntries(['performance', 'accessibility', 'best-practices', 'seo'].map(name => [
-        name,
-        categories[name]?.score == null ? null : Math.round(categories[name].score * 100)
-      ])),
-      metrics: {
-        FCP: audits['first-contentful-paint']?.displayValue,
-        LCP: audits['largest-contentful-paint']?.displayValue,
-        TBT: audits['total-blocking-time']?.displayValue,
-        CLS: audits['cumulative-layout-shift']?.displayValue,
-        SI: audits['speed-index']?.displayValue
-      }
-    };
+    return summarizeLighthouse(await response.json(), 'PageSpeed Insights API');
   } catch (error) {
     warnings.push(`PageSpeed API request failed: ${error.message}`);
     return { error: error.message };
   }
+}
+
+function summarizeLighthouse(data, source) {
+  const result = data.lighthouseResult || data;
+  const categories = result.categories || {};
+  const audits = result.audits || {};
+  return {
+    source,
+    fetchedAt: result.fetchTime,
+    lighthouseVersion: result.lighthouseVersion,
+    scores: Object.fromEntries(['performance', 'accessibility', 'best-practices', 'seo'].map(name => [
+      name,
+      categories[name]?.score == null ? null : Math.round(categories[name].score * 100)
+    ])),
+    metrics: {
+      FCP: audits['first-contentful-paint']?.displayValue,
+      LCP: audits['largest-contentful-paint']?.displayValue,
+      TBT: audits['total-blocking-time']?.displayValue,
+      CLS: audits['cumulative-layout-shift']?.displayValue,
+      SI: audits['speed-index']?.displayValue
+    }
+  };
 }
 
 function escapeCell(value) {
@@ -229,7 +244,7 @@ function renderSummary(critical, external, pageSpeed) {
     '| --- | ---: | --- |',
     ...external.map(result => `| ${escapeCell(result.url)} | ${escapeCell(result.status)} | ${escapeCell(result.result)} |`),
     '',
-    '## Mobile PageSpeed baseline',
+    '## Mobile Lighthouse baseline',
     ''
   ];
 
@@ -246,7 +261,7 @@ function renderSummary(critical, external, pageSpeed) {
     lines.push('| --- | --- | --- | --- | --- |');
     lines.push(`| ${escapeCell(pageSpeed.metrics.FCP)} | ${escapeCell(pageSpeed.metrics.LCP)} | ${escapeCell(pageSpeed.metrics.TBT)} | ${escapeCell(pageSpeed.metrics.CLS)} | ${escapeCell(pageSpeed.metrics.SI)} |`);
     lines.push('');
-    lines.push(`Lighthouse ${escapeCell(pageSpeed.lighthouseVersion)}, fetched ${escapeCell(pageSpeed.fetchedAt)}.`);
+    lines.push(`${escapeCell(pageSpeed.source)}; Lighthouse ${escapeCell(pageSpeed.lighthouseVersion)}, fetched ${escapeCell(pageSpeed.fetchedAt)}.`);
   }
 
   lines.push('', '## Outcome', '');
