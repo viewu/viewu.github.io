@@ -39,7 +39,7 @@ Run commands from `D:\viewu_blog`.
 The package scripts are defined in `package.json`:
 
 - `build`: `hexo generate`
-- `audit:production`: check live production endpoints, external links, and the mobile PageSpeed baseline
+- `audit:production`: check live production endpoints, external links, and a mobile Lighthouse baseline
 - `check`: audit source images, build, then run `tools/verify-generated-site.mjs`
 - `clean`: `hexo clean`
 - `deploy`: `hexo deploy` (legacy emergency path only)
@@ -115,9 +115,9 @@ Existing tags observed:
 
 - `.github/workflows/site-health.yml` runs weekly and by manual dispatch; keep it separate from the required PR build so an external service outage cannot block publishing.
 - `npm run audit:production` treats critical endpoint contract failures and confirmed external HTTP 404/410 responses as failures.
-- Treat bot rejection, rate limiting, transient network errors, and PageSpeed API unavailability as warnings to avoid noisy alerts.
-- PageSpeed scores are report-only baselines. Do not introduce hard thresholds until enough scheduled history exists to distinguish regressions from Lighthouse variance.
-- `PAGESPEED_API_KEY` is an optional GitHub repository secret for more reliable quota; never commit the key.
+- Treat bot rejection, rate limiting, transient network errors, and Lighthouse capture/report unavailability as warnings to avoid noisy alerts.
+- Lighthouse scores are report-only baselines. Do not introduce hard thresholds until enough scheduled history exists to distinguish regressions from run-to-run variance.
+- The workflow runs exact Lighthouse 13.4.1 under Node 24 through transient `npx`, keeping its dependency tree isolated from the blog. Local PageSpeed API fallback may use `PAGESPEED_API_KEY`; never commit the key.
 
 ## Verification Before Reporting Completion
 
