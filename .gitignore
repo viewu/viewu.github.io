@@ -1,0 +1,29 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+_multiconfig.yml
+
+# Local environment and caches
+.env
+.env.*
+!.env.example
+.cache/
+.hexo-cache/
+.npm/
+
+# Preserve the original NexT repository metadata locally without nesting Git
+themes/next/.git-upstream-backup/
+
+# Codex workspace metadata
+.agents/
+.codex/
+
+# Editor and OS files
+.idea/
+.vscode/
+*.swp
+*.tmp
