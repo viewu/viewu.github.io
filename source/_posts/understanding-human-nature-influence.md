@@ -3,7 +3,7 @@ layout: post
 title: 当一个人教你“理解人性”时，他也在用人性影响你
 date: 2026-07-06 20:35:10
 description: 一篇关于 Dan Koe、人性、内容影响力与自我觉察的读后分析。
-cover: /images/understanding-human-nature-influence/1.png
+cover: /images/understanding-human-nature-influence/1.webp
 categories:
   - 成长
 tags:
@@ -69,7 +69,7 @@ AI 再强，也只是工具。工具背后仍然是人：人决定买什么，�
 >
 > 进步张力对应的是成长、意义和转变。当基本的问题被缓解之后，人会开始关心自己能不能变得更清醒、更自由、更有方向。
 
-![](/images/understanding-human-nature-influence/2.png)
+![](/images/understanding-human-nature-influence/2.webp)
 
 这套说法并不完全新鲜。换一种语言看，它很像马斯洛需求层次的内容：安全、归属、地位、自我实现。
 
@@ -101,7 +101,7 @@ AI 再强，也只是工具。工具背后仍然是人：人决定买什么，�
 >
 > 给出第一步，则是把宏大的改变压缩成一个足够小、足够清楚、可以立刻开始的动作。
 
-![](/images/understanding-human-nature-influence/3.png)
+![](/images/understanding-human-nature-influence/3.webp)
 
 我一开始觉得这五个杠杆有些模糊。后来再看，它们其实不是严格的心理学分类，而更像一套内容创作和销售的路径。
 
@@ -123,7 +123,7 @@ AI 再强，也只是工具。工具背后仍然是人：人决定买什么，�
 
 第五步“给出第一步”，则把这种想象转化为行动。
 
-![](/images/understanding-human-nature-influence/4.png)
+![](/images/understanding-human-nature-influence/4.webp)
 
 这套路径非常有效。
 
@@ -165,7 +165,7 @@ AI 再强，也只是工具。工具背后仍然是人：人决定买什么，�
 
 后者是在套牢焦虑。
 
-![](/images/understanding-human-nature-influence/5.png)
+![](/images/understanding-human-nature-influence/5.webp)
 
 在这个基础上，我还想再往前推一步。
 

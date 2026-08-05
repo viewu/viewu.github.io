@@ -3,7 +3,7 @@ layout: post
 title: 简历被 AI 覆盖之后，我重新学会了怎么使用 Codex
 date: 2026-06-30 22:30:00
 description: 一个非技术用户的 AI Coding 协作笔记（一）
-cover: /images/resume-overwritten-learning-codex/cover.png
+cover: /images/resume-overwritten-learning-codex/cover.webp
 categories:
   - 工作
 tags:
@@ -32,7 +32,7 @@ Codex 检查了当前目录、临时目录、WPS 锁文件和 Git 历史。最�
 
 这次经历没有造成灾难，却足够让我意识到：使用 AI Coding，真正危险的时刻往往不是它明显报错，而是它看起来顺利完成了任务，我也顺手接受了结果。
 
-![被覆盖的简历让原稿比较基准消失](/images/resume-overwritten-learning-codex/resume-overwritten.png)
+![被覆盖的简历让原稿比较基准消失](/images/resume-overwritten-learning-codex/resume-overwritten.webp)
 
 ## 我原本以为，问题只是提示词不够好
 
@@ -91,7 +91,7 @@ Codex App 本身也用不同线程组织任务和项目，方便用户分别审�
 3. 告诉我具体改了什么；
 4. 提供验证结果和文件位置。
 
-![先调查和计划，再进入会改变文件的执行阶段](/images/resume-overwritten-learning-codex/investigate-before-editing.png)
+![先调查和计划，再进入会改变文件的执行阶段](/images/resume-overwritten-learning-codex/investigate-before-editing.webp)
 
 这里的“计划”不是为了增加仪式感，也不是让 AI 先写一篇漂亮的工作汇报。它的价值是把真正会改变文件的动作推迟一点，让我还有机会发现误解。
 
@@ -111,7 +111,7 @@ Codex App 本身也用不同线程组织任务和项目，方便用户分别审�
 
 > 生成新版本，不覆盖原文件。文件名增加 `_draft`、`_v02` 或日期；我确认后再决定是否替换正式版。
 
-![保留原文件，让草稿版本分支出去](/images/resume-overwritten-learning-codex/versioned-drafts.png)
+![保留原文件，让草稿版本分支出去](/images/resume-overwritten-learning-codex/versioned-drafts.webp)
 
 这条规则看起来笨，却非常有效。
 
@@ -147,7 +147,7 @@ Codex App 本身也用不同线程组织任务和项目，方便用户分别审�
 
 这些标准一旦说清，AI 才能在执行后进行有意义的验证，我也知道应该检查什么。
 
-![把任务完成变成可检查的证据闭环](/images/resume-overwritten-learning-codex/verification-loop.png)
+![把任务完成变成可检查的证据闭环](/images/resume-overwritten-learning-codex/verification-loop.webp)
 
 OpenAI 对 Codex 的产品说明多次把测试结果、终端日志和人工审查放在任务闭环中，也明确建议用户在应用修改或部署前审阅代理产物。[OpenAI：Codex 的验证与人工审查](https://openai.com/index/introducing-upgrades-to-codex/)
 

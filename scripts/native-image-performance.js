@@ -20,6 +20,23 @@ function readImageDimensions(filePath) {
     };
   }
 
+  if (buffer.length >= 25 && buffer.toString('ascii', 0, 4) === 'RIFF' && buffer.toString('ascii', 8, 12) === 'WEBP') {
+    const chunkType = buffer.toString('ascii', 12, 16);
+    if (chunkType === 'VP8L' && buffer[20] === 0x2f) {
+      const bits = buffer.readUInt32LE(21);
+      return {
+        width: (bits & 0x3fff) + 1,
+        height: ((bits >>> 14) & 0x3fff) + 1
+      };
+    }
+    if (chunkType === 'VP8X' && buffer.length >= 30) {
+      return {
+        width: buffer.readUIntLE(24, 3) + 1,
+        height: buffer.readUIntLE(27, 3) + 1
+      };
+    }
+  }
+
   if (buffer.length >= 4 && buffer[0] === 0xff && buffer[1] === 0xd8) {
     const startOfFrameMarkers = new Set([
       0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7,

@@ -9,10 +9,11 @@
   "packageManager": "npm@11.12.1",
   "scripts": {
     "build": "hexo generate",
-    "check": "npm run build && npm run verify:site",
+    "check": "npm run verify:images && npm run build && npm run verify:site",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
+    "verify:images": "node tools/audit-source-images.mjs",
     "verify:site": "node tools/verify-generated-site.mjs"
   },
   "hexo": {
