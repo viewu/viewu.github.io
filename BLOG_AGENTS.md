@@ -1,0 +1,130 @@
+# BLOG_AGENTS.md
+
+This document tells future agents how to work on this Hexo blog project without re-scanning the entire workspace every time.
+
+## Project
+
+- Workspace root: `D:\viewu_blog`
+- Project type: Hexo static blog
+- Hexo version observed: `7.3.0`
+- Theme: NexT, configured from `themes/next/_config.yml`
+- Generated site output: `public/`
+- Deployment working tree: `.deploy_git/`
+- Source content: `source/`
+- Root source repository: `.git/` (initialized locally; remote not configured yet)
+- Posts: `source/_posts/`
+
+## Start Every Blog Task
+
+1. Read this file first.
+2. Read `BLOG_TASK_STATE.md` second.
+3. Inspect only the files relevant to the current request unless the state file says the project has changed broadly.
+4. The root folder is the source Git repository. `.deploy_git/` is the legacy generated-output repository and is ignored by the root repository.
+5. Preserve user changes. Never reset, delete, or overwrite generated/user files unless the user explicitly asks.
+
+## Common Commands
+
+Run commands from `D:\viewu_blog`.
+
+- Check Hexo and config: `npx hexo version`
+- Build and verify generated links/pages: `npm run check`
+- Generate site: `npm run build`
+- Clean generated cache/output: `npm run clean`
+- Local server: `npm run server`
+- Deploy: `npm run deploy`
+
+The package scripts are defined in `package.json`:
+
+- `build`: `hexo generate`
+- `check`: build followed by `tools/verify-generated-site.mjs`
+- `clean`: `hexo clean`
+- `deploy`: `hexo deploy`
+- `server`: `hexo server`
+
+## Editing Rules
+
+- Prefer editing source/config files, not generated files.
+- Do not hand-edit `public/` unless the user specifically asks for generated output surgery.
+- Do not hand-edit `.deploy_git/` unless dealing with deployment state.
+- For posts, edit Markdown files under `source/_posts/`.
+- For site-wide static assets, prefer `source/images/` if created later.
+- Current theme images live in `themes/next/source/images/`. The full customized theme is vendored in the root repository; its original nested Git metadata is preserved locally as an ignored `.git-upstream-backup/`.
+- When changing the NexT theme, prefer configuration or `source/_data` overrides if possible. Direct theme edits are allowed only when the request requires it.
+- Be careful with Chinese text encoding. Some PowerShell output may display mojibake even when files are usable. Avoid rewriting whole Chinese articles unless necessary.
+
+## Blog Content Conventions
+
+Current posts use Hexo front matter like:
+
+```yaml
+---
+layout: post
+title: Example Title
+date: YYYY-MM-DD HH:mm:ss
+description: Short summary
+tags:
+  - TagName
+---
+```
+
+One older Chinese post does not include `layout: post`; Hexo can still infer the default layout.
+
+For new posts:
+
+- Use `source/_posts/<slug>.md`.
+- Keep slugs URL-safe and stable.
+- Add `description` when the article needs a homepage excerpt.
+- Use tags consistently with existing tags unless the user wants new taxonomy.
+
+Existing tags observed:
+
+- `SelfGrowth`
+- `STEMLife`
+- `EnglishDiary`
+- `MindsetShift`
+- `NewSemester`
+
+## Images
+
+No article body image references were observed during the initial scan.
+
+Recommended future convention:
+
+- Put shared images in `source/images/`.
+- Reference them in Markdown as `/images/<filename>`.
+- If the user wants per-post image folders, first enable or discuss Hexo `post_asset_folder`.
+
+Current generated/theme image assets include:
+
+- `avatar.png`
+- `favicon-16x16-viewu.png`
+- `favicon-32x32-viewu.png`
+- `apple-touch-icon-viewu.png`
+- `logo.svg`
+
+## Verification Before Reporting Completion
+
+Before claiming a change is complete, run the smallest useful verification:
+
+- Documentation-only change: confirm files exist and inspect relevant content.
+- Content/config change: run `npm run check` so the build and internal-link verification both execute.
+- Theme/layout change: run `npm run build`; if visual behavior matters, start `npm run server` and inspect the page.
+- Deployment change: check `.deploy_git` status and relevant deploy output.
+
+Report what was verified and any gaps.
+
+## Required State Maintenance
+
+After every meaningful project advancement, update `BLOG_TASK_STATE.md`.
+
+Meaningful advancement includes:
+
+- New or edited articles
+- Uploaded, moved, renamed, or referenced images
+- Theme, layout, navigation, style, or configuration changes
+- Build/deploy attempts and their results
+- New conventions, decisions, or known issues
+- Any user preference that future work should preserve
+
+Keep `BLOG_TASK_STATE.md` concise but useful. It should let a future agent continue work without reading the full conversation.
+
