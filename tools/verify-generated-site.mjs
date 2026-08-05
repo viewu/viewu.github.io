@@ -33,7 +33,15 @@ function localTargetExists(rawPath) {
 if (!existsSync(publicRoot)) {
   failures.push('public/ does not exist; run the Hexo build first.');
 } else {
-  const requiredPages = ['index.html', 'about/index.html', 'archives/index.html', 'categories/index.html', 'tags/index.html'];
+  const requiredPages = [
+    'index.html',
+    'about/index.html',
+    'archives/index.html',
+    'categories/index.html',
+    'tags/index.html',
+    '2024/04/03/最后的终点/index.html',
+    '2026/07/13/gpt-5-6-chatgpt-direction-workflow/index.html'
+  ];
   for (const page of requiredPages) {
     if (!existsSync(join(publicRoot, ...page.split('/')))) failures.push(`Missing required page: /${page}`);
   }

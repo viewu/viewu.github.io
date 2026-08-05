@@ -12,6 +12,9 @@ on:
 permissions:
   contents: read
 
+env:
+  TZ: Asia/Taipei
+
 concurrency:
   group: pages
   cancel-in-progress: true

@@ -17,17 +17,17 @@ The user wants ongoing assistance maintaining, modifying, rebuilding, and publis
 - Source posts: `source/_posts/`
 - Static article images: `source/images/<slug>/`
 - Generated site output: `public/`
-- Deployment repository: `.deploy_git/`
-- Root folder is now a local Git source repository on branch `main`; no source remote has been configured yet.
-- `.deploy_git/` remains the ignored legacy deployment repository until GitHub Pages is switched to Actions.
-- Last observed deployment commit: `524d8b4 Site updated: 2026-08-04 11:34:01`
+- Production repository: root `.git/`, remote `https://github.com/viewu/viewu.github.io.git`
+- Root folder is the production Git source repository on `main`, tracking `origin/main`.
+- GitHub Pages uses Actions publishing; `.deploy_git/` is ignored and retained only as an emergency legacy path.
+- Pre-migration static deployment commit: `524d8b4`, preserved on `legacy-static-2026-08-05`.
 
 ## Site Notes
 
 - Main config: `_config.yml`
 - Active theme directory: `themes/next/`
 - Permalink pattern: `:year/:month/:day/:title/`
-- GitHub Pages repository: `https://github.com/viewu/viewu.github.io.git`, branch `main`
+- GitHub Pages repository: `https://github.com/viewu/viewu.github.io.git`; source branch `main`; publishing mode `workflow`
 - Recent UI work before this task refined the site background, typography, borders, shadows, responsive spacing, homepage/category display, sidebar/music/avatar markup, and deployed at `b19e0fe`.
 - `BLOG_TASK_STATE.md` was found truncated on 2026-07-26 and was restored to this concise continuity state.
 
@@ -79,7 +79,11 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Removed the manually injected legacy `pjax@0.2.8`; NexT's own PJAX integration remains enabled.
 - Added missing `/categories/` and `/tags/` source pages, fixing existing navigation dead links.
 - Added `npm run check` and `tools/verify-generated-site.mjs` to verify required pages, internal assets, Windows-path leaks, and duplicate legacy PJAX.
-- Added a GitHub Pages Actions workflow and weekly grouped Dependabot configuration. The workflow is local only until a source remote is chosen and Pages is switched to GitHub Actions.
+- Added a GitHub Pages Actions workflow and weekly grouped Dependabot configuration.
+- Migrated `viewu/viewu.github.io` from checked-in generated files to source-on-`main` through PR #1; first production Actions deployment succeeded in run `30967799631` at merge commit `71f5257`.
+- Preserved the former static `main` exactly on remote branch `legacy-static-2026-08-05` and preserved the original local source-bootstrap history on `bootstrap-source-history-2026-08-05`.
+- Configured GitHub Pages `build_type: workflow`; PRs build/verify without deploying, while pushes to `main` deploy the verified artifact.
+- Fixed Linux CI date-permalink drift by setting `TZ=Asia/Taipei` and added regression checks for the two affected established URLs.
 - Verified a successful Hexo build: 42 HTML pages generated and the generated-site verifier passed.
 ### 2026-08-01
 

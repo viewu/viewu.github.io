@@ -19,9 +19,13 @@ npm run server
 
 ## Deployment
 
-The preferred deployment path is `.github/workflows/pages.yml`: a push to `main` installs the locked dependencies, builds and verifies the site, then publishes the `public/` artifact with GitHub Pages Actions.
+Production publishing is handled by `.github/workflows/pages.yml` in this repository:
 
-The legacy `npm run deploy` command remains available until the GitHub Pages repository is switched from branch publishing to GitHub Actions.
+- Pull requests targeting `main` install dependencies and run `npm run check`; deployment is skipped.
+- Pushes to `main` build the same locked source and deploy the `public/` artifact with GitHub Pages Actions.
+- The workflow sets `TZ=Asia/Taipei` so date-based permalinks remain stable on Linux runners.
+
+GitHub Pages is configured for Actions publishing. The pre-migration generated site is preserved on `legacy-static-2026-08-05`. `npm run deploy` and `.deploy_git/` are emergency legacy paths, not the routine publishing workflow.
 
 ## Theme provenance
 

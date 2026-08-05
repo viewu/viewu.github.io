@@ -9,9 +9,9 @@ This document tells future agents how to work on this Hexo blog project without 
 - Hexo version observed: `7.3.0`
 - Theme: NexT, configured from `themes/next/_config.yml`
 - Generated site output: `public/`
-- Deployment working tree: `.deploy_git/`
+- Legacy deployment working tree: `.deploy_git/` (ignored; emergency rollback only)
 - Source content: `source/`
-- Root source repository: `.git/` (initialized locally; remote not configured yet)
+- Root source repository: `.git/`, tracking `https://github.com/viewu/viewu.github.io.git` on `main`
 - Posts: `source/_posts/`
 
 ## Start Every Blog Task
@@ -19,7 +19,7 @@ This document tells future agents how to work on this Hexo blog project without 
 1. Read this file first.
 2. Read `BLOG_TASK_STATE.md` second.
 3. Inspect only the files relevant to the current request unless the state file says the project has changed broadly.
-4. The root folder is the source Git repository. `.deploy_git/` is the legacy generated-output repository and is ignored by the root repository.
+4. The root folder is the source Git repository and `origin/main` is the production source branch. `.deploy_git/` is an ignored emergency legacy path.
 5. Preserve user changes. Never reset, delete, or overwrite generated/user files unless the user explicitly asks.
 
 ## Common Commands
@@ -31,21 +31,21 @@ Run commands from `D:\viewu_blog`.
 - Generate site: `npm run build`
 - Clean generated cache/output: `npm run clean`
 - Local server: `npm run server`
-- Deploy: `npm run deploy`
+- Publish: commit and push `main`; GitHub Actions builds, verifies, and deploys Pages
 
 The package scripts are defined in `package.json`:
 
 - `build`: `hexo generate`
 - `check`: build followed by `tools/verify-generated-site.mjs`
 - `clean`: `hexo clean`
-- `deploy`: `hexo deploy`
+- `deploy`: `hexo deploy` (legacy emergency path only)
 - `server`: `hexo server`
 
 ## Editing Rules
 
 - Prefer editing source/config files, not generated files.
 - Do not hand-edit `public/` unless the user specifically asks for generated output surgery.
-- Do not hand-edit `.deploy_git/` unless dealing with deployment state.
+- Do not hand-edit `.deploy_git/`; routine deployment is performed from source by GitHub Actions.
 - For posts, edit Markdown files under `source/_posts/`.
 - For site-wide static assets, prefer `source/images/` if created later.
 - Current theme images live in `themes/next/source/images/`. The full customized theme is vendored in the root repository; its original nested Git metadata is preserved locally as an ignored `.git-upstream-backup/`.
@@ -109,7 +109,7 @@ Before claiming a change is complete, run the smallest useful verification:
 - Documentation-only change: confirm files exist and inspect relevant content.
 - Content/config change: run `npm run check` so the build and internal-link verification both execute.
 - Theme/layout change: run `npm run build`; if visual behavior matters, start `npm run server` and inspect the page.
-- Deployment change: check `.deploy_git` status and relevant deploy output.
+- Deployment change: check the GitHub Actions run, the Pages `build_type`, and the live URL. Use `legacy-static-2026-08-05` only for rollback.
 
 Report what was verified and any gaps.
 
