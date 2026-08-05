@@ -12,7 +12,7 @@ The user wants ongoing assistance maintaining, modifying, rebuilding, and publis
 
 - Workspace: `D:\viewu_blog`
 - Framework: Hexo static blog
-- Hexo: `7.3.0`
+- Hexo: `8.1.2`
 - Theme: NexT `8.19.2`
 - Source posts: `source/_posts/`
 - Static article images: `source/images/<slug>/`
@@ -85,6 +85,8 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Configured GitHub Pages `build_type: workflow`; PRs build/verify without deploying, while pushes to `main` deploy the verified artifact.
 - Fixed Linux CI date-permalink drift by setting `TZ=Asia/Taipei` and added regression checks for the two affected established URLs.
 - Upgraded the official Pages Actions to `configure-pages@v6`, `upload-pages-artifact@v5`, and `deploy-pages@v5` so all use the supported Node 24 runtime.
+- Enabled repository ruleset `Protect production main` (`20426356`): `main` requires a pull request and successful `build`, blocks deletion and non-fast-forward pushes, and permits the owner to bypass only through a pull request.
+- Upgraded Hexo from 7.3.0 to 8.1.2 on Node 22. The cold build retained all 131 generated paths and all static asset hashes; HTML changes were limited to the generator version and equivalent Open Graph tag ordering.
 - Verified a successful Hexo build: 42 HTML pages generated and the generated-site verifier passed.
 ### 2026-08-01
 
