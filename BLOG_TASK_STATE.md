@@ -28,6 +28,7 @@ The user wants ongoing assistance maintaining, modifying, rebuilding, and publis
 - Active theme directory: `themes/next/`
 - Permalink pattern: `:year/:month/:day/:title/`
 - GitHub Pages repository: `https://github.com/viewu/viewu.github.io.git`; source branch `main`; publishing mode `workflow`
+- Discovery endpoints: `/sitemap.xml`, `/atom.xml`, `/robots.txt`, `/manifest.webmanifest`; custom fallback: `/404.html`
 - Recent UI work before this task refined the site background, typography, borders, shadows, responsive spacing, homepage/category display, sidebar/music/avatar markup, and deployed at `b19e0fe`.
 - `BLOG_TASK_STATE.md` was found truncated on 2026-07-26 and was restored to this concise continuity state.
 
@@ -87,6 +88,7 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Upgraded the official Pages Actions to `configure-pages@v6`, `upload-pages-artifact@v5`, and `deploy-pages@v5` so all use the supported Node 24 runtime.
 - Enabled repository ruleset `Protect production main` (`20426356`): `main` requires a pull request and successful `build`, blocks deletion and non-fast-forward pushes, and permits the owner to bypass only through a pull request.
 - Upgraded Hexo from 7.3.0 to 8.1.2 on Node 22. The cold build retained all 131 generated paths and all static asset hashes; HTML changes were limited to the generator version and equivalent Open Graph tag ordering.
+- Added a custom 404 page, crawler policy, XML sitemap, Atom feed, and linked web app manifest. Expanded `npm run check` to require and validate them; the cold build now produces 136 files.
 - Verified a successful Hexo build: 42 HTML pages generated and the generated-site verifier passed.
 ### 2026-08-01
 

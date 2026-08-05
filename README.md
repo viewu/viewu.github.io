@@ -27,6 +27,15 @@ Production publishing is handled by `.github/workflows/pages.yml` in this reposi
 
 GitHub Pages is configured for Actions publishing. The pre-migration generated site is preserved on `legacy-static-2026-08-05`. `npm run deploy` and `.deploy_git/` are emergency legacy paths, not the routine publishing workflow.
 
+## Discovery and fallback files
+
+- `source/404.md` generates the custom GitHub Pages `/404.html` fallback.
+- `source/robots.txt` publishes the crawler policy and sitemap location.
+- `hexo-generator-sitemap` and `hexo-generator-feed` generate `/sitemap.xml` and `/atom.xml`.
+- `source/manifest.webmanifest` provides the linked web app manifest.
+
+`npm run check` requires these files and validates their essential URLs, metadata, and JSON/XML structure.
+
 ## Theme provenance
 
 `themes/next/` is based on NexT 8.19.2 commit `94dc7f105b1bf7d6d37246fec90af3a40ded1cfb` and contains local layout, sidebar, branding, and homepage customizations. It is intentionally tracked as vendored source so those customizations are preserved by the root repository. The original nested Git metadata is retained locally as `themes/next/.git-upstream-backup/` and ignored.
