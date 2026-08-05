@@ -3,7 +3,7 @@ layout: post
 title: GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向
 date: 2026-07-13 03:07:03
 description: 一篇关于 GPT-5.6、Codex、ChatGPT Work 与个人 AI 工作流方向的观察。
-cover: /images/gpt-5-6-chatgpt-direction-workflow/1.png
+cover: /images/gpt-5-6-chatgpt-direction-workflow/1.webp
 categories:
   - 工作
 tags:
@@ -56,7 +56,7 @@ tags:
 
 所以对我来说，Codex 早就超出了“写代码工具”的范围。更准确地说，我是在用 Codex 维护一套写作系统。
 
-![](/images/gpt-5-6-chatgpt-direction-workflow/6.png)
+![](/images/gpt-5-6-chatgpt-direction-workflow/6.webp)
 
 这也是为什么我看到 Work 和 Codex 的区分时，反而没有太多惊讶。
 
@@ -82,7 +82,7 @@ GPT-5.6 对我最直接的影响，目前还谈不上巨大。
 
 它希望你把 GPT 当成一个可以承接任务的环境：给它资料，给它目标，给它边界，让它调工具、读文件、生成成果、持续推进。
 
-![](/images/gpt-5-6-chatgpt-direction-workflow/5.png)
+![](/images/gpt-5-6-chatgpt-direction-workflow/5.webp)
 
 这个变化对大众用户可能很重要。
 
@@ -178,7 +178,7 @@ AI 可以碰文件，前提是我们提前做好安全隔离。
 
 **它可以帮我执行，但边界要由我提前画好。**
 
-![](/images/gpt-5-6-chatgpt-direction-workflow/7.png)
+![](/images/gpt-5-6-chatgpt-direction-workflow/7.webp)
 
 这也是从聊天框走向工作台以后，每个长期使用者都要面对的问题。
 
@@ -202,7 +202,7 @@ AI 可以碰文件，前提是我们提前做好安全隔离。
 
 对于我这种已经把 Codex 用成写作系统的人来说，它更像是一次确认。
 
-![](/images/gpt-5-6-chatgpt-direction-workflow/3.png)
+![](/images/gpt-5-6-chatgpt-direction-workflow/3.webp)
 
 我接下来可能会尝试把一次性的日常任务放到 Work 里处理，比如整理资料、做表格、生成文档或 PPT。
 

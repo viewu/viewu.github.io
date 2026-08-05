@@ -3,7 +3,7 @@ layout: post
 title: AI Coding 不只是“帮我写东西”：我如何理解上下文、工具与验证
 date: 2026-07-02 14:13:26
 description: 一个非技术用户的 AI Coding 协作笔记（二）
-cover: /images/ai-coding-context-tools-verification/1.png
+cover: /images/ai-coding-context-tools-verification/1.webp
 categories:
   - 工作
 tags:
@@ -43,7 +43,7 @@ tags:
 
 简历文件可以成功生成，却可能出现尾部空白页；Word 正文可以完整，却可能在渲染时断字；面试总结可以写得流畅，却可能没有读取我提供的材料。
 
-![](/images/ai-coding-context-tools-verification/2.png)
+![](/images/ai-coding-context-tools-verification/2.webp)
 
 这三个现象让我意识到：AI Coding 的结果不只由“模型会不会回答”决定，还取决于信息、行动和反馈如何被组织。
 
@@ -55,7 +55,7 @@ Anthropic 在介绍 Agent 时，把它描述为一种由模型动态决定过程
 
 > 获取信息 → 判断下一步 → 调用工具行动 → 检查结果 → 继续或结束
 
-![](/images/ai-coding-context-tools-verification/3.png)
+![](/images/ai-coding-context-tools-verification/3.webp)
 
 例如，我让 Codex 根据一份面试纪要生成复盘：
 
@@ -87,7 +87,7 @@ Anthropic 在介绍 Agent 时，把它描述为一种由模型动态决定过程
 
 假设我只想根据面试纪要总结失败原因，真正重要的是纪要内容、目标岗位和输出要求。如果同时塞入几份旧简历、其他公司的岗位描述、大量通用面试文章和一长串已经过时的讨论，“信息更多”很可能只是提高了筛选难度。
 
-![](/images/ai-coding-context-tools-verification/4.png)
+![](/images/ai-coding-context-tools-verification/4.webp)
 
 我的做法开始变得简单：
 
@@ -120,7 +120,7 @@ OpenAI 对 Codex App 的说明提到，任务可以放在项目中的独立线�
 - 返回结果能否支持下一步判断？
 - 失败时能否给出清楚原因？
 
-![](/images/ai-coding-context-tools-verification/5.png)
+![](/images/ai-coding-context-tools-verification/5.webp)
 
 Anthropic 的 Agent 实践建议也特别强调工具接口、说明和边界。工具越相似，定义越含糊，模型越难稳定选择。[Anthropic：工具与 Agent 的接口](https://www.anthropic.com/engineering/building-effective-agents)
 
@@ -175,7 +175,7 @@ OpenAI 在 Codex 的介绍中强调，用户可以通过日志、测试结果和
 
 验证标准不一定复杂，但必须能够观察。
 
-![](/images/ai-coding-context-tools-verification/6.png)
+![](/images/ai-coding-context-tools-verification/6.webp)
 
 ## Workflow 与 Agent，没有谁天然更高级
 
@@ -224,7 +224,7 @@ Anthropic 对两者做了一个实用区分：
 
 很多时候，AI 当然能够生成一个结果。困难的是：这个结果是不是我真正需要的，以及我凭什么相信它。
 
-![](/images/ai-coding-context-tools-verification/7.png)
+![](/images/ai-coding-context-tools-verification/7.webp)
 
 ## 非技术用户不必理解模型内部，但要理解协作边界
 

@@ -31,6 +31,7 @@ Run commands from `D:\viewu_blog`.
 - Build and verify generated links/pages: `npm run check`
 - Generate site: `npm run build`
 - Clean generated cache/output: `npm run clean`
+- Audit source image formats and budgets: `npm run verify:images`
 - Local server: `npm run server`
 - Publish: commit and push `main`; GitHub Actions builds, verifies, and deploys Pages
 
@@ -87,22 +88,11 @@ Existing tags observed:
 
 ## Images
 
-No article body image references were observed during the initial scan.
-
-Recommended future convention:
-
-- Put shared images in `source/images/`.
-- Reference them in Markdown as `/images/<filename>`.
-- If the user wants per-post image folders, first enable or discuss Hexo `post_asset_folder`.
-
-Current generated/theme image assets include:
-
-- `avatar.png`
-- `favicon-16x16-viewu.png`
-- `favicon-32x32-viewu.png`
-- `apple-touch-icon-viewu.png`
-- `logo.svg`
-
+- Put article assets in `source/images/<slug>/` and reference them through site-absolute `/images/<slug>/<filename>` URLs.
+- Use lossless WebP for article raster images by default. Preserve originals in Git history or an ignored local backup before conversion, and verify decoded pixels when migrating an existing asset.
+- `npm run verify:images` rejects nested article PNG/JPEG/GIF files, invalid WebP headers, and source images above 2 MiB.
+- Top-level shared/theme assets such as the avatar, favicons, QR code, and SVG brand icons keep the format required by their consumers.
+- If the user wants Hexo-managed per-post asset folders, first enable or discuss `post_asset_folder`; the current convention is static `source/images/<slug>/` directories.
 ## Discovery And Fallback Files
 
 - Edit the custom 404 source at `source/404.md`; it must keep `permalink: /404.html` and `sitemap: false`.
@@ -113,10 +103,10 @@ Current generated/theme image assets include:
 
 ## Performance And Quality Guardrails
 
-- `scripts/native-image-performance.js` modifies rendered post/page HTML only. It adds native lazy loading and asynchronous decoding, and reads local PNG/JPEG/GIF headers to add intrinsic dimensions when the source markup does not already specify a size.
-- Keep source images unchanged unless the user explicitly approves compression or format conversion.
+- `scripts/native-image-performance.js` modifies rendered post/page HTML only. It adds native lazy loading and asynchronous decoding, and reads local PNG/JPEG/GIF/WebP headers to add intrinsic dimensions when the source markup does not already specify a size.
+- Keep source images unchanged unless the user explicitly approves compression or format conversion. Existing article assets were migrated to pixel-identical lossless WebP with recoverable originals.
 - NexT resource preconnect is enabled in `themes/next/_config.yml`.
-- `npm run check` enforces core metadata, `rel="noopener"` for new-window links, native content-image attributes, a 3 MiB per-generated-file limit, and a 75 MiB total generated-site limit.
+- `npm run check` starts with the source-image audit, then enforces core metadata, `rel="noopener"` for new-window links, native content-image attributes, a 2 MiB per-generated-file limit, and a 55 MiB total generated-site limit.
 
 ## Verification Before Reporting Completion
 

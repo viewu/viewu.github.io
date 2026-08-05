@@ -126,16 +126,16 @@ if (!existsSync(publicRoot)) {
 
   const generatedFiles = collectFiles(publicRoot);
   const totalBytes = generatedFiles.reduce((sum, file) => sum + statSync(file).size, 0);
-  const maximumSiteBytes = 75 * 1024 * 1024;
-  const maximumAssetBytes = 3 * 1024 * 1024;
+  const maximumSiteBytes = 55 * 1024 * 1024;
+  const maximumAssetBytes = 2 * 1024 * 1024;
   if (totalBytes > maximumSiteBytes) {
-    failures.push(`Generated site exceeds the 75 MiB budget (${totalBytes} bytes).`);
+    failures.push(`Generated site exceeds the 55 MiB budget (${totalBytes} bytes).`);
   }
   for (const file of generatedFiles) {
     const size = statSync(file).size;
     if (size > maximumAssetBytes) {
       const page = file.slice(publicRoot.length).replaceAll('\\', '/');
-      failures.push(`${page}: asset exceeds the 3 MiB budget (${size} bytes).`);
+      failures.push(`${page}: asset exceeds the 2 MiB budget (${size} bytes).`);
     }
   }
 }

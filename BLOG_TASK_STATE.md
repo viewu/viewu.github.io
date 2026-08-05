@@ -54,14 +54,14 @@ Current source posts include:
   - Date: `2026-07-26 14:55:03`
   - Description: `一篇关于视频课、文字学习、技能错觉与问题驱动学习方式的反思。`
   - Tags: `SelfGrowth`, `学习系统`, `数字工作流`
-  - Assets: `source/images/learning-unit-from-course-to-question/` (`1.png` cover plus body images `2.png`-`6.png`)
+  - Assets: `source/images/learning-unit-from-course-to-question/` (`1.webp` cover plus body images `2.webp`-`6.webp`)
 - `internship-weekly-01-read-code-after-project-runs.md`
   - Title: `实习记录 01：项目跑起来以后，我才发现自己还没读懂代码`
   - Date: `2026-08-01 17:01:53`
   - Description: `实习第一周的工程环境、代码阅读、AI 辅助与能力边界复盘。`
   - Categories: `工作`
   - Tags: `实习记录`, `AI Coding`, `工程实践`
-  - Assets: `source/images/internship-weekly-01-read-code-after-project-runs/` (`1.png` cover plus body images `2.png`-`6.png`)
+  - Assets: `source/images/internship-weekly-01-read-code-after-project-runs/` (`1.webp` cover plus body images `2.webp`-`6.webp`)
 
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
@@ -91,6 +91,9 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Added a custom 404 page, crawler policy, XML sitemap, Atom feed, and linked web app manifest. Expanded `npm run check` to require and validate them; the cold build now produces 136 files.
 - Added dependency-free native image performance handling: rendered content images receive lazy loading, asynchronous decoding, and intrinsic dimensions where detectable, while original image files remain unchanged. Enabled NexT resource preconnect and expanded CI checks for metadata, new-window link safety, image markup, and generated-size budgets.
 - Second-batch verification covered 43 HTML pages and 34 content-image tags: all 34 use native lazy loading and asynchronous decoding, 29 receive numeric intrinsic dimensions, the largest generated asset remains 2,396,614 bytes, the full site is 57,971,266 bytes, and `npm audit` reports zero vulnerabilities.
+- Migrated all 40 nested article PNG assets to pixel-identical lossless WebP and updated seven post cover/body references. Source article images fell from 56,697,360 to 40,371,662 bytes, saving 16,325,698 bytes (28.79%); every decoded RGBA SHA-256 matched its original.
+- Preserved the removed PNG files and a conversion manifest locally at ignored `.agents/backups/image-originals-2026-08-05-lossless-webp/`; the originals also remain recoverable from Git history.
+- Added `npm run verify:images` to reject legacy nested raster formats, invalid WebP files, and article images above 2 MiB. Extended intrinsic-dimension detection to WebP and tightened generated budgets to 2 MiB per file and 55 MiB total.
 - Verified a successful Hexo build: 42 HTML pages generated and the generated-site verifier passed.
 ### 2026-08-01
 

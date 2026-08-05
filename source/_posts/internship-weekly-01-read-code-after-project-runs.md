@@ -3,7 +3,7 @@ layout: post
 title: 实习记录 01：项目跑起来以后，我才发现自己还没读懂代码
 date: 2026-08-01 17:01:53
 description: 实习第一周的工程环境、代码阅读、AI 辅助与能力边界复盘。
-cover: /images/internship-weekly-01-read-code-after-project-runs/1.png
+cover: /images/internship-weekly-01-read-code-after-project-runs/1.webp
 categories:
   - 工作
 tags:
@@ -19,7 +19,7 @@ tags:
 
 所以刚入职时，我除了紧张，也有一种终于落地的满足感。和我一起入职的还有另外三位小伙伴，其中一位后来还给我们投喂了酸奶。第一周虽然大部分时间都在配置环境、读项目和处理问题，身边这些很小的善意，也让我慢慢放松下来。
 
-<img src="/images/internship-weekly-01-read-code-after-project-runs/2.png" width="70%" alt="投递简历到入职第一周的时间线" />
+<img src="/images/internship-weekly-01-read-code-after-project-runs/2.webp" width="70%" alt="投递简历到入职第一周的时间线" />
 
 实习第一周，我花了五天时间让一个现有项目在本地运行起来。
 
@@ -39,7 +39,7 @@ tags:
 
 这个判断仍然需要依赖搜索和 AI 帮助，但至少让我少了一些毫无方向的尝试。`curl` 也不再只是安装命令里偶尔出现的词。它是一个可以在终端里发送网络请求、查看响应的工具。理解这一点以后，我再看到连接超时，就知道应该先检查网络链路，而不是立刻去改项目代码。
 
-<img src="/images/internship-weekly-01-read-code-after-project-runs/3.png" width="70%" alt="六层诊断：网络、环境、权限、依赖、接口、业务" />
+<img src="/images/internship-weekly-01-read-code-after-project-runs/3.webp" width="70%" alt="六层诊断：网络、环境、权限、依赖、接口、业务" />
 
 代码来源也从下载压缩包变成了 Git 仓库。压缩包能让我查看一份代码，却无法自然地同步团队更新。通过 Git 获取仓库、拉取最新代码、在自己的分支修改、查看差异，再提交给团队审查，这才是团队项目持续变化时需要的协作方式。
 
@@ -55,7 +55,7 @@ tags:
 
 **AI 可以很快画出一条调用链，我目前还缺少验证这条链的能力。**
 
-<img src="/images/internship-weekly-01-read-code-after-project-runs/4.png" width="70%" alt="AI带着走与独立理解两条路径的对比" />
+<img src="/images/internship-weekly-01-read-code-after-project-runs/4.webp" width="70%" alt="AI带着走与独立理解两条路径的对比" />
 
 这个差距很容易被“我已经看过代码”掩盖。Claude Code 给出的解释足够清楚时，我会产生一种已经理解项目的感觉。可这里的“理解”大多停留在模块负责什么。让我自己解释具体实现，或者修改其中一段逻辑，我很快就会暴露出断点。
 
@@ -75,7 +75,7 @@ AI 回答逐段出现在页面上，看起来只是文字不断增加。落到�
 
 这套解释帮我看见了项目的大致结构，却还没有让我读懂具体代码。每个节点更新了哪些状态，流式事件从哪里产生，数据格式怎样转换，前端收到以后怎样更新页面，我仍然需要依赖 AI 的说明。
 
-<img src="/images/internship-weekly-01-read-code-after-project-runs/5.png" width="70%" alt="LangGraph、SSE 与前端页面三层配合关系" />
+<img src="/images/internship-weekly-01-read-code-after-project-runs/5.webp" width="70%" alt="LangGraph、SSE 与前端页面三层配合关系" />
 
 ## 一次没有效果的修改，把理解缺口暴露了出来
 
@@ -89,7 +89,7 @@ AI 回答逐段出现在页面上，看起来只是文字不断增加。落到�
 
 **这次本地实验没有给项目带来改进，却准确暴露了我当前的能力边界。**
 
-<img src="/images/internship-weekly-01-read-code-after-project-runs/6.png" width="70%" alt="本地修改到理解编排的反馈闭环与能力刻度" />
+<img src="/images/internship-weekly-01-read-code-after-project-runs/6.webp" width="70%" alt="本地修改到理解编排的反馈闭环与能力刻度" />
 
 ## 第一周的进度，应该写得诚实一点
 

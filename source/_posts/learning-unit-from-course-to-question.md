@@ -3,7 +3,7 @@ layout: post
 title: 学习的单位，从一门课程变成一个问题
 date: 2026-07-26 14:55:03
 description: 一篇关于视频课、文字学习、技能错觉与问题驱动学习方式的反思。
-cover: /images/learning-unit-from-course-to-question/1.png
+cover: /images/learning-unit-from-course-to-question/1.webp
 categories:
   - 成长
 tags:
@@ -23,7 +23,7 @@ tags:
 
 读文字的时候，我需要不断参与。哪里没看懂，我会停下来；前后逻辑没接上，我会回看；遇到已经了解的内容，我可以直接跳过。阅读速度也掌握在自己手里。
 
-<img src="/images/learning-unit-from-course-to-question/2.png" style="zoom: 50%;" />
+<img src="/images/learning-unit-from-course-to-question/2.webp" style="zoom: 50%;" />
 
 视频则按照讲解者设定的速度往前走。即使某一段已经听懂了，我也要等他讲完；某一处没有跟上，视频仍然会继续播放，没有给自己停下来思考的时间。只要内容密度稍低，我就很容易从学习者变成一个坐在屏幕前的观众，看似在进行视频学习，其实大脑根本就没在参与信息的处理。
 
@@ -43,7 +43,7 @@ tags:
 
 网上有一句很形象的话：眼睛会了，手没会。
 
-<img src="/images/learning-unit-from-course-to-question/3.png" style="zoom:50%;" />
+<img src="/images/learning-unit-from-course-to-question/3.webp" style="zoom:50%;" />
 
 老师讲解时，很多决定已经替学生做好了。用哪些变量表达状态，循环从哪里开始、到哪里结束，每轮更新什么，什么情况下提前退出，数组为空或者下标越界怎么处理，这些步骤在一份完成度很高的讲解里依次出现，看起来十分顺畅。
 
@@ -71,7 +71,7 @@ tags:
 
 老师可以压缩探索路径，却无法替学生完成理解、提取、应用和纠错。算法的知识地图可以在两个小时里讲完，但是实际动手时，把算法写成代码的犹豫、报错和调试仍然会发生。
 
-<img src="/images/learning-unit-from-course-to-question/4.png" style="zoom:50%;" />
+<img src="/images/learning-unit-from-course-to-question/4.webp" style="zoom:50%;" />
 
 学习研究会区分“再次接触材料”和“主动从记忆中提取材料”。2008 年发表在 *Science* 的一项实验让大学生学习 40 组外语词对（斯瓦希里语—英语）。某个词对被正确回忆一次后，研究者发现，后续继续呈现并复习这个词对，并没有提高一周后的回忆成绩；继续要求学生根据提示调出答案，则明显改善了长期保持。这个结论只适用于该实验中的词对学习，不能直接替代编程练习，也不能简单概括成“重复阅读没有用”。但它给我的提醒很具体：**对一段材料越来越熟悉，和离开材料以后还能不能调用，是两个不同的问题。**
 
@@ -99,7 +99,7 @@ tags:
 
 **以前的完美主义很容易把学习拉成一条很长的准备期。**想做一件事，先觉得自己基础不够；为了补基础，找来一门完整课程；打开课程，又觉得应该从第一节开始。**时间不断花在准备上，最初的问题迟迟没有推进。**
 
-<img src="/images/learning-unit-from-course-to-question/5.png" style="zoom:50%;" />
+<img src="/images/learning-unit-from-course-to-question/5.webp" style="zoom:50%;" />
 
 现在，我会先问自己缺少哪一小段知识。能够帮助我解决当前问题的部分，我就先学这一部分，然后立刻放回原来的任务里验证。
 
@@ -121,7 +121,7 @@ Markdown 能不能正常显示，代码能不能运行，问题有没有解决�
 
 **我不需要因为一个小问题，把整个领域从头学到尾；也不能永远只查零散答案，让相同的前置缺口反复出现。孤立问题可以就地解决。多个问题指向同一组前置知识时，再集中补上这一部分。**
 
-<img src="/images/learning-unit-from-course-to-question/6.png" style="zoom:50%;" />
+<img src="/images/learning-unit-from-course-to-question/6.webp" style="zoom:50%;" />
 
 这也让我重新理解了攀岩时想到的“**学习体能**”。
 

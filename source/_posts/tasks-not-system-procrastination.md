@@ -3,7 +3,7 @@ layout: post
 title: 任务还没变成系统，人就容易拖延
 date: 2026-07-08 17:14:42
 description: 一篇关于拖延、任务入口、系统化行动和研究生读论文困境的反思。
-cover: /images/tasks-not-system-procrastination/6.png
+cover: /images/tasks-not-system-procrastination/6.webp
 categories:
   - 工作
 tags:
@@ -27,7 +27,7 @@ tags:
 
 你又想逃开任务，因为一旦开始，就要面对模糊、压力、消耗和不确定。
 
-![](/images/tasks-not-system-procrastination/1.png)
+![](/images/tasks-not-system-procrastination/1.webp)
 
 这个描述很贴近我读论文时的状态，算是把我之前一些模糊的，无法言说的感受，比较准确的表达了出来。
 
@@ -63,7 +63,7 @@ Rian Doris 把拖延解释为一种”趋近-回避“冲突。
 
 这些话没有错，但它们没有处理入口问题。
 
-![](/images/tasks-not-system-procrastination/2.png)
+![](/images/tasks-not-system-procrastination/2.webp)
 
 例如，“今天我要读论文”这个任务太粗。
 
@@ -127,7 +127,7 @@ Rian Doris 把拖延解释为一种”趋近-回避“冲突。
 
 阅读绑定产物，它才会变成推进。
 
-![](/images/tasks-not-system-procrastination/3.png)
+![](/images/tasks-not-system-procrastination/3.webp)
 
 这套方法放到写文章、健身、学习技能上也一样。
 
@@ -169,7 +169,7 @@ Rian Doris 把拖延解释为一种”趋近-回避“冲突。
 
 同伴可以在行动过程中遇到。你持续出现在同一个场景里，自然会认识有相同兴趣的人。这样的关系也更稳定，因为你们是因为同样的行动频率遇见的，而不是靠互相催促才开始的。
 
-![](/images/tasks-not-system-procrastination/4.png)
+![](/images/tasks-not-system-procrastination/4.webp)
 
 原文里提到 response inhibition，也就是在犹豫机制完全启动前先行动。
 
@@ -217,7 +217,7 @@ Rian Doris 把拖延解释为一种”趋近-回避“冲突。
 
 不值得继续的部分，重新判断，必要时舍弃。
 
-![](/images/tasks-not-system-procrastination/5.png)
+![](/images/tasks-not-system-procrastination/5.webp)
 
 这篇文章对我的启发也在这里。
 
