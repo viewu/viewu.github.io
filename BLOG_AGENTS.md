@@ -6,7 +6,7 @@ This document tells future agents how to work on this Hexo blog project without 
 
 - Workspace root: `D:\viewu_blog`
 - Project type: Hexo static blog
-- Hexo version observed: `7.3.0`
+- Hexo version observed: `8.1.2`
 - Theme: NexT, configured from `themes/next/_config.yml`
 - Generated site output: `public/`
 - Legacy deployment working tree: `.deploy_git/` (ignored; emergency rollback only)
@@ -21,6 +21,7 @@ This document tells future agents how to work on this Hexo blog project without 
 3. Inspect only the files relevant to the current request unless the state file says the project has changed broadly.
 4. The root folder is the source Git repository and `origin/main` is the production source branch. `.deploy_git/` is an ignored emergency legacy path.
 5. Preserve user changes. Never reset, delete, or overwrite generated/user files unless the user explicitly asks.
+6. `main` is protected by repository ruleset `Protect production main`: use a pull request and require the `build` check; force pushes and deletion are blocked.
 
 ## Common Commands
 
