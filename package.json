@@ -8,6 +8,7 @@
   },
   "packageManager": "npm@11.12.1",
   "scripts": {
+    "audit:production": "node tools/audit-production.mjs",
     "build": "hexo generate",
     "check": "npm run verify:images && npm run build && npm run verify:site",
     "clean": "hexo clean",

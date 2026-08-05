@@ -48,6 +48,17 @@ GitHub Pages is configured for Actions publishing. The pre-migration generated s
 - `npm run verify:images` rejects legacy PNG/JPEG/GIF files in article asset folders, invalid WebP headers, and source images above 2 MiB.
 - Keep original assets recoverable through Git history or an ignored local backup before converting future images.
 
+## Production health monitoring
+
+`npm run audit:production` checks the live site rather than the generated local output. It verifies the homepage, discovery endpoints, a representative article and WebP asset, then checks external URLs referenced by published Markdown and requests a mobile PageSpeed baseline.
+
+The `Audit production health` GitHub Actions workflow runs every Monday at 03:23 UTC (11:23 Asia/Taipei) and can also be started manually. Its job summary contains the endpoint table, external-link results, and Lighthouse scores/metrics.
+
+- Broken critical contracts and confirmed external HTTP 404/410 responses fail the audit.
+- Bot rejection, rate limiting, transient network errors, and an unavailable PageSpeed API are warnings so they do not create noisy false failures.
+- Set the optional repository secret `PAGESPEED_API_KEY` if Google API quota becomes unreliable; the audit works without a key when public quota is available.
+- Run `node tools/audit-production.mjs --skip-pagespeed` for a faster endpoint and link-only check.
+
 ## Theme provenance
 
 `themes/next/` is based on NexT 8.19.2 commit `94dc7f105b1bf7d6d37246fec90af3a40ded1cfb` and contains local layout, sidebar, branding, and homepage customizations. It is intentionally tracked as vendored source so those customizations are preserved by the root repository. The original nested Git metadata is retained locally as `themes/next/.git-upstream-backup/` and ignored.
