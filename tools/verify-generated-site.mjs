@@ -39,11 +39,49 @@ if (!existsSync(publicRoot)) {
     'archives/index.html',
     'categories/index.html',
     'tags/index.html',
+    '404.html',
     '2024/04/03/最后的终点/index.html',
     '2026/07/13/gpt-5-6-chatgpt-direction-workflow/index.html'
   ];
   for (const page of requiredPages) {
     if (!existsSync(join(publicRoot, ...page.split('/')))) failures.push(`Missing required page: /${page}`);
+  }
+
+  const requiredFiles = ['robots.txt', 'sitemap.xml', 'atom.xml', 'manifest.webmanifest'];
+  for (const file of requiredFiles) {
+    if (!existsSync(join(publicRoot, file))) failures.push(`Missing required discovery file: /${file}`);
+  }
+
+  const indexHtml = readFileSync(join(publicRoot, 'index.html'), 'utf8');
+  if (!indexHtml.includes('rel="manifest" href="/manifest.webmanifest"')) {
+    failures.push('/index.html: web app manifest is not linked.');
+  }
+  if (!indexHtml.includes('type="application/atom+xml"')) {
+    failures.push('/index.html: Atom feed autodiscovery link is missing.');
+  }
+
+  const robots = readFileSync(join(publicRoot, 'robots.txt'), 'utf8');
+  if (!robots.includes('User-agent: *') || !robots.includes('Sitemap: https://viewu.github.io/sitemap.xml')) {
+    failures.push('/robots.txt: crawler policy or sitemap declaration is missing.');
+  }
+
+  const sitemap = readFileSync(join(publicRoot, 'sitemap.xml'), 'utf8');
+  if (!sitemap.includes('<urlset') || !sitemap.includes('<loc>https://viewu.github.io/</loc>')) {
+    failures.push('/sitemap.xml: valid root URL entry is missing.');
+  }
+
+  const atom = readFileSync(join(publicRoot, 'atom.xml'), 'utf8');
+  if (!atom.includes('<feed') || !atom.includes('https://viewu.github.io/')) {
+    failures.push('/atom.xml: valid Atom feed content is missing.');
+  }
+
+  try {
+    const manifest = JSON.parse(readFileSync(join(publicRoot, 'manifest.webmanifest'), 'utf8'));
+    if (manifest.start_url !== '/' || manifest.scope !== '/' || manifest.icons?.[0]?.src !== '/images/avatar.png') {
+      failures.push('/manifest.webmanifest: required start URL, scope, or icon is missing.');
+    }
+  } catch {
+    failures.push('/manifest.webmanifest: invalid JSON.');
   }
 
   const htmlFiles = collectHtmlFiles(publicRoot);

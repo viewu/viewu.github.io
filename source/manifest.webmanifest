@@ -1,0 +1,19 @@
+{
+  "name": "vieWu's world",
+  "short_name": "vieWu",
+  "description": "vieWu 的个人博客",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#222222",
+  "icons": [
+    {
+      "src": "/images/avatar.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
