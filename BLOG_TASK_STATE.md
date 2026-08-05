@@ -67,6 +67,13 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-08-05 - July Reflection upload
+
+- Imported `july-reflection-the-month-theory-became-reality.md` from `D:\viewu_writing\english\July Reflection — The Month Theory Became Reality.md`.
+- Added front matter with `categories: 成长` and tags `SelfGrowth`, `EnglishDiary`, `Internship`.
+- Fixed the homepage Writing category card in `themes/next/layout/index.njk`, replacing the stale `英文日记、科幻创作和其他不属于工作笔记的文字。` with `科幻创作和其他不属于工作笔记的文字实验。`.
+- Local `npm run check` passed before publishing.
+
 ### 2026-08-05
 
 - Initialized a root Git repository on `main` to version the actual blog source.
