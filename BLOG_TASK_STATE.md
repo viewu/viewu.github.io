@@ -89,6 +89,8 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Enabled repository ruleset `Protect production main` (`20426356`): `main` requires a pull request and successful `build`, blocks deletion and non-fast-forward pushes, and permits the owner to bypass only through a pull request.
 - Upgraded Hexo from 7.3.0 to 8.1.2 on Node 22. The cold build retained all 131 generated paths and all static asset hashes; HTML changes were limited to the generator version and equivalent Open Graph tag ordering.
 - Added a custom 404 page, crawler policy, XML sitemap, Atom feed, and linked web app manifest. Expanded `npm run check` to require and validate them; the cold build now produces 136 files.
+- Added dependency-free native image performance handling: rendered content images receive lazy loading, asynchronous decoding, and intrinsic dimensions where detectable, while original image files remain unchanged. Enabled NexT resource preconnect and expanded CI checks for metadata, new-window link safety, image markup, and generated-size budgets.
+- Second-batch verification covered 43 HTML pages and 34 content-image tags: all 34 use native lazy loading and asynchronous decoding, 29 receive numeric intrinsic dimensions, the largest generated asset remains 2,396,614 bytes, the full site is 57,971,266 bytes, and `npm audit` reports zero vulnerabilities.
 - Verified a successful Hexo build: 42 HTML pages generated and the generated-site verifier passed.
 ### 2026-08-01
 

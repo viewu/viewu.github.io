@@ -1,15 +1,15 @@
-import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, normalize, resolve, sep } from 'node:path';
 
 const projectRoot = resolve(import.meta.dirname, '..');
 const publicRoot = join(projectRoot, 'public');
 const failures = [];
 
-function collectHtmlFiles(directory) {
+function collectFiles(directory, predicate = () => true) {
   return readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
     const absolutePath = join(directory, entry.name);
-    if (entry.isDirectory()) return collectHtmlFiles(absolutePath);
-    return entry.isFile() && entry.name.endsWith('.html') ? [absolutePath] : [];
+    if (entry.isDirectory()) return collectFiles(absolutePath, predicate);
+    return entry.isFile() && predicate(entry) ? [absolutePath] : [];
   });
 }
 
@@ -84,17 +84,58 @@ if (!existsSync(publicRoot)) {
     failures.push('/manifest.webmanifest: invalid JSON.');
   }
 
-  const htmlFiles = collectHtmlFiles(publicRoot);
+  const htmlFiles = collectFiles(publicRoot, entry => entry.name.endsWith('.html'));
+  let contentImagesWithDimensions = 0;
   for (const file of htmlFiles) {
     const html = readFileSync(file, 'utf8');
     const page = file.slice(publicRoot.length).replaceAll('\\', '/');
 
     if (html.includes('pjax@0.2.8')) failures.push(`${page}: legacy duplicate PJAX script is present.`);
     if (/\b(?:src|href)=["'][A-Za-z]:\\/i.test(html)) failures.push(`${page}: contains a local Windows path.`);
+    if (!/<html\b[^>]*\blang=["'][^"']+["']/i.test(html)) failures.push(`${page}: document language is missing.`);
+    if (!/<meta\b[^>]*\bname=["']viewport["']/i.test(html)) failures.push(`${page}: viewport metadata is missing.`);
+    if (!/<title>[^<]+<\/title>/i.test(html)) failures.push(`${page}: page title is missing.`);
+    if (!/<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']https:\/\/viewu\.github\.io\//i.test(html)) {
+      failures.push(`${page}: production canonical URL is missing.`);
+    }
+
+    for (const match of html.matchAll(/<a\b[^>]*\btarget=["']_blank["'][^>]*>/gi)) {
+      if (!/\brel=["'][^"']*\bnoopener\b[^"']*["']/i.test(match[0])) {
+        failures.push(`${page}: target=_blank link is missing rel=noopener.`);
+      }
+    }
+
+    for (const match of html.matchAll(/<img\b[^>]*\bsrc=["']\/images\/(?!avatar\.png|social\/)[^"']+["'][^>]*>/gi)) {
+      const image = match[0];
+      if (!/\bloading=["']lazy["']/i.test(image)) failures.push(`${page}: content image is missing native lazy loading.`);
+      if (!/\bdecoding=["']async["']/i.test(image)) failures.push(`${page}: content image is missing async decoding.`);
+      if (/\bwidth=["']\d+["']/i.test(image) && /\bheight=["']\d+["']/i.test(image)) {
+        contentImagesWithDimensions += 1;
+      }
+    }
 
     const attributePattern = /\b(?:src|href)=["'](\/(?!\/)[^"']*)["']/gi;
     for (const match of html.matchAll(attributePattern)) {
       if (!localTargetExists(match[1])) failures.push(`${page}: missing local target ${match[1]}`);
+    }
+  }
+
+  if (contentImagesWithDimensions === 0) {
+    failures.push('No content images include intrinsic width and height metadata.');
+  }
+
+  const generatedFiles = collectFiles(publicRoot);
+  const totalBytes = generatedFiles.reduce((sum, file) => sum + statSync(file).size, 0);
+  const maximumSiteBytes = 75 * 1024 * 1024;
+  const maximumAssetBytes = 3 * 1024 * 1024;
+  if (totalBytes > maximumSiteBytes) {
+    failures.push(`Generated site exceeds the 75 MiB budget (${totalBytes} bytes).`);
+  }
+  for (const file of generatedFiles) {
+    const size = statSync(file).size;
+    if (size > maximumAssetBytes) {
+      const page = file.slice(publicRoot.length).replaceAll('\\', '/');
+      failures.push(`${page}: asset exceeds the 3 MiB budget (${size} bytes).`);
     }
   }
 }

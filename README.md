@@ -36,6 +36,12 @@ GitHub Pages is configured for Actions publishing. The pre-migration generated s
 
 `npm run check` requires these files and validates their essential URLs, metadata, and JSON/XML structure.
 
+## Performance guardrails
+
+- `scripts/native-image-performance.js` adds native lazy loading, asynchronous decoding, and intrinsic dimensions to rendered content images without changing the source image files.
+- NexT preconnects to configured font and vendor origins to reduce connection setup latency.
+- `npm run check` rejects missing canonical/title/viewport metadata, unsafe `target="_blank"` links, unoptimized content-image markup, individual generated assets above 3 MiB, and generated sites above 75 MiB.
+
 ## Theme provenance
 
 `themes/next/` is based on NexT 8.19.2 commit `94dc7f105b1bf7d6d37246fec90af3a40ded1cfb` and contains local layout, sidebar, branding, and homepage customizations. It is intentionally tracked as vendored source so those customizations are preserved by the root repository. The original nested Git metadata is retained locally as `themes/next/.git-upstream-backup/` and ignored.
