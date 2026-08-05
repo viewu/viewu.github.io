@@ -29,6 +29,7 @@ Run commands from `D:\viewu_blog`.
 
 - Check Hexo and config: `npx hexo version`
 - Build and verify generated links/pages: `npm run check`
+- Audit the deployed site and external links: `npm run audit:production`
 - Generate site: `npm run build`
 - Clean generated cache/output: `npm run clean`
 - Audit source image formats and budgets: `npm run verify:images`
@@ -38,7 +39,8 @@ Run commands from `D:\viewu_blog`.
 The package scripts are defined in `package.json`:
 
 - `build`: `hexo generate`
-- `check`: build followed by `tools/verify-generated-site.mjs`
+- `audit:production`: check live production endpoints, external links, and the mobile PageSpeed baseline
+- `check`: audit source images, build, then run `tools/verify-generated-site.mjs`
 - `clean`: `hexo clean`
 - `deploy`: `hexo deploy` (legacy emergency path only)
 - `server`: `hexo server`
@@ -93,6 +95,7 @@ Existing tags observed:
 - `npm run verify:images` rejects nested article PNG/JPEG/GIF files, invalid WebP headers, and source images above 2 MiB.
 - Top-level shared/theme assets such as the avatar, favicons, QR code, and SVG brand icons keep the format required by their consumers.
 - If the user wants Hexo-managed per-post asset folders, first enable or discuss `post_asset_folder`; the current convention is static `source/images/<slug>/` directories.
+
 ## Discovery And Fallback Files
 
 - Edit the custom 404 source at `source/404.md`; it must keep `permalink: /404.html` and `sitemap: false`.
@@ -107,6 +110,14 @@ Existing tags observed:
 - Keep source images unchanged unless the user explicitly approves compression or format conversion. Existing article assets were migrated to pixel-identical lossless WebP with recoverable originals.
 - NexT resource preconnect is enabled in `themes/next/_config.yml`.
 - `npm run check` starts with the source-image audit, then enforces core metadata, `rel="noopener"` for new-window links, native content-image attributes, a 2 MiB per-generated-file limit, and a 55 MiB total generated-site limit.
+
+## Production Health Monitoring
+
+- `.github/workflows/site-health.yml` runs weekly and by manual dispatch; keep it separate from the required PR build so an external service outage cannot block publishing.
+- `npm run audit:production` treats critical endpoint contract failures and confirmed external HTTP 404/410 responses as failures.
+- Treat bot rejection, rate limiting, transient network errors, and PageSpeed API unavailability as warnings to avoid noisy alerts.
+- PageSpeed scores are report-only baselines. Do not introduce hard thresholds until enough scheduled history exists to distinguish regressions from Lighthouse variance.
+- `PAGESPEED_API_KEY` is an optional GitHub repository secret for more reliable quota; never commit the key.
 
 ## Verification Before Reporting Completion
 
