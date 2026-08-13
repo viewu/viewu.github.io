@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-05, Asia/Taipei
+Last updated: 2026-08-13, Asia/Taipei
 
 ## Current Objective
 
@@ -10,7 +10,7 @@ The user wants ongoing assistance maintaining, modifying, rebuilding, and publis
 
 ## Current Project Snapshot
 
-- Workspace: `D:\viewu_blog`
+- Workspace: `~/Desktop/blog/viewu.github.io` (macOS; formerly `D:\viewu_blog` on Windows)
 - Framework: Hexo static blog
 - Hexo: `8.1.2`
 - Theme: NexT `8.19.2`
@@ -66,6 +66,18 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-08-13 - Klein blue minimal visual redesign (macOS)
+
+- Development moved from Windows (`D:\viewu_blog`) to macOS (`~/Desktop/blog/viewu.github.io`); Node 22 installed via nvm (project pins `>=22 <23`), deps installed with `npm ci`.
+- Full "极简安静" visual repaint on branch `feature/klein-blue-redesign`, keeping all layout structure unchanged:
+  - Palette: light-gray page `#fafafa` + white cards + near-black text `#1a1a1a` + grays `#6b6b6b`/`#9e9e9e` + hairlines `#eeeeee`; single accent Klein blue `#002fa7` (3px top `headband`, home-intro left rule, link hovers).
+  - Typography: system serif headings (`Songti SC`/`STSong`/`SimSun`) + system sans body, zero webfont loading.
+  - De-decorated: removed card shadows, gradients, rounded corners, and hover lift; hairlines + whitespace only.
+  - `.site-brand-container` (sidebar brand panel) changed from the `--theme-color` solid block to white + hairline.
+- Social icons reworked to the CSS `mask` technique: `source/images/social/*.svg` reverted to original brand fills (Bilibili `#00AEEC`, NetEase `#D43C33`, WeChat `#07C160`, Xiaohongshu `#FF2442`); `themes/next/layout/_partials/sidebar/site-overview.njk` renders `<span class="social-brand-icon">` instead of `<img>`; `source/_data/styles.styl` colors them Klein blue at rest and brand color on hover via `background-color` + `mask-image`. Card stays white + hairline; hover changes only the icon.
+- All style changes are additive overrides in `source/_data/styles.styl` (the `custom_file_path.style` inject point); the vendored NexT theme is otherwise untouched.
+- `npm run check` passes (image audit + build + generated-site verification).
 
 ### 2026-08-05 - July Reflection upload
 

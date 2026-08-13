@@ -542,3 +542,267 @@ body
     width: 26px
     height: 26px
     padding: 2px
+
+// ============================================================
+// 克莱因蓝 · 极简重涂 (2026-08-13)
+// 黑白灰 + 克莱因蓝 #002FA7 · 宋体标题 · 去装饰 · 系统字体
+// 追加覆盖：等价特异性下后声明者优先；不动既有结构与主题本体
+// ============================================================
+
+// ---- 主题变量（侧栏 / 导航 / 页脚 / 分页 / 按钮 / 代码块）----
+:root
+  --body-bg-color: #fafafa
+  --content-bg-color: #ffffff
+  --card-bg-color: #ffffff
+  --text-color: #1a1a1a
+  --blockquote-color: #6b6b6b
+  --link-color: #1a1a1a
+  --link-hover-color: #002fa7
+  --brand-color: #1a1a1a
+  --brand-hover-color: #002fa7
+  --table-row-odd-bg-color: #fafafa
+  --table-row-hover-bg-color: #f4f4f4
+  --menu-item-bg-color: #fafafa
+  --theme-color: #002fa7
+  --btn-default-bg: #ffffff
+  --btn-default-color: #1a1a1a
+  --btn-default-border-color: #e0e0e0
+  --btn-default-hover-bg: #002fa7
+  --btn-default-hover-color: #ffffff
+  --btn-default-hover-border-color: #002fa7
+  --highlight-background: #f7f7f7
+  --highlight-foreground: #4a4a4a
+
+// ---- 基础底色 ----
+body
+  background: #fafafa
+  color: #1a1a1a
+
+// ---- 站名（宋体 · 墨色 · 安静）----
+.site-title
+  color: #1a1a1a
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-weight: 500
+  letter-spacing: 0.01em
+
+.site-subtitle
+  color: #9e9e9e
+  letter-spacing: 0.04em
+
+// ---- 宋体标题（全局）----
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.post-title-link,
+.home-intro h2,
+.home-topic-card h3,
+.home-section-heading h2,
+.home-latest-heading h2
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-weight: 500
+
+// ---- 首页引言（签名：克莱因蓝批注竖线）----
+.home-intro
+  background: #ffffff
+  border: 1px solid #eeeeee
+  border-left: 3px solid #002fa7
+  border-radius: 0
+  box-shadow: none
+
+.home-intro h2
+  color: #1a1a1a
+  letter-spacing: 0
+
+.home-intro-kicker
+  color: #9e9e9e
+  letter-spacing: 0.14em
+
+.home-intro p:not(.home-intro-kicker)
+  color: #6b6b6b
+
+.home-intro-link
+  color: #002fa7
+  font-weight: 500
+
+.home-intro-link:hover
+  color: #002fa7
+  text-decoration: underline
+
+// ---- 话题卡片 ----
+.home-topic-card
+  background: #ffffff
+  border-color: #eeeeee
+  border-radius: 0
+  box-shadow: none
+  transition: border-color 0.15s ease
+
+.home-topic-card:hover
+  border-color: #002fa7
+  box-shadow: none
+  transform: none
+
+.home-topic-card h3
+  color: #1a1a1a
+
+.home-topic-card p
+  color: #6b6b6b
+
+.home-topic-index
+  color: #9e9e9e
+
+.home-topic-arrow
+  color: #9e9e9e
+
+// ---- start-here / 精选 / 视频 / 最新 ----
+.home-start-here
+  border-top-color: #eeeeee
+  border-bottom-color: #eeeeee
+
+.home-section-heading h2,
+.home-latest-heading h2
+  color: #1a1a1a
+
+.home-section-heading p:last-child
+  color: #9e9e9e
+
+.home-featured-item
+  border-top-color: #eeeeee
+  color: #1a1a1a
+
+.home-featured-item span
+  color: #9e9e9e
+
+.home-featured-item i
+  color: #9e9e9e
+
+.home-featured-item:hover
+  color: #002fa7
+
+.home-featured-item:hover i
+  color: #002fa7
+  transform: translateX(3px)
+
+.home-video-section
+  border-top-color: #eeeeee
+  border-bottom-color: #eeeeee
+
+.home-video-item
+  border-top-color: #eeeeee
+  color: #1a1a1a
+
+.home-video-item span
+  color: #9e9e9e
+
+.home-video-item small
+  color: #9e9e9e
+
+.home-video-item i
+  color: #9e9e9e
+
+.home-video-item:hover
+  color: #002fa7
+
+// ---- 文章列表 ----
+.posts-expand .post-block
+  background: #ffffff
+  border: 1px solid #eeeeee
+  border-radius: 0
+  box-shadow: none
+
+.posts-expand .post-title-link
+  color: #1a1a1a
+
+.posts-expand .post-title-link:hover
+  color: #002fa7
+
+.posts-expand .post-body
+  color: #6b6b6b
+
+.post-button .btn
+  border-radius: 0
+  border-color: #e0e0e0
+  color: #1a1a1a
+  letter-spacing: 0.02em
+
+.post-button .btn:hover
+  border-color: #002fa7
+  background: #002fa7
+  color: #ffffff
+
+// ---- 正文引用块：蓝竖线（呼应“批注”签名）----
+.post-body blockquote
+  border-left-color: #002fa7
+  color: #6b6b6b
+
+// ---- 社交图标：透明框 + 克莱因蓝常态 + hover 品牌原色（CSS mask）----
+.links-of-author-item a
+  background: #ffffff
+  border: 1px solid #eeeeee
+  border-radius: 2px
+  box-shadow: none
+
+.links-of-author-item a:hover
+  transform: none
+  background: #ffffff
+  border-color: #eeeeee
+  box-shadow: none
+
+.social-brand-icon
+  display: block
+  flex: 0 0 28px
+  width: 28px
+  height: 28px
+  padding: 0
+  border: none
+  background: #002fa7
+  -webkit-mask-repeat: no-repeat
+  mask-repeat: no-repeat
+  -webkit-mask-position: center
+  mask-position: center
+  -webkit-mask-size: contain
+  mask-size: contain
+  transition: background-color 0.15s ease
+
+.links-of-author-item a[href*='space.bilibili.com'] .social-brand-icon
+  -webkit-mask-image: url('/images/social/bilibili.svg')
+  mask-image: url('/images/social/bilibili.svg')
+  --brand: #00aeec
+
+.links-of-author-item a[href*='music.163.com'] .social-brand-icon
+  -webkit-mask-image: url('/images/social/neteasecloudmusic.svg')
+  mask-image: url('/images/social/neteasecloudmusic.svg')
+  --brand: #d43c33
+
+.links-of-author-item a[href*='xiaohongshu.com'] .social-brand-icon
+  -webkit-mask-image: url('/images/social/xiaohongshu.svg')
+  mask-image: url('/images/social/xiaohongshu.svg')
+  --brand: #ff2442
+
+.links-of-author-item a[href='/wechat/'] .social-brand-icon
+  -webkit-mask-image: url('/images/social/wechat.svg')
+  mask-image: url('/images/social/wechat.svg')
+  --brand: #07c160
+
+.links-of-author-item a:hover .social-brand-icon
+  background-color: var(--brand)
+
+.social-brand-label
+  color: #1a1a1a
+
+.bilibili-icon
+  border-color: #9e9e9e
+
+// ---- 修复：品牌区去大面积色块 ----
+// .site-brand-container 原本用 var(--theme-color) 当背景，
+// 因 --theme-color 被设为克莱因蓝而整体变蓝。这里改成白底 + 发丝分隔线，
+// 克莱因蓝只保留在页面最顶部的 3px headband 细线。
+.site-brand-container
+  background: #ffffff
+  border-bottom: 1px solid #eeeeee
+
+// 白底上的移动端汉堡 / 搜索图标改用深色（原为白色配深底）
+.site-nav-toggle .toggle,
+.site-nav-right .toggle
+  color: #1a1a1a
+
+  .toggle-line
+    background: #1a1a1a

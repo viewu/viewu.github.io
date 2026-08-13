@@ -4,7 +4,7 @@ This document tells future agents how to work on this Hexo blog project without 
 
 ## Project
 
-- Workspace root: `D:\viewu_blog`
+- Workspace root: the repository root (the directory containing this file)
 - Project type: Hexo static blog
 - Hexo version observed: `8.1.2`
 - Theme: NexT, configured from `themes/next/_config.yml`
@@ -25,7 +25,7 @@ This document tells future agents how to work on this Hexo blog project without 
 
 ## Common Commands
 
-Run commands from `D:\viewu_blog`.
+Run commands from the repository root.
 
 - Check Hexo and config: `npx hexo version`
 - Build and verify generated links/pages: `npm run check`
