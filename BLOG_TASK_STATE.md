@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-13, Asia/Taipei
+Last updated: 2026-08-14, Asia/Taipei
 
 ## Current Objective
 
@@ -66,6 +66,18 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-08-14 - Performance: eliminate overseas CDN dependencies
+
+- Disabled `motion` (`themes/next/_config.yml`), removing the animate.css + motion.js entrance-animation requests.
+- Self-hosted all third-party assets into `source/lib/` (removing every `cdnjs.cloudflare.com` / `cdn.jsdelivr.net` dependency, which are slow/unreliable for mainland-China readers):
+  - `fontawesome@6.5.1` css + 4 woff2 webfonts → `/lib/fontawesome/`
+  - `next-theme-pjax@0.6.0` → `/lib/pjax/pjax.min.js`
+  - `animejs@3.2.1` → `/lib/anime/anime.min.js`
+  - `aplayer@1.10.1` css+js and `meting@2.0.1` js → `/lib/aplayer/`
+- Overrode vendor URLs in `themes/next/_config.yml` (`vendors.fontawesome/pjax/anime`) to local `/lib/...` paths; set `preconnect: false`.
+- Music player (`_macro/sidebar.njk`) kept but optimized: local assets, `defer` scripts, `preload="none"`, theme color corrected `#42aaf0` → `#002fa7`.
+- Verified `cdnjs`/`jsdelivr` references are 0 in generated HTML; `npm run check` passes.
 
 ### 2026-08-13 - Klein blue minimal visual redesign (macOS)
 
