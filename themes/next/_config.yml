@@ -344,7 +344,7 @@ calendar:
 
 # Preload styles and preconnect CDN for fonts and plugins.
 # For more information: https://www.w3.org/TR/resource-hints/#preconnect
-preconnect: true
+preconnect: false
 
 # Set the text alignment in posts / pages.
 text_align:
@@ -632,7 +632,7 @@ quicklink:
 # Use Animate.css to animate everything.
 # For more information: https://animate.style
 motion:
-  enable: true
+  enable: false
   async: false
   transition:
     # All available transition variants: https://theme-next.js.org/animate/
@@ -927,6 +927,10 @@ vendors:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}
   # custom_cdn_url: https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${cdnjs_file}
   custom_cdn_url:
+  # 本地化第三方库（去掉海外 CDN 依赖，文件在 source/lib/ 下）
+  fontawesome: /lib/fontawesome/css/all.min.css
+  pjax: /lib/pjax/pjax.min.js
+  anime: /lib/anime/anime.min.js
 
 # Assets
 # Accelerate delivery of static files using a CDN

@@ -8,10 +8,10 @@
     <div class="sidebar-inner {% if display_toc %}sidebar-nav-active sidebar-toc-active{% else %}sidebar-overview-active{% endif %}">
 
           <!-- require APlayer -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-          <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+          <link rel="stylesheet" href="/lib/aplayer/APlayer.min.css">
+          <script defer src="/lib/aplayer/APlayer.min.js"></script>
           <!-- require MetingJS-->
-          <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+          <script defer src="/lib/aplayer/Meting.min.js"></script>
           <!--网易云-->
           <meting-js
             server="netease"
@@ -22,10 +22,10 @@
             list-folded="true"
             autoplay="false"
             volume="0.4"
-            theme="#42aaf0"
+            theme="#002fa7"
             order="random"
       	  loop="all"
-            preload="auto"
+            preload="none"
             mutex="true">
           </meting-js>
 
