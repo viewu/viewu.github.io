@@ -63,7 +63,7 @@ Current source posts include:
   - Tags: `实习记录`, `AI Coding`, `工程实践`
   - Assets: `source/images/internship-weekly-01-read-code-after-project-runs/` (`1.webp` cover plus body images `2.webp`-`6.webp`)
 - `internship-record-02-understanding-real-engineering.md`
-  - Title: `第一次做开发实习，我是怎么从“只会写代码”开始理解真实工程的`
+  - Title: `实习记录02：从“只会写代码”到开始理解真实工程。`
   - Date: `2026-08-15 13:15:13`
   - Description: `实习记录第二篇：从 CLI、API、异步、CI/CD 到真实工程协作的理解变化。`
   - Categories: `工作`
