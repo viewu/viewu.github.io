@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-15, Asia/Taipei
+Last updated: 2026-08-16, Asia/Taipei
 
 ## Current Objective
 
@@ -73,6 +73,16 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-08-16 - UI refinements: intro, sidebar, about, typography
+
+- Avatar: removed cursor-rotation (`rotated: false`), added subtle hover scale (1.05).
+- Sidebar description replaced long Chinese text with two lines "YOLO" / "an optimistic pessimist"; hidden the site-state "分类" count via CSS.
+- Header menu: commented out the "分类" item (首页/关于/标签/归档 remain).
+- Homepage intro (`index.njk`): removed the redundant description paragraph, switched to an open large-title layout (no card; Klein-blue kicker + blue left rule on the headline).
+- About page (`source/about/index.md`): rewrote with personal positioning ("初级技术用户", YOLO motto) and all five sections (工作/成长/写作/音乐/运动) as links; updated `_config.yml` description to "初级技术用户".
+- Post/page typography (`source/_data/styles.styl`): body ink `#1a1a1a`, line-height 1.85, clearer heading hierarchy, Klein-blue links, styled blockquotes; embedded images constrained (`max-width: 80%`, centered, `height: auto`).
+- `npm run check` passes. Branch: `feature/ui-refinements`.
 
 ### 2026-08-15 - Homepage: five-section navigation + section hero images
 
