@@ -806,3 +806,78 @@ h1, h2, h3, h4, h5, h6,
 
   .toggle-line
     background: #1a1a1a
+
+// ---- 首页五个板块卡片（极简文字卡）----
+.home-sections
+  display: grid
+  grid-template-columns: repeat(5, minmax(0, 1fr))
+  gap: 14px
+  margin-bottom: 42px
+
+.home-section-card
+  display: block
+  background: #ffffff
+  border: 1px solid #eeeeee
+  border-radius: 2px
+  transition: border-color 0.15s ease
+
+.home-section-card:hover
+  border-color: #002fa7
+
+.home-section-icon
+  display: block
+  margin-bottom: 10px
+  color: #002fa7
+  font-size: 1.25em
+  line-height: 1
+
+.home-section-body
+  padding: 18px 16px
+
+.home-section-body h3
+  margin: 0 0 6px
+  color: #1a1a1a
+  font-size: 1.05em
+
+.home-section-body p
+  margin: 0
+  color: #6b6b6b
+  font-size: 0.8em
+  line-height: 1.5
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+@media (max-width: 767px)
+  .home-sections
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 10px
+
+// ---- 板块页顶部 hero 大图 ----
+.section-hero
+  max-width: 380px
+  margin: 0 auto 24px
+
+.section-hero img
+  display: block
+  width: 100%
+  height: auto
+  border-radius: 2px
+
+// ---- 分类页居中标题 ----
+.category-title-wrap
+  text-align: center
+  margin-bottom: 20px
+
+.category-title
+  margin: 0
+  color: #1a1a1a
+  font-size: 1.5em
+
+// 分类页白卡（与音乐/运动页一致，让 hero 图与背景融为一体）
+.posts-collapse .post-block
+  background: #ffffff
+  border: 1px solid #eeeeee
+  border-radius: 2px
+  box-shadow: none
+  padding: 28px 30px 16px

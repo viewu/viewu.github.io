@@ -14,71 +14,42 @@
     <a class="home-intro-link" href="{{ url_for('/about/') }}">了解更多关于我 <i class="fa fa-arrow-right"></i></a>
   </section>
 
-  <section class="home-topics" aria-label="内容主题">
-    <a class="home-topic-card" href="{{ url_for('/categories/工作/') }}">
-      <span class="home-topic-index">01 / 工作</span>
-      <h3>AI 工作流</h3>
-      <p>记录 Codex、ChatGPT 和工具协作如何进入真实任务。</p>
-      <span class="home-topic-arrow"><i class="fa fa-arrow-right"></i></span>
+  <section class="home-sections" aria-label="网站板块">
+    <a class="home-section-card" href="{{ url_for('/categories/工作/') }}">
+      <div class="home-section-body">
+        <i class="fa fa-briefcase home-section-icon"></i>
+        <h3>工作</h3>
+        <p>AI 工作流</p>
+      </div>
     </a>
-    <a class="home-topic-card" href="{{ url_for('/categories/成长/') }}">
-      <span class="home-topic-index">02 / 成长</span>
-      <h3>学习与自我观察</h3>
-      <p>记录学习、拖延、注意力，以及逐渐理解自己的过程。</p>
-      <span class="home-topic-arrow"><i class="fa fa-arrow-right"></i></span>
+    <a class="home-section-card" href="{{ url_for('/categories/成长/') }}">
+      <div class="home-section-body">
+        <i class="fa fa-seedling home-section-icon"></i>
+        <h3>成长</h3>
+        <p>学习与自我观察</p>
+      </div>
     </a>
-    <a class="home-topic-card" href="{{ url_for('/categories/写作/') }}">
-      <span class="home-topic-index">03 / 写作</span>
-      <h3>文字实验</h3>
-      <p>科幻创作和其他不属于工作笔记的文字实验。</p>
-      <span class="home-topic-arrow"><i class="fa fa-arrow-right"></i></span>
+    <a class="home-section-card" href="{{ url_for('/categories/写作/') }}">
+      <div class="home-section-body">
+        <i class="fa fa-feather home-section-icon"></i>
+        <h3>写作</h3>
+        <p>文字实验</p>
+      </div>
     </a>
-  </section>
-
-  <section class="home-start-here" aria-labelledby="home-start-title">
-    <div class="home-section-heading">
-      <p class="home-intro-kicker">START HERE</p>
-      <h2 id="home-start-title">从这里开始</h2>
-      <p>如果你第一次来到这里，可以先读这几篇文章。</p>
-    </div>
-    <div class="home-featured-list">
-      <a href="/2026/06/30/resume-overwritten-learning-codex/" class="home-featured-item">
-        <span>01</span>
-        <strong>简历被 AI 覆盖之后，我重新学会了怎么使用 Codex</strong>
-        <i class="fa fa-arrow-right"></i>
-      </a>
-      <a href="/2026/07/02/ai-coding-context-tools-verification/" class="home-featured-item">
-        <span>02</span>
-        <strong>AI Coding 不只是“帮我写东西”</strong>
-        <i class="fa fa-arrow-right"></i>
-      </a>
-      <a href="/2026/07/08/tasks-not-system-procrastination/" class="home-featured-item">
-        <span>03</span>
-        <strong>任务还没变成系统，人就容易拖延</strong>
-        <i class="fa fa-arrow-right"></i>
-      </a>
-    </div>
-  </section>
-
-  <section class="home-video-section" aria-labelledby="home-video-title">
-    <div class="home-section-heading">
-      <p class="home-intro-kicker">BILIBILI</p>
-      <h2 id="home-video-title">精选视频</h2>
-      <p>在哔哩哔哩观看我的视频记录。</p>
-    </div>
-    <div class="home-video-list">
-      <a href="https://www.bilibili.com/video/BV13DbTzYEQ9/" class="home-video-item" target="_blank" rel="noopener">
-        <span>VIDEO 01</span>
-        <strong>吉他弹唱-童言无忌（王以太）</strong>
-        <i class="fa fa-external-link"></i>
-      </a>
-      <a href="https://www.bilibili.com/video/BV1v4faBcEhR/" class="home-video-item" target="_blank" rel="noopener">
-        <span>VIDEO 02</span>
-        <strong>吉他弹唱-玲子4.0（叶霁晨）</strong>
-        <i class="fa fa-external-link"></i>
-      </a>
-    </div>
-    <a class="home-intro-link" href="https://space.bilibili.com/496157043" target="_blank" rel="noopener">访问我的哔哩哔哩主页 <i class="fa fa-arrow-right"></i></a>
+    <a class="home-section-card" href="{{ url_for('/music/') }}">
+      <div class="home-section-body">
+        <i class="fa fa-music home-section-icon"></i>
+        <h3>音乐</h3>
+        <p>专辑与推荐</p>
+      </div>
+    </a>
+    <a class="home-section-card" href="{{ url_for('/sports/') }}">
+      <div class="home-section-body">
+        <i class="fa fa-dumbbell home-section-icon"></i>
+        <h3>运动</h3>
+        <p>训练与分享</p>
+      </div>
+    </a>
   </section>
   <div class="home-latest-heading">
     <p class="home-intro-kicker">LATEST NOTES</p>
