@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-14, Asia/Taipei
+Last updated: 2026-08-15, Asia/Taipei
 
 ## Current Objective
 
@@ -66,6 +66,18 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-08-15 - Homepage: five-section navigation + section hero images
+
+- Restructured the homepage (`themes/next/layout/index.njk`) to: intro + five section cards (工作/成长/写作/音乐/运动, each a Font Awesome icon + name + one-line subtitle) + latest posts. Removed the featured-posts, Bilibili-video, and old three topic-card sections.
+- The five cards link to three category pages plus two new pages:
+  - `source/music/index.md` and `source/sports/index.md` (placeholder "正在建设中" pages).
+- Section pages now share a consistent layout — centered title + hero image + content/list:
+  - Category pages (`themes/next/layout/category.njk`) render the category name as a centered title, a hero image, then the collapse post list, all inside a white card (so the white line-art blends with the card).
+  - Music/sports pages use the same `.section-hero` block.
+- Five AI-generated black-and-white line-art images (one per section) converted to WebP (`hero-*.webp`, 1000px wide) in `source/images/sections/`. PNG sources live outside the repo in `~/Desktop/blog_pic`.
+- New CSS in `source/_data/styles.styl`: `.home-sections`/`.home-section-card`/`.home-section-icon` (cards), `.section-hero` (hero), `.category-title` (centered title), `.posts-collapse .post-block` (white card).
+- `npm run check` passes. Branch: `feature/homepage-5-sections`.
 
 ### 2026-08-14 - Performance: eliminate overseas CDN dependencies
 
