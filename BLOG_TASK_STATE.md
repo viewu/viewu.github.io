@@ -62,6 +62,13 @@ Current source posts include:
   - Categories: `工作`
   - Tags: `实习记录`, `AI Coding`, `工程实践`
   - Assets: `source/images/internship-weekly-01-read-code-after-project-runs/` (`1.webp` cover plus body images `2.webp`-`6.webp`)
+- `internship-record-02-understanding-real-engineering.md`
+  - Title: `实习记录02：从“只会写代码”到开始理解真实工程。`
+  - Date: `2026-08-15 13:15:13`
+  - Description: `实习记录第二篇：从 CLI、API、异步、CI/CD 到真实工程协作的理解变化。`
+  - Categories: `工作`
+  - Tags: `实习记录`, `工程实践`, `AI Coding`
+  - Assets: `source/images/internship-record-02-understanding-real-engineering/` (`1.webp` cover plus body images `2.webp`-`7.webp`)
 
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
@@ -78,6 +85,14 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Five AI-generated black-and-white line-art images (one per section) converted to WebP (`hero-*.webp`, 1000px wide) in `source/images/sections/`. PNG sources live outside the repo in `~/Desktop/blog_pic`.
 - New CSS in `source/_data/styles.styl`: `.home-sections`/`.home-section-card`/`.home-section-icon` (cards), `.section-hero` (hero), `.category-title` (centered title), `.posts-collapse .post-block` (white card).
 - `npm run check` passes. Branch: `feature/homepage-5-sections`.
+
+### 2026-08-15
+
+- Imported `internship-record-02-understanding-real-engineering.md` from the 公众号 writing folder.
+- Added front matter with `categories: 工作` and tags `实习记录`, `工程实践`, `AI Coding`.
+- Converted source `1.png`-`7.png` to lossless WebP in `source/images/internship-record-02-understanding-real-engineering/`; `1.webp` is the cover and `2.webp`-`7.webp` are body images.
+- Replaced stale source-local image paths that pointed at an older draft directory with site-absolute `/images/internship-record-02-understanding-real-engineering/` WebP paths.
+- Local `npm run check` passed before publishing.
 
 ### 2026-08-14 - Performance: eliminate overseas CDN dependencies
 
