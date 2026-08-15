@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-14, Asia/Taipei
+Last updated: 2026-08-15, Asia/Taipei
 
 ## Current Objective
 
@@ -62,10 +62,25 @@ Current source posts include:
   - Categories: `工作`
   - Tags: `实习记录`, `AI Coding`, `工程实践`
   - Assets: `source/images/internship-weekly-01-read-code-after-project-runs/` (`1.webp` cover plus body images `2.webp`-`6.webp`)
+- `internship-record-02-understanding-real-engineering.md`
+  - Title: `第一次做开发实习，我是怎么从“只会写代码”开始理解真实工程的`
+  - Date: `2026-08-15 13:15:13`
+  - Description: `实习记录第二篇：从 CLI、API、异步、CI/CD 到真实工程协作的理解变化。`
+  - Categories: `工作`
+  - Tags: `实习记录`, `工程实践`, `AI Coding`
+  - Assets: `source/images/internship-record-02-understanding-real-engineering/` (`1.webp` cover plus body images `2.webp`-`7.webp`)
 
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-08-15
+
+- Imported `internship-record-02-understanding-real-engineering.md` from the 公众号 writing folder.
+- Added front matter with `categories: 工作` and tags `实习记录`, `工程实践`, `AI Coding`.
+- Converted source `1.png`-`7.png` to lossless WebP in `source/images/internship-record-02-understanding-real-engineering/`; `1.webp` is the cover and `2.webp`-`7.webp` are body images.
+- Replaced stale source-local image paths that pointed at an older draft directory with site-absolute `/images/internship-record-02-understanding-real-engineering/` WebP paths.
+- Local `npm run check` passed before publishing.
 
 ### 2026-08-14 - Performance: eliminate overseas CDN dependencies
 
