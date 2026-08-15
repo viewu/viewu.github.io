@@ -10,7 +10,7 @@ The user wants ongoing assistance maintaining, modifying, rebuilding, and publis
 
 ## Current Project Snapshot
 
-- Workspace: `D:\viewu_blog`
+- Workspace: `~/Desktop/blog/viewu.github.io` (macOS; formerly `D:\viewu_blog` on Windows)
 - Framework: Hexo static blog
 - Hexo: `8.1.2`
 - Theme: NexT `8.19.2`
@@ -62,6 +62,13 @@ Current source posts include:
   - Categories: `工作`
   - Tags: `实习记录`, `AI Coding`, `工程实践`
   - Assets: `source/images/internship-weekly-01-read-code-after-project-runs/` (`1.webp` cover plus body images `2.webp`-`6.webp`)
+- `internship-record-02-understanding-real-engineering.md`
+  - Title: `第一次做开发实习，我是怎么从“只会写代码”开始理解真实工程的`
+  - Date: `2026-08-15 13:15:13`
+  - Description: `实习记录第二篇：从 CLI、API、异步、CI/CD 到真实工程协作的理解变化。`
+  - Categories: `工作`
+  - Tags: `实习记录`, `工程实践`, `AI Coding`
+  - Assets: `source/images/internship-record-02-understanding-real-engineering/` (`1.webp` cover plus body images `2.webp`-`7.webp`)
 
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
@@ -74,6 +81,30 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Converted source `1.png`-`7.png` to lossless WebP in `source/images/internship-record-02-understanding-real-engineering/`; `1.webp` is the cover and `2.webp`-`7.webp` are body images.
 - Replaced stale source-local image paths that pointed at an older draft directory with site-absolute `/images/internship-record-02-understanding-real-engineering/` WebP paths.
 - Local `npm run check` passed before publishing.
+
+### 2026-08-14 - Performance: eliminate overseas CDN dependencies
+
+- Disabled `motion` (`themes/next/_config.yml`), removing the animate.css + motion.js entrance-animation requests.
+- Self-hosted all third-party assets into `source/lib/` (removing every `cdnjs.cloudflare.com` / `cdn.jsdelivr.net` dependency, which are slow/unreliable for mainland-China readers):
+  - `fontawesome@6.5.1` css + 4 woff2 webfonts → `/lib/fontawesome/`
+  - `next-theme-pjax@0.6.0` → `/lib/pjax/pjax.min.js`
+  - `animejs@3.2.1` → `/lib/anime/anime.min.js`
+  - `aplayer@1.10.1` css+js and `meting@2.0.1` js → `/lib/aplayer/`
+- Overrode vendor URLs in `themes/next/_config.yml` (`vendors.fontawesome/pjax/anime`) to local `/lib/...` paths; set `preconnect: false`.
+- Music player (`_macro/sidebar.njk`) kept but optimized: local assets, `defer` scripts, `preload="none"`, theme color corrected `#42aaf0` → `#002fa7`.
+- Verified `cdnjs`/`jsdelivr` references are 0 in generated HTML; `npm run check` passes.
+
+### 2026-08-13 - Klein blue minimal visual redesign (macOS)
+
+- Development moved from Windows (`D:\viewu_blog`) to macOS (`~/Desktop/blog/viewu.github.io`); Node 22 installed via nvm (project pins `>=22 <23`), deps installed with `npm ci`.
+- Full "极简安静" visual repaint on branch `feature/klein-blue-redesign`, keeping all layout structure unchanged:
+  - Palette: light-gray page `#fafafa` + white cards + near-black text `#1a1a1a` + grays `#6b6b6b`/`#9e9e9e` + hairlines `#eeeeee`; single accent Klein blue `#002fa7` (3px top `headband`, home-intro left rule, link hovers).
+  - Typography: system serif headings (`Songti SC`/`STSong`/`SimSun`) + system sans body, zero webfont loading.
+  - De-decorated: removed card shadows, gradients, rounded corners, and hover lift; hairlines + whitespace only.
+  - `.site-brand-container` (sidebar brand panel) changed from the `--theme-color` solid block to white + hairline.
+- Social icons reworked to the CSS `mask` technique: `source/images/social/*.svg` reverted to original brand fills (Bilibili `#00AEEC`, NetEase `#D43C33`, WeChat `#07C160`, Xiaohongshu `#FF2442`); `themes/next/layout/_partials/sidebar/site-overview.njk` renders `<span class="social-brand-icon">` instead of `<img>`; `source/_data/styles.styl` colors them Klein blue at rest and brand color on hover via `background-color` + `mask-image`. Card stays white + hairline; hover changes only the icon.
+- All style changes are additive overrides in `source/_data/styles.styl` (the `custom_file_path.style` inject point); the vendored NexT theme is otherwise untouched.
+- `npm run check` passes (image audit + build + generated-site verification).
 
 ### 2026-08-05 - July Reflection upload
 
