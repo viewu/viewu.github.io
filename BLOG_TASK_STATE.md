@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-05, Asia/Taipei
+Last updated: 2026-08-15, Asia/Taipei
 
 ## Current Objective
 
@@ -66,6 +66,14 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-08-15
+
+- Imported `internship-record-02-understanding-real-engineering.md` from the 公众号 writing folder.
+- Added front matter with `categories: 工作` and tags `实习记录`, `工程实践`, `AI Coding`.
+- Converted source `1.png`-`7.png` to lossless WebP in `source/images/internship-record-02-understanding-real-engineering/`; `1.webp` is the cover and `2.webp`-`7.webp` are body images.
+- Replaced stale source-local image paths that pointed at an older draft directory with site-absolute `/images/internship-record-02-understanding-real-engineering/` WebP paths.
+- Local `npm run check` passed before publishing.
 
 ### 2026-08-05 - July Reflection upload
 
