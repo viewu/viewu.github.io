@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 四种兴趣，让生活不只有一个方向
-date: 2026-08-03 16:49:07
+date: 2026-08-16 16:56:33
 description: 一篇关于四种兴趣、生活重心、身份标签与让生活保持多方向感的反思。
 cover: /images/four-interests-life-more-than-one-direction/1.webp
 categories:

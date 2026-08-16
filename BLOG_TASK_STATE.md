@@ -64,7 +64,7 @@ Current source posts include:
   - Assets: `source/images/internship-weekly-01-read-code-after-project-runs/` (`1.webp` cover plus body images `2.webp`-`6.webp`)
 - `four-interests-life-more-than-one-direction.md`
   - Title: `四种兴趣，让生活不只有一个方向`
-  - Date: `2026-08-03 16:49:07`
+  - Date: `2026-08-16 16:56:33`
   - Description: `一篇关于四种兴趣、生活重心、身份标签与让生活保持多方向感的反思。`
   - Categories: `成长`
   - Tags: `SelfGrowth`, `兴趣探索`, `生活方式`
