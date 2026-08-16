@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-15, Asia/Taipei
+Last updated: 2026-08-16, Asia/Taipei
 
 ## Current Objective
 
@@ -62,6 +62,13 @@ Current source posts include:
   - Categories: `工作`
   - Tags: `实习记录`, `AI Coding`, `工程实践`
   - Assets: `source/images/internship-weekly-01-read-code-after-project-runs/` (`1.webp` cover plus body images `2.webp`-`6.webp`)
+- `four-interests-life-more-than-one-direction.md`
+  - Title: `四种兴趣，让生活不只有一个方向`
+  - Date: `2026-08-03 16:49:07`
+  - Description: `一篇关于四种兴趣、生活重心、身份标签与让生活保持多方向感的反思。`
+  - Categories: `成长`
+  - Tags: `SelfGrowth`, `兴趣探索`, `生活方式`
+  - Assets: `source/images/four-interests-life-more-than-one-direction/` (`1.webp` cover plus body images `1.webp`-`5.webp`)
 - `internship-record-02-understanding-real-engineering.md`
   - Title: `实习记录02：从“只会写代码”到开始理解真实工程。`
   - Date: `2026-08-15 13:15:13`
