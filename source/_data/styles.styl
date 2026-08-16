@@ -806,3 +806,182 @@ h1, h2, h3, h4, h5, h6,
 
   .toggle-line
     background: #1a1a1a
+
+// ---- 首页五个板块卡片（极简文字卡）----
+.home-sections
+  display: grid
+  grid-template-columns: repeat(5, minmax(0, 1fr))
+  gap: 14px
+  margin-bottom: 42px
+
+.home-section-card
+  display: block
+  background: #ffffff
+  border: 1px solid #eeeeee
+  border-radius: 2px
+  transition: border-color 0.15s ease
+
+.home-section-card:hover
+  border-color: #002fa7
+
+.home-section-icon
+  display: block
+  margin-bottom: 10px
+  color: #002fa7
+  font-size: 1.25em
+  line-height: 1
+
+.home-section-body
+  padding: 18px 16px
+
+.home-section-body h3
+  margin: 0 0 6px
+  color: #1a1a1a
+  font-size: 1.05em
+
+.home-section-body p
+  margin: 0
+  color: #6b6b6b
+  font-size: 0.8em
+  line-height: 1.5
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+@media (max-width: 767px)
+  .home-sections
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 10px
+
+// ---- 板块页顶部 hero 大图 ----
+.section-hero
+  max-width: 380px
+  margin: 0 auto 24px
+
+.section-hero img
+  display: block
+  width: 100%
+  height: auto
+  border-radius: 2px
+
+// ---- 分类页居中标题 ----
+.category-title-wrap
+  text-align: center
+  margin-bottom: 20px
+
+.category-title
+  margin: 0
+  color: #1a1a1a
+  font-size: 1.5em
+
+// 侧边栏描述两行显示
+.site-description-line
+  display: block
+
+// 头像 hover 轻微放大
+.site-author-image
+  transition: transform 0.2s ease
+
+.site-author-image:hover
+  transform: scale(1.05)
+
+// ---- 首页引言升级：开放式大字标题 ----
+.home-intro
+  background: transparent
+  border: none
+  box-shadow: none
+  padding: 36px 0 0
+  margin-bottom: 26px
+
+.home-intro-kicker
+  color: #002fa7
+  letter-spacing: 0.14em
+
+.home-intro h2
+  margin: 12px 0 16px
+  padding-left: 18px
+  border-left: 3px solid #002fa7
+  color: #1a1a1a
+  font-size: 2.2em
+  line-height: 1.35
+
+.home-intro-link
+  margin-left: 21px
+
+@media (max-width: 767px)
+  .home-intro
+    padding-top: 24px
+    margin-bottom: 18px
+
+  .home-intro h2
+    font-size: 1.6em
+    padding-left: 14px
+
+// ---- 正文排版升级（文章 + 关于页）----
+.posts-expand .post-body
+  color: #1a1a1a
+  font-size: 1em
+  line-height: 1.85
+  letter-spacing: 0.01em
+
+.posts-expand .post-body p
+  margin: 0 0 1.1em
+
+.posts-expand .post-body h2,
+.posts-expand .post-body h3,
+.posts-expand .post-body h4,
+.posts-expand .post-body h5,
+.posts-expand .post-body h6
+  color: #1a1a1a
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-weight: 500
+  line-height: 1.4
+
+.posts-expand .post-body h2
+  font-size: 1.5em
+  margin: 1.8em 0 0.8em
+
+.posts-expand .post-body h3
+  font-size: 1.22em
+  margin: 1.5em 0 0.6em
+
+.posts-expand .post-body h4
+  font-size: 1.08em
+  margin: 1.3em 0 0.5em
+
+.posts-expand .post-body blockquote
+  margin: 1.2em 0
+  padding: 0.6em 1.2em
+  border-left: 3px solid #002fa7
+  background: #f7f7f7
+  color: #555
+
+.posts-expand .post-body a
+  color: #002fa7
+  border-bottom: 1px solid rgba(0, 47, 167, 0.25)
+
+.posts-expand .post-body a:hover
+  border-bottom-color: #002fa7
+
+.posts-expand .post-body li
+  margin-bottom: 0.4em
+
+// 内嵌图片：不溢出、比例正确、居中、适中大小
+.posts-expand .post-body img
+  max-width: 80%
+  height: auto
+  display: block
+  margin: 1.4em auto
+  border-radius: 2px
+
+// 侧边栏去掉「分类」统计项
+.site-state-categories
+  display: none
+
+// 分类页白卡（与音乐/运动页一致，让 hero 图与背景融为一体）
+.posts-collapse .post-block
+  background: #ffffff
+  border: 1px solid #eeeeee
+  border-radius: 2px
+  box-shadow: none
+  padding: 28px 30px 16px

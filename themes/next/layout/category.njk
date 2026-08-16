@@ -8,24 +8,29 @@
 
 {% block content %}
 
-  {######################}
-  {### CATEGORY BLOCK ###}
-  {######################}
   <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">
-          {{- page.category }}
-          <small>{{ __('title.category') }}</small>
-        </h1>
-      </div>
+    <div class="category-title-wrap">
+      <h1 class="category-title">{{ page.category }}</h1>
+    </div>
 
+    {%- if page.category == '工作' %}
+    <div class="section-hero">
+      <img src="{{ url_for('/images/sections/hero-work.webp') }}" alt="工作" loading="lazy" decoding="async" width="1000" height="1500">
+    </div>
+    {%- elif page.category == '成长' %}
+    <div class="section-hero">
+      <img src="{{ url_for('/images/sections/hero-growth.webp') }}" alt="成长" loading="lazy" decoding="async" width="1000" height="1500">
+    </div>
+    {%- elif page.category == '写作' %}
+    <div class="section-hero">
+      <img src="{{ url_for('/images/sections/hero-writing.webp') }}" alt="写作" loading="lazy" decoding="async" width="1000" height="1500">
+    </div>
+    {%- endif %}
+
+    <div class="post-content">
       {{ post_template.render(page.posts) }}
     </div>
   </div>
-  {##########################}
-  {### END CATEGORY BLOCK ###}
-  {##########################}
 
   {%- include '_partials/pagination.njk' -%}
 

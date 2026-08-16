@@ -81,6 +81,28 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-08-16 - UI refinements: intro, sidebar, about, typography
+
+- Avatar: removed cursor-rotation (`rotated: false`), added subtle hover scale (1.05).
+- Sidebar description replaced long Chinese text with two lines "YOLO" / "an optimistic pessimist"; hidden the site-state "分类" count via CSS.
+- Header menu: commented out the "分类" item (首页/关于/标签/归档 remain).
+- Homepage intro (`index.njk`): removed the redundant description paragraph, switched to an open large-title layout (no card; Klein-blue kicker + blue left rule on the headline).
+- About page (`source/about/index.md`): rewrote with personal positioning ("初级技术用户", YOLO motto) and all five sections (工作/成长/写作/音乐/运动) as links; updated `_config.yml` description to "初级技术用户".
+- Post/page typography (`source/_data/styles.styl`): body ink `#1a1a1a`, line-height 1.85, clearer heading hierarchy, Klein-blue links, styled blockquotes; embedded images constrained (`max-width: 80%`, centered, `height: auto`).
+- `npm run check` passes. Branch: `feature/ui-refinements`.
+
+### 2026-08-15 - Homepage: five-section navigation + section hero images
+
+- Restructured the homepage (`themes/next/layout/index.njk`) to: intro + five section cards (工作/成长/写作/音乐/运动, each a Font Awesome icon + name + one-line subtitle) + latest posts. Removed the featured-posts, Bilibili-video, and old three topic-card sections.
+- The five cards link to three category pages plus two new pages:
+  - `source/music/index.md` and `source/sports/index.md` (placeholder "正在建设中" pages).
+- Section pages now share a consistent layout — centered title + hero image + content/list:
+  - Category pages (`themes/next/layout/category.njk`) render the category name as a centered title, a hero image, then the collapse post list, all inside a white card (so the white line-art blends with the card).
+  - Music/sports pages use the same `.section-hero` block.
+- Five AI-generated black-and-white line-art images (one per section) converted to WebP (`hero-*.webp`, 1000px wide) in `source/images/sections/`. PNG sources live outside the repo in `~/Desktop/blog_pic`.
+- New CSS in `source/_data/styles.styl`: `.home-sections`/`.home-section-card`/`.home-section-icon` (cards), `.section-hero` (hero), `.category-title` (centered title), `.posts-collapse .post-block` (white card).
+- `npm run check` passes. Branch: `feature/homepage-5-sections`.
+
 ### 2026-08-15
 
 - Imported `internship-record-02-understanding-real-engineering.md` from the 公众号 writing folder.
