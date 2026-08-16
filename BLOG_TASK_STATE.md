@@ -81,6 +81,15 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+
+### 2026-08-16 - Four interests growth article upload
+
+- Imported `four-interests-life-more-than-one-direction.md` from the 公众号 writing folder.
+- Added front matter with `categories: 成长` and tags `SelfGrowth`, `兴趣探索`, `生活方式`.
+- Converted source `1.png`-`5.png` to lossless WebP in `source/images/four-interests-life-more-than-one-direction/`; `1.webp` is the cover.
+- Replaced two external jsDelivr image blocks and three source-local Windows image paths with site-absolute `/images/four-interests-life-more-than-one-direction/` WebP paths.
+- Local `npm run check` passed before publishing.
+
 ### 2026-08-16 - UI refinements: intro, sidebar, about, typography
 
 - Avatar: removed cursor-rotation (`rotated: false`), added subtle hover scale (1.05).
