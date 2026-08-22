@@ -77,9 +77,27 @@ Current source posts include:
   - Tags: `实习记录`, `工程实践`, `AI Coding`
   - Assets: `source/images/internship-record-02-understanding-real-engineering/` (`1.webp` cover plus body images `2.webp`-`7.webp`)
 
+- `beyond-weight-bmi-body-fat-bmr-tdee.md`
+  - Title: `体重之外：看懂 BMI、体脂率、基础代谢和 TDEE`
+  - Date: `2026-08-22 13:51:47`
+  - Description: `一篇关于体重、BMI、体脂率、基础代谢、TDEE 与健身数据理解方式的整理。`
+  - Categories: `运动`
+  - Tags: `运动`, `健身`, `身体数据`
+  - Assets: `source/images/beyond-weight-bmi-body-fat-bmr-tdee/` (`1.webp` cover plus body images `2.webp`, `3.webp`, `4.webp`, `5.webp`, `6.webp`)
+
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+
+### 2026-08-22 - Fitness metrics sports article upload
+
+- Imported `beyond-weight-bmi-body-fat-bmr-tdee.md` from the 公众号 writing folder; corrected the user-provided root from `D:\viewu\_writing` to the actual `D:\viewu_writing` path.
+- Added front matter with `categories: 运动` and tags `运动`, `健身`, `身体数据`.
+- Used the source Markdown LastWriteTime as the publish date: `2026-08-22 13:51:47`.
+- Converted source `1.png`-`6.png` to high-quality WebP in `source/images/beyond-weight-bmi-body-fat-bmr-tdee/`; `1.webp` is the cover and `2.webp`, `3.webp`, `4.webp`, `5.webp`, `6.webp` are body images. Used lossy WebP for this new article to keep the generated site within the 55 MiB budget while leaving the original writing-folder PNGs untouched.
+- Replaced local relative image references with site-absolute `/images/beyond-weight-bmi-body-fat-bmr-tdee/` WebP paths.
+- Local `npm run check` passed before publishing.
 
 ### 2026-08-22 - About page social-platform links
 
