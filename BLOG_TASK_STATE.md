@@ -97,7 +97,7 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Includes the concise corrected English recommendations and replaces *Trying Times* with Jay Chou's 《八度空间》.
 - Blog cover copies are optimized to 360×360 WebP (132,336 bytes total); the external 400×400 source package remains unchanged.
 - Extended the generated-site verifier to require the music page, exactly 12 album cards, 《八度空间》, and no *Trying Times* residue.
-- A clean `npm run check` passed. Production deployment was requested on 2026-08-22 and proceeds through the protected-main pull-request workflow.
+- A clean `npm run check` passed. Production deployment succeeded through PR #21 at merge commit `4ecd419`; Pages workflow run `32576803027` succeeded. The live `/music/` returned HTTP 200 with 12 album cards, 《八度空间》 present, and no *Trying Times* residue.
 - Refined the music page hierarchy after local review: restored the shared 380px section Hero, removed the duplicate header description, and placed the introduction once inside Album Notes beneath the Hero before The Collection.
 - Added a music-only 420px Hero width override because the music artwork has substantially narrower internal content than the other 1000×1500 section illustrations; the shared 380px Hero rule remains unchanged elsewhere.
 
