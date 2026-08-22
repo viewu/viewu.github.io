@@ -963,6 +963,26 @@ h1, h2, h3, h4, h5, h6,
 .posts-expand .post-body a:hover
   border-bottom-color: #002fa7
 
+// 关于页复用侧边栏的四个平台入口，并在正文宽度下保持清晰的卡片布局
+.posts-expand .post-body .about-social-links
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 10px
+  margin: 1.2em 0 0
+
+.posts-expand .post-body .about-social-links a
+  min-height: 48px
+  padding: 8px 12px
+  border: 1px solid #eeeeee
+  color: #1a1a1a
+
+.posts-expand .post-body .about-social-links a:hover
+  border-color: #eeeeee
+  color: #002fa7
+
+@media (max-width: 567px)
+  .posts-expand .post-body .about-social-links
+    grid-template-columns: 1fr
+
 .posts-expand .post-body li
   margin-bottom: 0.4em
 

@@ -31,8 +31,33 @@ layout: page
 
 训练计划、动作参考与运动心得，也许还有一些徒步的分享。
 
-## 微信公众号
+## 社交平台
 
-公众号名称：viewu。欢迎通过二维码关注。
+也可以在这些地方找到我。公众号入口会带你前往二维码页面。
 
-[查看公众号二维码](/wechat/)
+<div class="links-of-author about-social-links" aria-label="社交平台">
+  <span class="links-of-author-item">
+    <a href="https://space.bilibili.com/496157043" title="哔哩哔哩" rel="noopener me">
+      <span class="social-brand-icon" aria-hidden="true"></span>
+      <span class="social-brand-label">哔哩哔哩</span>
+    </a>
+  </span>
+  <span class="links-of-author-item">
+    <a href="https://music.163.com/#/artist?id=46702907" title="网易云音乐" rel="noopener me">
+      <span class="social-brand-icon" aria-hidden="true"></span>
+      <span class="social-brand-label">网易云音乐</span>
+    </a>
+  </span>
+  <span class="links-of-author-item">
+    <a href="https://www.xiaohongshu.com/user/profile/64683306000000002a00a3da" title="小红书" rel="noopener me">
+      <span class="social-brand-icon" aria-hidden="true"></span>
+      <span class="social-brand-label">小红书</span>
+    </a>
+  </span>
+  <span class="links-of-author-item">
+    <a href="/wechat/" title="微信公众号">
+      <span class="social-brand-icon" aria-hidden="true"></span>
+      <span class="social-brand-label">微信公众号</span>
+    </a>
+  </span>
+</div>
