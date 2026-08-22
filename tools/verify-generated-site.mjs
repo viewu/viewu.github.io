@@ -39,6 +39,7 @@ if (!existsSync(publicRoot)) {
     'archives/index.html',
     'categories/index.html',
     'tags/index.html',
+    'music/index.html',
     '404.html',
     '2024/04/03/最后的终点/index.html',
     '2026/07/13/gpt-5-6-chatgpt-direction-workflow/index.html'
@@ -58,6 +59,16 @@ if (!existsSync(publicRoot)) {
   }
   if (!indexHtml.includes('type="application/atom+xml"')) {
     failures.push('/index.html: Atom feed autodiscovery link is missing.');
+  }
+
+  const musicHtml = readFileSync(join(publicRoot, 'music', 'index.html'), 'utf8');
+  const albumCardCount = (musicHtml.match(/class="music-album-card"/g) || []).length;
+  if (albumCardCount !== 12) failures.push(`/music/index.html: expected 12 album cards, found ${albumCardCount}.`);
+  if (!musicHtml.includes('album-jay-chou-eight-dimensions')) {
+    failures.push('/music/index.html: 八度空间 album card is missing.');
+  }
+  if (musicHtml.includes('james-blake-trying-times') || musicHtml.includes('Trying Times')) {
+    failures.push('/music/index.html: replaced Trying Times content is still present.');
   }
 
   const robots = readFileSync(join(publicRoot, 'robots.txt'), 'utf8');
