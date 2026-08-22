@@ -1,10 +1,7 @@
 ---
 title: 音乐
-layout: page
+layout: music
 ---
 
-<div class="section-hero">
-  <img src="/images/sections/hero-music.webp" alt="音乐" loading="lazy" decoding="async" width="1000" height="1500">
-</div>
-
-正在建设中，敬请期待。
+我喜欢的专辑，以及它们曾经陪我走过的时间。
+这里不做评分，只记录那些让我反复回到其中的声音。

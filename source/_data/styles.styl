@@ -1005,3 +1005,312 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 2px
   box-shadow: none
   padding: 28px 30px 16px
+
+
+// ============================================================
+// 音乐板块 · 私人专辑档案
+// ============================================================
+.music-page .post-block
+  padding-bottom: 38px
+
+.music-page .post-body
+  overflow: visible
+
+.music-masthead
+  margin: 0 0 46px
+  padding-bottom: 34px
+  border-bottom: 1px solid #eeeeee
+
+.music-page .music-masthead .section-hero
+  max-width: 420px
+
+.music-intro
+  max-width: 570px
+  margin: 0 auto
+  text-align: center
+
+.music-intro > p:not(.music-kicker):not(.music-count)
+  margin: 0 0 14px
+  color: #4a4a4a
+
+.music-kicker
+  margin: 0 0 8px !important
+  color: #002fa7 !important
+  font-size: 0.68em
+  font-weight: 600
+  letter-spacing: 0.16em
+
+.music-count
+  margin: 0 !important
+  color: #9e9e9e !important
+  font-size: 0.82em
+
+.music-library-heading
+  margin-bottom: 24px
+
+.music-page .post-body .music-library-heading h2
+  margin: 0 0 8px
+  font-size: 1.55em
+
+.music-library-heading > p:last-child
+  margin: 0
+  color: #6b6b6b
+  font-size: 0.9em
+
+.music-album-grid
+  display: grid
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+  gap: 18px
+  align-items: start
+
+.music-album-card
+  min-width: 0
+  border: 1px solid #eeeeee
+  background: #ffffff
+  transition: border-color 0.15s ease
+
+.music-album-card:hover
+  border-color: #b8b8b8
+
+.music-album-card[open]
+  grid-column: 1 / -1
+  border-color: #002fa7
+
+.music-album-summary
+  display: block
+  min-width: 0
+  padding: 0
+  cursor: pointer
+  list-style: none
+
+.music-album-summary::-webkit-details-marker
+  display: none
+
+.music-album-summary:focus-visible
+  outline: 2px solid #002fa7
+  outline-offset: 3px
+
+.music-album-cover-frame
+  position: relative
+  display: block
+  aspect-ratio: 1 / 1
+  overflow: hidden
+  background: #f4f4f4
+
+.music-page .post-body .music-album-cover
+  display: block
+  width: 100%
+  max-width: 100%
+  height: 100%
+  margin: 0
+  border-radius: 0
+  object-fit: cover
+  transition: transform 0.25s ease
+
+.music-album-card:not([open]):hover .music-album-cover
+  transform: scale(1.018)
+
+.music-album-copy
+  position: relative
+  display: block
+  min-width: 0
+  padding: 15px 16px 16px
+
+.music-album-title,
+.music-album-meta,
+.music-album-note-preview
+  display: block
+
+.music-album-title
+  overflow: hidden
+  color: #1a1a1a
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-size: 1.03em
+  font-weight: 600
+  line-height: 1.35
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.music-album-meta
+  margin-top: 5px
+  overflow: hidden
+  color: #8a8a8a
+  font-size: 0.76em
+  line-height: 1.45
+  text-overflow: ellipsis
+  white-space: nowrap
+
+.music-album-note-preview
+  display: -webkit-box
+  min-height: 3em
+  margin-top: 11px
+  overflow: hidden
+  color: #4f4f4f
+  font-size: 0.78em
+  line-height: 1.5
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: 2
+
+.music-album-toggle
+  display: flex
+  align-items: center
+  gap: 5px
+  margin-top: 13px
+  color: #002fa7
+  font-size: 0.7em
+  letter-spacing: 0.06em
+
+.music-album-toggle::before
+  content: '+'
+  font-size: 1.15em
+  line-height: 1
+
+.music-album-toggle-open
+  display: none
+
+.music-album-card[open] .music-album-toggle::before
+  content: '−'
+
+.music-album-card[open] .music-album-toggle-closed
+  display: none
+
+.music-album-card[open] .music-album-toggle-open
+  display: inline
+
+.music-album-card[open] .music-album-summary
+  display: grid
+  grid-template-columns: minmax(170px, 220px) minmax(0, 1fr)
+  align-items: center
+
+.music-album-card[open] .music-album-note-preview
+  max-width: 540px
+  min-height: auto
+  -webkit-line-clamp: 3
+
+.music-album-details
+  padding: 26px 28px 28px
+  border-top: 1px solid #eeeeee
+
+.music-album-description
+  display: grid
+  grid-template-columns: 150px minmax(0, 1fr)
+  gap: 20px
+
+.music-album-description > p
+  margin: 0
+
+.music-album-detail-label
+  color: #002fa7
+  font-size: 0.66em
+  font-weight: 600
+  letter-spacing: 0.14em
+
+.music-album-facts
+  grid-column: 2
+  margin-top: 10px !important
+  color: #8a8a8a
+  font-size: 0.78em
+
+.music-album-personal
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 30px
+  margin-top: 28px
+  padding-top: 25px
+  border-top: 1px solid #eeeeee
+
+.music-page .post-body .music-album-personal h3
+  margin: 0 0 12px
+  font-size: 1em
+
+.music-favorite-tracks
+  margin: 0
+  padding-left: 1.35em
+
+.music-favorite-tracks li
+  margin-bottom: 5px !important
+  color: #4a4a4a
+  font-size: 0.88em
+
+.music-page .post-body .music-personal-note
+  margin: 0
+  padding: 0 0 0 15px
+  border-left: 2px solid #002fa7
+  background: transparent
+  color: #1a1a1a
+  font-size: 0.92em
+  line-height: 1.75
+
+.music-album-actions
+  display: flex
+  flex-wrap: wrap
+  gap: 12px
+  margin-top: 28px
+
+.music-page .post-body .music-listen-link,
+.music-page .post-body .music-review-link
+  display: inline-flex
+  align-items: center
+  gap: 8px
+  padding: 8px 12px
+  border: 1px solid #d8d8d8
+  color: #1a1a1a
+  font-size: 0.78em
+  line-height: 1.4
+
+.music-page .post-body .music-listen-link:hover,
+.music-page .post-body .music-review-link:hover
+  border-color: #002fa7
+  color: #002fa7
+
+@media (max-width: 767px)
+  .music-page .post-block
+    padding-right: 18px
+    padding-left: 18px
+
+  .music-masthead
+    margin-bottom: 34px
+    padding-bottom: 26px
+
+  .music-album-grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    gap: 12px
+
+  .music-album-copy
+    padding: 12px
+
+  .music-album-title
+    font-size: 0.95em
+
+  .music-album-note-preview
+    min-height: 2.9em
+    font-size: 0.73em
+
+  .music-album-card[open] .music-album-summary
+    grid-template-columns: 112px minmax(0, 1fr)
+
+  .music-album-card[open] .music-album-note-preview
+    -webkit-line-clamp: 2
+
+  .music-album-details
+    padding: 22px 18px 24px
+
+  .music-album-description
+    grid-template-columns: 1fr
+    gap: 9px
+
+  .music-album-facts
+    grid-column: 1
+    margin-top: 2px !important
+
+  .music-album-personal
+    grid-template-columns: 1fr
+    gap: 24px
+
+@media (prefers-reduced-motion: reduce)
+  .music-album-card,
+  .music-page .post-body .music-album-cover
+    transition: none
+
+  .music-album-card:not([open]):hover .music-album-cover
+    transform: none

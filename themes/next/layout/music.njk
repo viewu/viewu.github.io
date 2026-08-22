@@ -1,0 +1,84 @@
+{% extends 'page.njk' %}
+
+{% block class %}page posts-expand music-page{% endblock %}
+
+{% block content %}
+  <div class="post-block" lang="{{ page.lang }}">
+    {%- include '_partials/page/page-header.njk' -%}
+
+    <div class="post-body music-body">
+      <section class="music-masthead" aria-labelledby="album-notes-title">
+        <div class="section-hero">
+          <img src="{{ url_for('/images/sections/hero-music.webp') }}" alt="音乐板块线稿插画" loading="lazy" decoding="async" width="1000" height="1500">
+        </div>
+        <div class="music-intro">
+          <p class="music-kicker" id="album-notes-title">ALBUM NOTES</p>
+          {{ page.content | safe }}
+          <p class="music-count">{{ site.data.music_albums | length }} 张专辑 · 持续更新</p>
+        </div>
+      </section>
+
+      <section class="music-library" aria-labelledby="album-wall-title">
+        <div class="music-library-heading">
+          <p class="music-kicker">THE COLLECTION</p>
+          <h2 id="album-wall-title">喜欢的专辑</h2>
+          <p>点击任意封面，查看我留下的听歌笔记。</p>
+        </div>
+
+        <div class="music-album-grid">
+          {%- for album in site.data.music_albums %}
+            <details class="music-album-card" id="album-{{ album.slug }}">
+              <summary class="music-album-summary" aria-label="展开 {{ album.title }} 的推荐详情">
+                <span class="music-album-cover-frame">
+                  <img class="music-album-cover" src="{{ url_for(album.cover) }}" alt="{{ album.title }} — {{ album.artist }} 专辑封面" loading="lazy" decoding="async" width="360" height="360">
+                </span>
+                <span class="music-album-copy">
+                  <span class="music-album-title">{{ album.title }}</span>
+                  <span class="music-album-meta">{{ album.artist }} · {{ album.year }}</span>
+                  <span class="music-album-note-preview">{{ album.note }}</span>
+                  <span class="music-album-toggle" aria-hidden="true">
+                    <span class="music-album-toggle-closed">展开</span>
+                    <span class="music-album-toggle-open">收起</span>
+                  </span>
+                </span>
+              </summary>
+
+              <div class="music-album-details">
+                <div class="music-album-description">
+                  <p class="music-album-detail-label">ABOUT THE ALBUM</p>
+                  <p>{{ album.public_description }}</p>
+                  <p class="music-album-facts">{{ album.genre }} · {{ album.track_count }} 首</p>
+                </div>
+
+                <div class="music-album-personal">
+                  <div>
+                    <h3>我喜欢的歌</h3>
+                    <ol class="music-favorite-tracks">
+                      {%- for track in album.favorite_tracks %}
+                        <li>{{ track }}</li>
+                      {%- endfor %}
+                    </ol>
+                  </div>
+                  <div>
+                    <h3>我的推荐</h3>
+                    <blockquote class="music-personal-note">{{ album.note }}</blockquote>
+                  </div>
+                </div>
+
+                <div class="music-album-actions">
+                  <a class="music-listen-link" href="{{ album.listen.url }}" target="_blank" rel="noopener noreferrer">
+                    去 {{ album.listen.label }} 收听 <i class="fa fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                  {%- if album.review_url %}
+                    <a class="music-review-link" href="{{ url_for(album.review_url) }}">阅读完整解析 <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  {%- endif %}
+                </div>
+              </div>
+            </details>
+          {%- endfor %}
+        </div>
+      </section>
+    </div>
+  </div>
+  {%- include '_partials/page/breadcrumb.njk' -%}
+{% endblock %}

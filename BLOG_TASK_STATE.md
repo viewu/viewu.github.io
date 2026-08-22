@@ -89,6 +89,18 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-08-22 - Local music album recommendation MVP
+
+- Replaced the `/music/` placeholder with a data-driven album wall using `source/_data/music_albums.yml` and `themes/next/layout/music.njk`.
+- Imported 12 albums and covers from `D:\view_music\专辑推荐`; scene/moment metadata is intentionally omitted.
+- Uses native `<details>` expansion without client-side JavaScript; the grid is three columns on desktop and two on mobile.
+- Includes the concise corrected English recommendations and replaces *Trying Times* with Jay Chou's 《八度空间》.
+- Blog cover copies are optimized to 360×360 WebP (132,336 bytes total); the external 400×400 source package remains unchanged.
+- Extended the generated-site verifier to require the music page, exactly 12 album cards, 《八度空间》, and no *Trying Times* residue.
+- A clean `npm run check` passed. Production deployment was requested on 2026-08-22 and proceeds through the protected-main pull-request workflow.
+- Refined the music page hierarchy after local review: restored the shared 380px section Hero, removed the duplicate header description, and placed the introduction once inside Album Notes beneath the Hero before The Collection.
+- Added a music-only 420px Hero width override because the music artwork has substantially narrower internal content than the other 1000×1500 section illustrations; the shared 380px Hero rule remains unchanged elsewhere.
+
 
 
 ### 2026-08-22 - Sports section category routing fix

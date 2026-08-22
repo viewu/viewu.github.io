@@ -1,0 +1,473 @@
+- slug: "frank-ocean-blonde"
+  title: "Blonde"
+  artist: "Frank Ocean"
+  release_date: "2016-08-20"
+  year: 2016
+  platform_release_date: "2016-08-20"
+  album_type: "studio album"
+  genre: "Alternative R&B / Pop"
+  track_count: 17
+  cover: "/images/music/albums/frank-ocean-blonde.webp"
+  public_description: "Frank Ocean 的第二张录音室专辑，由 Blonded 独立发行；作品以克制编曲、非线性叙事和亲密的人声书写记忆、身份与关系。"
+  tracklist:
+    - "Nikes"
+    - "Ivy"
+    - "Pink + White"
+    - "Be Yourself"
+    - "Solo"
+    - "Skyline To"
+    - "Self Control"
+    - "Good Guy"
+    - "Nights"
+    - "Solo (Reprise)"
+    - "Pretty Sweet"
+    - "Facebook Story"
+    - "Close to You"
+    - "White Ferrari"
+    - "Seigfried"
+    - "Godspeed"
+    - "Futura Free"
+  favorite_tracks:
+    - "Futura Free"
+    - "Godspeed"
+    - "White Ferrari"
+  note: "Whenever you're alone, listen to it."
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/us/album/blonde/1146195596"
+  sources:
+    apple_music: "https://music.apple.com/us/album/blonde/1146195596"
+  review_url: null
+  order: 10
+- slug: "kanye-west-donda"
+  title: "Donda"
+  artist: "Kanye West"
+  release_date: "2021-08-29"
+  year: 2021
+  platform_release_date: "2021-08-29"
+  album_type: "studio album"
+  genre: "Hip-Hop/Rap / Gospel"
+  track_count: 27
+  cover: "/images/music/albums/kanye-west-donda.webp"
+  public_description: "Kanye West 的第十张录音室专辑，以母亲 Donda West 的名字命名，在嘻哈框架中大量融入福音合唱、宗教主题和大型合作阵容。"
+  tracklist:
+    - "Donda Chant"
+    - "Jail"
+    - "God Breathed"
+    - "Off The Grid"
+    - "Hurricane"
+    - "Praise God"
+    - "Jonah"
+    - "Ok Ok"
+    - "Junya"
+    - "Believe What I Say"
+    - "24"
+    - "Remote Control"
+    - "Moon"
+    - "Heaven and Hell"
+    - "Donda"
+    - "Keep My Spirit Alive"
+    - "Jesus Lord"
+    - "New Again"
+    - "Tell The Vision"
+    - "Lord I Need You"
+    - "Pure Souls"
+    - "Come to Life"
+    - "No Child Left Behind"
+    - "Jail pt 2"
+    - "Ok Ok pt 2"
+    - "Junya pt 2"
+    - "Jesus Lord pt 2"
+  favorite_tracks:
+    - "Jail"
+    - "24"
+    - "Moon"
+    - "Keep My Spirit Alive"
+    - "Come to Life"
+    - "No Child Left Behind"
+  note: "Gospel rap, filled with light—I feel its guidance."
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/us/album/donda/1587795158"
+  sources:
+    apple_music: "https://music.apple.com/us/album/donda/1587795158"
+  review_url: null
+  order: 20
+- slug: "quadeca-scrapyard"
+  title: "SCRAPYARD"
+  artist: "Quadeca"
+  release_date: "2024-02-16"
+  year: 2024
+  platform_release_date: "2024-02-16"
+  album_type: "album / mixtape project"
+  genre: "Alternative Hip-Hop / Art Pop"
+  track_count: 15
+  cover: "/images/music/albums/quadeca-scrapyard.webp"
+  public_description: "Quadeca 将此前分批发布的 SCRAPYARD 系列与新增曲目整理成 15 曲项目，延续其在另类嘻哈、实验流行和细密声音设计之间的探索。"
+  tracklist:
+    - "DUSTCUTTER"
+    - "A LA CARTE"
+    - "PRETTY PRIVILEGE"
+    - "EASIER"
+    - "EVEN IF I TRIED"
+    - "WHAT'S IT TO HIM?"
+    - "U DON'T KNOW ME LIKE THAT"
+    - "I MAKE IT LOOK EFFORTLESS"
+    - "WAY TOO MANY FRIENDS"
+    - "GUESS WHO?"
+    - "UNDER MY SKIN"
+    - "BEING YOURSELF"
+    - "U TRIED THAT THING WHERE UR HUMAN"
+    - "GUIDE DOG"
+    - "TEXAS BLUE"
+  favorite_tracks:
+    - "DUSTCUTTER"
+    - "EASIER"
+    - "U DON'T KNOW ME LIKE THAT"
+  note: "I walk down the street, lost. No one holds my hand or leads me back, so I keep going without knowing where."
+  listen:
+    label: "Spotify"
+    url: "https://open.spotify.com/album/1S9MukUQEFAYCqlfrwqMd6"
+  sources:
+    spotify: "https://open.spotify.com/album/1S9MukUQEFAYCqlfrwqMd6"
+  review_url: null
+  order: 30
+- slug: "dou-wei-huan-ting"
+  title: "幻听"
+  artist: "窦唯、译乐队"
+  release_date: "1999"
+  year: 1999
+  platform_release_date: "2001-09-11"
+  album_type: "studio album"
+  genre: "Chinese Rock / Alternative Rock"
+  track_count: 10
+  cover: "/images/music/albums/dou-wei-huan-ting.webp"
+  public_description: "窦唯与译乐队合作的十曲作品，以吉他、贝斯和富有空间感的编排连接另类摇滚、梦幻色彩与古典中文意象。"
+  tracklist:
+    - "序·玉楼春·雨·临江仙"
+    - "幻听"
+    - "旺天下"
+    - "哪呢"
+    - "丰收获"
+    - "觉是"
+    - "荡空山"
+    - "暮春秋色"
+    - "爱被爱"
+    - "漓江水"
+  favorite_tracks:
+    - "旺天下"
+    - "暮春秋色"
+    - "漓江水"
+  note: "山水、家国、人间、世界、我"
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/us/album/%E5%B9%BB%E8%81%BD/200657007"
+  sources:
+    apple_music: "https://music.apple.com/us/album/%E5%B9%BB%E8%81%BD/200657007"
+    release_reference: "https://zh.wikipedia.org/wiki/%E5%B9%BB%E5%90%AC_(%E4%B8%93%E8%BE%91)"
+  review_url: null
+  order: 40
+- slug: "kanye-west-ye"
+  title: "ye"
+  artist: "Kanye West"
+  release_date: "2018-06-01"
+  year: 2018
+  platform_release_date: "2018-06-01"
+  album_type: "studio album"
+  genre: "Hip-Hop/Rap"
+  track_count: 7
+  cover: "/images/music/albums/kanye-west-ye.webp"
+  public_description: "Kanye West 的第八张录音室专辑，也是 Wyoming Sessions 系列之一；七首歌以紧凑篇幅处理心理状态、家庭关系与自我认知。"
+  tracklist:
+    - "I Thought About Killing You"
+    - "Yikes"
+    - "All Mine"
+    - "Wouldn't Leave (feat. PARTYNEXTDOOR)"
+    - "No Mistakes"
+    - "Ghost Town (feat. PARTYNEXTDOOR)"
+    - "Violent Crimes"
+  favorite_tracks:
+    - "Ghost Town (feat. PARTYNEXTDOOR)"
+    - "Violent Crimes"
+    - "I Thought About Killing You"
+  note: "Someday, someday, I'll be there."
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/us/album/ye/1441456689"
+  sources:
+    apple_music: "https://music.apple.com/us/album/ye/1441456689"
+  review_url: null
+  order: 50
+- slug: "omnipotent-youth-society"
+  title: "万能青年旅店"
+  artist: "万能青年旅店"
+  release_date: "2010-11-12"
+  year: 2010
+  platform_release_date: "2010-11-12"
+  album_type: "studio album"
+  genre: "Alternative Rock"
+  track_count: 9
+  cover: "/images/music/albums/omnipotent-youth-society.webp"
+  public_description: "万能青年旅店的首张同名专辑，以摇滚乐队编制、小号和文学化歌词描绘城市、工业经验与个体困境。"
+  tracklist:
+    - "狗尿馆"
+    - "不万能的喜剧"
+    - "揪心的玩笑与漫长的白日梦"
+    - "大石碎胸口"
+    - "洋鸟消夏录"
+    - "秦皇岛"
+    - "十万嬉皮"
+    - "在这颗行星所有的酒馆"
+    - "杀死那个石家庄人"
+  favorite_tracks:
+    - "秦皇岛"
+    - "十万嬉皮"
+    - "杀死那个石家庄人"
+  note: "弹奏杀死那个石家庄人的时候总会落泪"
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/us/album/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97/1538548871"
+  sources:
+    apple_music: "https://music.apple.com/us/album/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97/1538548871"
+    musicbrainz: "https://musicbrainz.org/release/b27ad74f-c8e5-4698-9d18-800539368ff8"
+  review_url: null
+  order: 60
+- slug: "the-crane-talent"
+  title: "TALENT"
+  artist: "The Crane"
+  release_date: "2022-12-12"
+  year: 2022
+  platform_release_date: "2022-12-12"
+  album_type: "studio album"
+  genre: "Soul / Alternative R&B"
+  track_count: 11
+  cover: "/images/music/albums/the-crane-talent.webp"
+  public_description: "The Crane 的 11 曲专辑，以 Soul 和另类 R&B 为核心，把轻盈律动、合成器音色与较私密的唱作表达放在同一套声音语言中。"
+  tracklist:
+    - "Natural Ability"
+    - "Don't Mind"
+    - "PRINCESS"
+    - "The Dragon Song (feat. ØZI)"
+    - "Alright"
+    - "Pain Hasn't Hit Me"
+    - "Take Your Time"
+    - "Unique Design"
+    - "Classy"
+    - "Up in the Clouds"
+    - "Ramen Boy"
+  favorite_tracks:
+    - "Natural Ability"
+    - "Don't Mind"
+    - "PRINCESS"
+    - "Pain Hasn't Hit Me"
+  note: "很chill的一张华语专辑，依然没有忘记第一次听到时，温暖的夕阳落在手臂上的感觉"
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/tw/album/talent/1658029468"
+  sources:
+    apple_music: "https://music.apple.com/tw/album/talent/1658029468"
+    spotify: "https://open.spotify.com/album/58AtmygL5FdxGhuEUSnWwF"
+  review_url: null
+  order: 70
+- slug: "sza-sos"
+  title: "SOS"
+  artist: "SZA"
+  release_date: "2022-12-09"
+  year: 2022
+  platform_release_date: "2022-12-09"
+  album_type: "studio album"
+  genre: "R&B/Soul"
+  track_count: 23
+  cover: "/images/music/albums/sza-sos.webp"
+  public_description: "SZA 的第二张录音室专辑，23 首歌在当代 R&B 的主体中穿插流行、摇滚和说唱表达，围绕关系、自我价值与情绪反复展开。"
+  tracklist:
+    - "SOS"
+    - "Kill Bill"
+    - "Seek & Destroy"
+    - "Low"
+    - "Love Language"
+    - "Blind"
+    - "Used (feat. Don Toliver)"
+    - "Snooze"
+    - "Notice Me"
+    - "Gone Girl"
+    - "Smoking on my Ex Pack"
+    - "Ghost in the Machine (feat. Phoebe Bridgers)"
+    - "F2F"
+    - "Nobody Gets Me"
+    - "Conceited"
+    - "Special"
+    - "Too Late"
+    - "Far"
+    - "Shirt"
+    - "Open Arms (feat. Travis Scott)"
+    - "I Hate U"
+    - "Good Days"
+    - "Forgiveless (feat. Ol' Dirty Bastard)"
+  favorite_tracks:
+    - "Snooze"
+    - "Too Late"
+    - "Open Arms (feat. Travis Scott)"
+    - "Good Days"
+  note: "I can't stop singing along."
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/us/album/sos/1658650093"
+  sources:
+    apple_music: "https://music.apple.com/us/album/sos/1658650093"
+  review_url: null
+  order: 80
+- slug: "jay-chou-eight-dimensions"
+  title: "八度空间"
+  artist: "周杰伦"
+  release_date: "2002-07-18"
+  year: 2002
+  platform_release_date: "2002-07-18"
+  album_type: "studio album"
+  genre: "Mandopop"
+  track_count: 10
+  cover: "/images/music/albums/jay-chou-eight-dimensions.webp"
+  public_description: "周杰伦的第三张录音室专辑，十首作品延续早期融合 R&B、嘻哈与流行旋律的创作方式，并进一步拓展题材与编曲想象。"
+  tracklist:
+    - "半兽人"
+    - "半岛铁盒"
+    - "暗号"
+    - "龙拳"
+    - "火车叨位去"
+    - "分裂"
+    - "爷爷泡的茶"
+    - "回到过去"
+    - "米兰的小铁匠"
+    - "最后的战役"
+  favorite_tracks:
+    - "半岛铁盒"
+    - "暗号"
+    - "回到过去"
+  note: "周董"
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/us/album/%E5%85%AB%E5%BA%A6%E7%A9%BA%E9%96%93/1721459350"
+  sources:
+    apple_music: "https://music.apple.com/us/album/%E5%85%AB%E5%BA%A6%E7%A9%BA%E9%96%93/1721459350"
+    musicbrainz: "https://musicbrainz.org/release-group/796a921e-9370-3441-a755-f6d9adb2e8dc"
+  review_url: null
+  order: 90
+- slug: "gali-atlantis"
+  title: "亚特兰蒂斯"
+  artist: "GALI"
+  release_date: "2022-02-18"
+  year: 2022
+  platform_release_date: "2022-02-18"
+  album_type: "studio album"
+  genre: "Hip-Hop/Rap"
+  track_count: 16
+  cover: "/images/music/albums/gali-atlantis.webp"
+  public_description: "GALI 的 16 曲专辑以亚特兰蒂斯意象组织完整项目，在 Boom bap、Trap、Drill 与旋律化说唱之间切换。"
+  tracklist:
+    - "CRITIAS"
+    - "亚特兰蒂斯之心"
+    - "WhenSmokeClears"
+    - "卡通 (CARTOON)"
+    - "Color: Teriyaki"
+    - "6ackPack"
+    - "屠宰室"
+    - "Priceless (Interlude)"
+    - "YYKBZ"
+    - "TAGs"
+    - "胎记"
+    - "天选之子 (Special Ver.)"
+    - "优雅妖精"
+    - "WILDROSE."
+    - "迷宫 (MAZE)"
+    - "悬浮术II"
+  favorite_tracks:
+    - "悬浮术II"
+    - "WILDROSE."
+    - "Priceless (Interlude)"
+  note: "完整性、腔调、范"
+  listen:
+    label: "Spotify"
+    url: "https://open.spotify.com/album/0Pa97I86ypFymNCH6koUFr"
+  sources:
+    spotify: "https://open.spotify.com/album/0Pa97I86ypFymNCH6koUFr"
+    line_music: "https://music-tw.line.me/album/5480008"
+  review_url: null
+  order: 100
+- slug: "kanye-west-the-life-of-pablo"
+  title: "The Life of Pablo"
+  artist: "Kanye West"
+  release_date: "2016-02-14"
+  year: 2016
+  platform_release_date: "2016-06-15"
+  album_type: "studio album"
+  genre: "Hip-Hop/Rap / Gospel"
+  track_count: 20
+  cover: "/images/music/albums/kanye-west-the-life-of-pablo.webp"
+  public_description: "Kanye West 的第七张录音室专辑，首次上线后持续修改混音、编排和曲目；这里采用包含 Saint Pablo 的 20 曲流媒体版本。"
+  tracklist:
+    - "Ultralight Beam"
+    - "Father Stretch My Hands Pt. 1"
+    - "Pt. 2"
+    - "Famous"
+    - "Feedback"
+    - "Low Lights"
+    - "Highlights"
+    - "Freestyle 4"
+    - "I Love Kanye"
+    - "Waves"
+    - "FML"
+    - "Real Friends"
+    - "Wolves"
+    - "Frank's Track"
+    - "Siiiiiiiiilver Surffffeeeeer Intermission"
+    - "30 Hours"
+    - "No More Parties In LA"
+    - "Facts (Charlie Heat Version)"
+    - "Fade"
+    - "Saint Pablo"
+  favorite_tracks:
+    - "Ultralight Beam"
+    - "Father Stretch My Hands Pt. 1"
+    - "Real Friends"
+  note: "麦迪逊花园"
+  listen:
+    label: "Spotify"
+    url: "https://open.spotify.com/album/7gsWAHLeT0w7es6FofOXk1"
+  sources:
+    spotify: "https://open.spotify.com/album/7gsWAHLeT0w7es6FofOXk1"
+    musicbrainz: "https://musicbrainz.org/release-group/8c18657a-6338-490d-a952-897663596b96"
+  review_url: null
+  order: 110
+- slug: "liang-bo-mi-cang"
+  title: "迷藏"
+  artist: "梁博"
+  release_date: "2015-11-02"
+  year: 2015
+  platform_release_date: "2018-11-13"
+  album_type: "studio album"
+  genre: "Mandopop / Rock"
+  track_count: 8
+  cover: "/images/music/albums/liang-bo-mi-cang.webp"
+  public_description: "梁博的第二张创作专辑，以现场同期录音方式制作；八首歌保持完整乐队演奏感，并集中呈现其摇滚唱作取向。"
+  tracklist:
+    - "拥有"
+    - "颠倒梦想"
+    - "融化"
+    - "四季"
+    - "变了"
+    - "危险"
+    - "不堪一击"
+    - "日落大道"
+  favorite_tracks:
+    - "拥有"
+    - "变了"
+    - "日落大道"
+  note: "安安静静走自己的路"
+  listen:
+    label: "Apple Music"
+    url: "https://music.apple.com/us/album/%E8%BF%B7%E8%97%8F/1751781776"
+  sources:
+    apple_music: "https://music.apple.com/us/album/%E8%BF%B7%E8%97%8F/1751781776"
+    release_reference: "https://www.bmcritic.com/album/0854ML"
+  review_url: null
+  order: 120
