@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-16, Asia/Taipei
+Last updated: 2026-08-22, Asia/Taipei
 
 ## Current Objective
 
@@ -81,6 +81,11 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-08-22 - About page social-platform links
+
+- Replaced the about page's standalone WeChat section with a unified social-platform section for Bilibili, NetEase Cloud Music, Xiaohongshu, and the WeChat Official Account.
+- Reused the sidebar's local brand icons and platform URLs; the WeChat entry still leads to the dedicated QR-code page.
+- Added a responsive two-column card layout that collapses to one column on narrow screens.
 
 ### 2026-08-16 - Four interests growth article upload
 
