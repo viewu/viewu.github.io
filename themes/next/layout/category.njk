@@ -25,6 +25,10 @@
     <div class="section-hero">
       <img src="{{ url_for('/images/sections/hero-writing.webp') }}" alt="写作" loading="lazy" decoding="async" width="1000" height="1500">
     </div>
+    {%- elif page.category == '运动' %}
+    <div class="section-hero">
+      <img src="{{ url_for('/images/sections/hero-sport.webp') }}" alt="运动" loading="lazy" decoding="async" width="1000" height="1500">
+    </div>
     {%- endif %}
 
     <div class="post-content">

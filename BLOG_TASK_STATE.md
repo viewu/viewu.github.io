@@ -90,6 +90,13 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 ## Maintenance Log
 
 
+
+### 2026-08-22 - Sports section category routing fix
+
+- Fixed the homepage Sports card to link to `/categories/运动/` instead of the empty placeholder `/sports/` page.
+- Added the Sports hero image branch to `themes/next/layout/category.njk`, so the `运动` category page matches the styled category pages for 工作、成长、写作 and shows the published sports article list.
+- Local `npm run check` passed before publishing.
+
 ### 2026-08-22 - Fitness metrics sports article upload
 
 - Imported `beyond-weight-bmi-body-fat-bmr-tdee.md` from the 公众号 writing folder; corrected the user-provided root from `D:\viewu\_writing` to the actual `D:\viewu_writing` path.
