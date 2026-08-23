@@ -61,3 +61,7 @@ layout: page
     </a>
   </span>
 </div>
+
+## 联系我
+
+如果你想交流博客内容、提供建议或讨论合作，欢迎发送邮件至 [viewublog@163.com](mailto:viewublog@163.com)。
