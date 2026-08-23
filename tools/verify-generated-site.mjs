@@ -38,6 +38,7 @@ if (!existsSync(publicRoot)) {
     'about/index.html',
     'archives/index.html',
     'categories/index.html',
+    'categories/运动/index.html',
     'tags/index.html',
     'music/index.html',
     '404.html',
@@ -59,6 +60,14 @@ if (!existsSync(publicRoot)) {
   }
   if (!indexHtml.includes('type="application/atom+xml"')) {
     failures.push('/index.html: Atom feed autodiscovery link is missing.');
+  }
+
+  const aboutHtml = readFileSync(join(publicRoot, 'about', 'index.html'), 'utf8');
+  if (!aboutHtml.includes('href="/categories/%E8%BF%90%E5%8A%A8/"')) {
+    failures.push('/about/index.html: Sports link does not target the populated Sports category.');
+  }
+  if (aboutHtml.includes('href="/sports/"')) {
+    failures.push('/about/index.html: stale Sports placeholder link is still present.');
   }
 
   const musicHtml = readFileSync(join(publicRoot, 'music', 'index.html'), 'utf8');
