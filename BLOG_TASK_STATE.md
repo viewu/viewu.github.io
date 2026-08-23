@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-22, Asia/Taipei
+Last updated: 2026-08-23, Asia/Taipei
 
 ## Current Objective
 
@@ -88,6 +88,11 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-08-23 - About page contact email
+
+- Added the dedicated blog email `viewublog@163.com` to a new "联系我" section on the About page.
+- Kept the sidebar unchanged; the address uses a direct `mailto:` link.
 
 ### 2026-08-22 - Local music album recommendation MVP
 
