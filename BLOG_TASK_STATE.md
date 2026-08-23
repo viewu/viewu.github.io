@@ -89,6 +89,11 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-08-23 - About page Sports routing fix
+
+- Fixed the About page Sports link to use the populated `/categories/运动/` route instead of the stale `/sports/` placeholder page.
+- Added a generated-site regression check that requires the populated Sports category and rejects the stale About-page placeholder link.
+
 ### 2026-08-23 - About page contact email
 
 - Added the dedicated blog email `viewublog@163.com` to a new "联系我" section on the About page.
