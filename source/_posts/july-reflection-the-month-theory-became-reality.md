@@ -10,8 +10,6 @@ tags:
   - EnglishDiary
   - Internship
 ---
-# July Reflection — The Month Theory Became Reality
-
 If I had to describe July with one sentence, it would be this:
 
 **July was the month I stopped preparing for the real world and finally stepped into it.**

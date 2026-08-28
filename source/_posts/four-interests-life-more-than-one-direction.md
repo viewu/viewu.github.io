@@ -11,8 +11,6 @@ tags:
   - 兴趣探索
   - 生活方式
 ---
-# 四种兴趣，让生活不只有一个方向
-
 > You need 4 hobbies:  
 > 1) A social hobby  
 > 2) A creative hobby  

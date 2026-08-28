@@ -105,6 +105,13 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-08-28 - Remove duplicate body H1 post titles
+
+- Diagnosed duplicate article titles as duplicated title sources: NexT renders the page title from front matter, while many imported Markdown files also started with the same `# Title` in the body.
+- Removed the matching opening body H1 from 11 affected posts so each article page keeps only the theme-rendered title.
+- Confirmed generated article bodies no longer contain duplicate H1 headings and the sidebar table of contents now numbers peer section headings as `1.`, `2.`, `3.` instead of nesting everything under `1.x`.
+- Added a generated-site regression check that rejects H1 headings inside article post bodies while leaving standalone pages such as `/wechat/` unaffected.
+- Local `npm run check` passed before publishing.
 ### 2026-08-28 - Internship record 03 upload
 
 - Corrected the user-provided root from `D:\viewu\_writing` to actual `D:\viewu_writing`.

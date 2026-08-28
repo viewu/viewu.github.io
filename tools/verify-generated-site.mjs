@@ -118,6 +118,9 @@ if (!existsSync(publicRoot)) {
     if (!/<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']https:\/\/viewu\.github\.io\//i.test(html)) {
       failures.push(`${page}: production canonical URL is missing.`);
     }
+    if (/^\/\d{4}\/\d{2}\/\d{2}\//.test(page) && /<div\b[^>]*\bclass=["'][^"']*\bpost-body\b[^"']*["'][\s\S]*?<h1\b/i.test(html)) {
+      failures.push(`${page}: post body contains an H1 heading; use the theme-rendered post title as the only H1.`);
+    }
 
     for (const match of html.matchAll(/<a\b[^>]*\btarget=["']_blank["'][^>]*>/gi)) {
       if (!/\brel=["'][^"']*\bnoopener\b[^"']*["']/i.test(match[0])) {
