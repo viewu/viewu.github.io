@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-23, Asia/Taipei
+Last updated: 2026-08-28, Asia/Taipei
 
 ## Current Objective
 
@@ -85,9 +85,27 @@ Current source posts include:
   - Tags: `运动`, `健身`, `身体数据`
   - Assets: `source/images/beyond-weight-bmi-body-fat-bmr-tdee/` (`1.webp` cover plus body images `2.webp`, `3.webp`, `4.webp`, `5.webp`, `6.webp`)
 
+- `august-learning-to-carry-more.md`
+  - Title: `August — Learning to Carry More`
+  - Date: `2026-08-28 16:05:00`
+  - Description: `An August reflection on internship pressure, money, AI learning, gratitude, responsibility, and growing into a stronger container.`
+  - Categories: `成长`
+  - Tags: `SelfGrowth`, `EnglishDiary`, `Internship`
+  - Assets: `source/images/august-learning-to-carry-more/` (`1.webp` cover plus body images `1.webp`-`5.webp`)
+
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+
+### 2026-08-28 - August English reflection upload
+
+- Corrected the user-provided root from `D:\viewu\_writing` to the actual `D:\viewu_writing` path.
+- Renamed the source folder from `D:\viewu_writing\english\2026-08-28` to `D:\viewu_writing\english\2026-08-28-August-Learning-to-Carry-More`.
+- Inserted five source images into `August — Learning to Carry More.md` at natural reading breaks: internship pressure, second-hand bicycle/money, AI learning, responsibility/gratitude, and closing growth reflection; preserved the source Markdown LastWriteTime as `2026-08-28 16:05:00`.
+- Imported `august-learning-to-carry-more.md` with `categories: 成长` and tags `SelfGrowth`, `EnglishDiary`, `Internship`.
+- Converted source `1.png`-`5.png` to 800px-wide WebP in `source/images/august-learning-to-carry-more/`; `1.webp` is the cover and all five images are used in the body. The original writing-folder PNGs remain unchanged; the smaller blog copies keep the generated site within the 55 MiB budget.
+- Local `npm run check` passed before publishing.
 
 ### 2026-08-23 - About page Sports routing fix
 
