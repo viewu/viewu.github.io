@@ -93,10 +93,28 @@ Current source posts include:
   - Tags: `SelfGrowth`, `EnglishDiary`, `Internship`
   - Assets: `source/images/august-learning-to-carry-more/` (`1.webp` cover plus body images `1.webp`-`5.webp`)
 
+- `internship-record-03-ai-answers-judgment.md`
+  - Title: `实习记录03：当 AI 越来越会给答案，我该如何判断？`
+  - Date: `2026-08-28 20:03:39`
+  - Description: `实习记录第三篇：关于 AI 生成答案、工具结果、Taste、评价标准与判断力形成的反思。`
+  - Categories: `工作`
+  - Tags: `实习记录`, `AI Coding`, `判断力`
+  - Assets: `source/images/internship-record-03-ai-answers-judgment/` (`0.webp` cover plus body images `1.webp`-`5.webp`)
+
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
 
+### 2026-08-28 - Internship record 03 upload
+
+- Corrected the user-provided root from `D:\viewu\_writing` to actual `D:\viewu_writing`.
+- Renamed source folder from `D:\viewu_writing\公众号\2026-08-28` to `D:\viewu_writing\公众号\2026-08-28-实习记录03：当 AI 越来越会给答案，我该如何判断？`.
+- Renamed the duplicated source Markdown filename to `实习记录03：当 AI 越来越会给答案，我该如何判断？.md`.
+- Inserted five source images into the article at natural reading breaks: AI shifts work to judgment, Graphify/evaluation gap, multi-agent decision ownership, Taste/internal evaluation function, and the final “why this path?” reflection; restored the source Markdown LastWriteTime as `2026-08-28 20:03:39`.
+- Imported `internship-record-03-ai-answers-judgment.md` with `categories: 工作` and tags `实习记录`, `AI Coding`, `判断力`.
+- Converted source `0.png`-`5.png` to 800px-wide WebP in `source/images/internship-record-03-ai-answers-judgment/`; `0.webp` is the cover and `1.webp`-`5.webp` are body images. Original writing-folder PNGs remain unchanged; smaller blog copies keep the generated site within the 55 MiB budget.
+- Re-encoded the oversized existing Work-category asset `source/images/internship-weekly-01-read-code-after-project-runs/6.webp` to an 800px-wide WebP copy (1,598,842 bytes to 14,592 bytes) so the generated site remains under the 55 MiB budget.
+- Local `npm run check` passed before publishing.
 
 ### 2026-08-28 - August English reflection upload
 
