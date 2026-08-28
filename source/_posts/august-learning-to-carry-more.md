@@ -11,8 +11,6 @@ tags:
   - EnglishDiary
   - Internship
 ---
-# August — Learning to Carry More
-
 August is almost over.
 
 Five weeks ago, I walked into my internship carrying a very simple fear: **I was not good enough yet.**

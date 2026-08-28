@@ -12,8 +12,6 @@ tags:
   - ChatGPT
   - 数字工作流
 ---
-# GPT-5.6 没有改变我的工作流，但让我看清了 ChatGPT 的方向
-
 这几天刷到几篇关于 GPT-5.6、Codex 和 ChatGPT Work 的文章。
 
 一篇在讲 GPT-5.6 的 prompting 变化，一篇在拆 Codex 和 Work 的新功能，还有一篇写得更有情绪，直接把这次更新理解成 ChatGPT 和 Codex 合并、Agent 时代的正式到来。
