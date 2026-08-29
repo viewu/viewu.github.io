@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-28, Asia/Taipei
+Last updated: 2026-08-29, Asia/Taipei
 
 ## Current Objective
 
@@ -104,6 +104,17 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-08-29 - Consistent section-switcher title typography
+
+- Changed the Music section switcher to reuse the same `category-title-wrap` and `category-title` classes as Work, Growth, Writing, and Sports.
+- Removed the Music-only `post-header` / `post-title` styling path that made its title larger and bolder than the other section titles.
+
+### 2026-08-28 - Cross-section arrow navigation
+
+- Added a shared title-row switcher to the five homepage sections in the order 工作 → 成长 → 写作 → 音乐 → 运动, wrapping from the last section back to the first.
+- Positioned the previous/next arrows at the far left and right edges while keeping each section title centered; included keyboard focus and mobile sizing.
+- Added generated-site checks for exactly one switcher and the expected previous/next destinations on all five section pages.
 
 ### 2026-08-28 - Remove duplicate body H1 post titles
 

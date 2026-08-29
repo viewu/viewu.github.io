@@ -38,6 +38,9 @@ if (!existsSync(publicRoot)) {
     'about/index.html',
     'archives/index.html',
     'categories/index.html',
+    'categories/工作/index.html',
+    'categories/成长/index.html',
+    'categories/写作/index.html',
     'categories/运动/index.html',
     'tags/index.html',
     'music/index.html',
@@ -78,6 +81,26 @@ if (!existsSync(publicRoot)) {
   }
   if (musicHtml.includes('james-blake-trying-times') || musicHtml.includes('Trying Times')) {
     failures.push('/music/index.html: replaced Trying Times content is still present.');
+  }
+
+  const sectionNavigation = [
+    ['categories/工作/index.html', '/categories/%E8%BF%90%E5%8A%A8/', '/categories/%E6%88%90%E9%95%BF/'],
+    ['categories/成长/index.html', '/categories/%E5%B7%A5%E4%BD%9C/', '/categories/%E5%86%99%E4%BD%9C/'],
+    ['categories/写作/index.html', '/categories/%E6%88%90%E9%95%BF/', '/music/'],
+    ['music/index.html', '/categories/%E5%86%99%E4%BD%9C/', '/categories/%E8%BF%90%E5%8A%A8/'],
+    ['categories/运动/index.html', '/music/', '/categories/%E5%B7%A5%E4%BD%9C/']
+  ];
+  for (const [page, previousUrl, nextUrl] of sectionNavigation) {
+    const html = readFileSync(join(publicRoot, ...page.split('/')), 'utf8');
+    if ((html.match(/class="section-switcher"/g) || []).length !== 1) {
+      failures.push(`/${page}: expected exactly one section switcher.`);
+    }
+    if (!html.includes(`class="section-switcher-link section-switcher-prev" href="${previousUrl}"`)) {
+      failures.push(`/${page}: previous section link is missing or incorrect.`);
+    }
+    if (!html.includes(`class="section-switcher-link section-switcher-next" href="${nextUrl}"`)) {
+      failures.push(`/${page}: next section link is missing or incorrect.`);
+    }
   }
 
   const robots = readFileSync(join(publicRoot, 'robots.txt'), 'utf8');
