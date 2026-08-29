@@ -4,7 +4,15 @@
 
 {% block content %}
   <div class="post-block" lang="{{ page.lang }}">
-    {%- include '_partials/page/page-header.njk' -%}
+    {%- set currentSectionTitle = page.title %}
+    {%- set sectionTitleClass = 'category-title' %}
+    {%- set previousSectionTitle = '写作' %}
+    {%- set previousSectionUrl = '/categories/写作/' %}
+    {%- set nextSectionTitle = '运动' %}
+    {%- set nextSectionUrl = '/categories/运动/' %}
+    <div class="category-title-wrap">
+      {%- include '_partials/section-switcher.njk' -%}
+    </div>
 
     <div class="post-body music-body">
       <section class="music-masthead" aria-labelledby="album-notes-title">

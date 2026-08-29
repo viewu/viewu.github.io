@@ -8,9 +8,41 @@
 
 {% block content %}
 
+  {%- set currentSectionTitle = page.category %}
+  {%- set sectionTitleClass = 'category-title' %}
+  {%- set previousSectionTitle = '' %}
+  {%- set previousSectionUrl = '' %}
+  {%- set nextSectionTitle = '' %}
+  {%- set nextSectionUrl = '' %}
+  {%- if page.category == '工作' %}
+    {%- set previousSectionTitle = '运动' %}
+    {%- set previousSectionUrl = '/categories/运动/' %}
+    {%- set nextSectionTitle = '成长' %}
+    {%- set nextSectionUrl = '/categories/成长/' %}
+  {%- elif page.category == '成长' %}
+    {%- set previousSectionTitle = '工作' %}
+    {%- set previousSectionUrl = '/categories/工作/' %}
+    {%- set nextSectionTitle = '写作' %}
+    {%- set nextSectionUrl = '/categories/写作/' %}
+  {%- elif page.category == '写作' %}
+    {%- set previousSectionTitle = '成长' %}
+    {%- set previousSectionUrl = '/categories/成长/' %}
+    {%- set nextSectionTitle = '音乐' %}
+    {%- set nextSectionUrl = '/music/' %}
+  {%- elif page.category == '运动' %}
+    {%- set previousSectionTitle = '音乐' %}
+    {%- set previousSectionUrl = '/music/' %}
+    {%- set nextSectionTitle = '工作' %}
+    {%- set nextSectionUrl = '/categories/工作/' %}
+  {%- endif %}
+
   <div class="post-block">
     <div class="category-title-wrap">
-      <h1 class="category-title">{{ page.category }}</h1>
+      {%- if previousSectionUrl and nextSectionUrl %}
+        {%- include '_partials/section-switcher.njk' -%}
+      {%- else %}
+        <h1 class="category-title">{{ page.category }}</h1>
+      {%- endif %}
     </div>
 
     {%- if page.category == '工作' %}
