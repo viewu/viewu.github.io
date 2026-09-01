@@ -103,7 +103,7 @@ Current source posts include:
 
 - `smartwatch-health-data-reliability.md`
   - Title: `智能手表上的健康数据，到底有多少是真的？`
-  - Date: `2026-09-01 13:16:47`
+  - Date: `2026-09-01 17:08:46`
   - Description: `一篇关于智能手表健康数据、传感器信号、算法估算与长期趋势使用方式的整理。`
   - Categories: `运动`
   - Tags: `运动`, `身体数据`, `智能手表`
@@ -113,13 +113,21 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-09-01 - Smartwatch article viewu-writing-skill revision
+
+- Found the requested `viewu-writing-skill` under the project-level `.agents/viewu-writing-skill/` directory after the user asked to scan `.agents`.
+- Read `SKILL.md`, `references/style-guide.md`, `references/de-ai-audit.md`, and `references/corpus-basis.md` before revising.
+- Re-polished `智能手表上的健康数据，到底有多少是真的？.md` to better preserve Viewu's first-person question, mechanism explanation, uncertainty boundaries, and non-lecture ending.
+- Reduced non-load-bearing AI-shaped markers such as repeated `真正` while keeping concrete mechanism claims and the existing image placements.
+- Re-synced `source/_posts/smartwatch-health-data-reliability.md` from the revised source Markdown and updated the post date to the revised LastWriteTime: `2026-09-01 17:08:46`.
+- Local `npm run check` passed before publishing.
 ### 2026-09-01 - Smartwatch health data sports article upload
 
 - `viewu-writing-skill` was requested but not available in the current skill list or local skills folder, so the article was lightly polished with a fallback style-preserving pass.
 - Corrected the user-provided root from `D:\viewu\_writing` to actual `D:\viewu_writing`.
 - Renamed source folder from `D:\viewu_writing\公众号\2026-09-01` to `D:\viewu_writing\公众号\2026-09-01-智能手表上的健康数据，到底有多少是真的？`.
 - Inserted source images `1.png`-`4.png` into the article at natural reading breaks: opening health numbers, sensor signals, sleep/energy model estimates, and long-term trend interpretation.
-- Imported `smartwatch-health-data-reliability.md` with `categories: 运动` and tags `运动`, `身体数据`, `智能手表`; used the polished source Markdown LastWriteTime as the publish date: `2026-09-01 13:16:47`.
+- Imported `smartwatch-health-data-reliability.md` with `categories: 运动` and tags `运动`, `身体数据`, `智能手表`; used the polished source Markdown LastWriteTime as the publish date: `2026-09-01 13:16:47`; later revised with the project-level `viewu-writing-skill` and updated the post date to the revised source Markdown LastWriteTime: `2026-09-01 17:08:46`.
 - Converted source `0.png`-`4.png` to 800px-wide WebP in `source/images/smartwatch-health-data-reliability/`; `0.webp` is the cover and `1.webp`-`4.webp` are body images. Original writing-folder PNGs remain unchanged.
 - Local `npm run check` passed before publishing.
 
