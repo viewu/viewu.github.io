@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-08-29, Asia/Taipei
+Last updated: 2026-09-01, Asia/Taipei
 
 ## Current Objective
 
@@ -101,9 +101,27 @@ Current source posts include:
   - Tags: `实习记录`, `AI Coding`, `判断力`
   - Assets: `source/images/internship-record-03-ai-answers-judgment/` (`0.webp` cover plus body images `1.webp`-`5.webp`)
 
+- `smartwatch-health-data-reliability.md`
+  - Title: `智能手表上的健康数据，到底有多少是真的？`
+  - Date: `2026-09-01 13:16:47`
+  - Description: `一篇关于智能手表健康数据、传感器信号、算法估算与长期趋势使用方式的整理。`
+  - Categories: `运动`
+  - Tags: `运动`, `身体数据`, `智能手表`
+  - Assets: `source/images/smartwatch-health-data-reliability/` (`0.webp` cover plus body images `1.webp`-`4.webp`)
+
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-09-01 - Smartwatch health data sports article upload
+
+- `viewu-writing-skill` was requested but not available in the current skill list or local skills folder, so the article was lightly polished with a fallback style-preserving pass.
+- Corrected the user-provided root from `D:\viewu\_writing` to actual `D:\viewu_writing`.
+- Renamed source folder from `D:\viewu_writing\公众号\2026-09-01` to `D:\viewu_writing\公众号\2026-09-01-智能手表上的健康数据，到底有多少是真的？`.
+- Inserted source images `1.png`-`4.png` into the article at natural reading breaks: opening health numbers, sensor signals, sleep/energy model estimates, and long-term trend interpretation.
+- Imported `smartwatch-health-data-reliability.md` with `categories: 运动` and tags `运动`, `身体数据`, `智能手表`; used the polished source Markdown LastWriteTime as the publish date: `2026-09-01 13:16:47`.
+- Converted source `0.png`-`4.png` to 800px-wide WebP in `source/images/smartwatch-health-data-reliability/`; `0.webp` is the cover and `1.webp`-`4.webp` are body images. Original writing-folder PNGs remain unchanged.
+- Local `npm run check` passed before publishing.
 
 ### 2026-08-29 - Consistent section-switcher title typography
 
