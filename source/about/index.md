@@ -49,7 +49,7 @@ layout: page
     </a>
   </span>
   <span class="links-of-author-item">
-    <a href="https://www.xiaohongshu.com/user/profile/64683306000000002a00a3da" title="小红书" rel="noopener me">
+    <a href="https://www.xiaohongshu.com/user/profile/616997bc0000000002026d5b" title="小红书" rel="noopener me">
       <span class="social-brand-icon" aria-hidden="true"></span>
       <span class="social-brand-label">小红书</span>
     </a>

@@ -72,6 +72,17 @@ if (!existsSync(publicRoot)) {
   if (aboutHtml.includes('href="/sports/"')) {
     failures.push('/about/index.html: stale Sports placeholder link is still present.');
   }
+  const xiaohongshuProfile = 'https://www.xiaohongshu.com/user/profile/616997bc0000000002026d5b';
+  const staleXiaohongshuProfile = 'https://www.xiaohongshu.com/user/profile/64683306000000002a00a3da';
+  if (!indexHtml.includes(`href="${xiaohongshuProfile}"`)) {
+    failures.push('/index.html: sidebar Xiaohongshu profile link is missing or incorrect.');
+  }
+  if (!aboutHtml.includes(`href="${xiaohongshuProfile}"`)) {
+    failures.push('/about/index.html: Xiaohongshu profile link is missing or incorrect.');
+  }
+  if (indexHtml.includes(staleXiaohongshuProfile) || aboutHtml.includes(staleXiaohongshuProfile)) {
+    failures.push('Stale Xiaohongshu profile link is still present.');
+  }
 
   const musicHtml = readFileSync(join(publicRoot, 'music', 'index.html'), 'utf8');
   const albumCardCount = (musicHtml.match(/class="music-album-card"/g) || []).length;
