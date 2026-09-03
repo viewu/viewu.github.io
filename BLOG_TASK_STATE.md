@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-09-01, Asia/Taipei
+Last updated: 2026-09-03, Asia/Taipei
 
 ## Current Objective
 
@@ -112,6 +112,12 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-09-03 - Xiaohongshu account update
+
+- Replaced the previous Xiaohongshu profile with `https://www.xiaohongshu.com/user/profile/616997bc0000000002026d5b` in both the sidebar and About page.
+- Verified the public profile is named `睡个好觉` and has Xiaohongshu account number `2705758278`.
+- Added generated-site checks that require the new profile in both locations and reject the stale profile URL.
 
 ### 2026-09-01 - Smartwatch article viewu-writing-skill revision
 
