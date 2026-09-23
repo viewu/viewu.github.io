@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-09-03, Asia/Taipei
+Last updated: 2026-09-23, Asia/Taipei
 
 ## Current Objective
 
@@ -112,6 +112,11 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-09-23 - About page copy refresh
+
+- Published the user-authored About page copy refresh, expanding the descriptions for Work, Growth, Writing, Music, Sports, and the social-platform introduction.
+- Preserved the user's wording and kept the existing section links and social cards unchanged.
 
 ### 2026-09-03 - Xiaohongshu account update
 
