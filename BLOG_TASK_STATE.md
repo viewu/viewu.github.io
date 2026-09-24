@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-09-23, Asia/Taipei
+Last updated: 2026-09-24, Asia/Taipei
 
 ## Current Objective
 
@@ -112,6 +112,13 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-09-24 - About page editorial redesign
+
+- Built and reviewed a local About page preview with a typographic intro, numbered links for five sections, and clearer social/contact presentation.
+- Included the user's typo fix from `书记` to `书籍`.
+- `npm run check` passed; visually reviewed the desktop preview; local Hexo server is available at `http://localhost:4000/about/`.
+- The user reviewed this local preview and requested its production deployment on 2026-09-24 through the protected-main PR workflow.
 
 ### 2026-09-23 - About page copy refresh
 

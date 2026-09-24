@@ -1365,3 +1365,170 @@ h1, h2, h3, h4, h5, h6,
 
   .music-album-card:not([open]):hover .music-album-cover
     transform: none
+
+// About page editorial layout
+.about-page .post-block
+  padding: 48px 54px 44px
+  border-top: 3px solid #002fa7
+
+.about-page .post-header
+  margin-bottom: 30px
+  text-align: left
+
+.about-page .post-header::before
+  display: block
+  margin-bottom: 13px
+  color: #002fa7
+  content: 'ABOUT / VIEWU'
+  font-size: 0.64em
+  font-weight: 700
+  letter-spacing: 0.18em
+
+.about-page .post-title
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-size: 2.2em
+  font-weight: 500
+  letter-spacing: 0
+
+.about-page .post-body
+  display: grid
+  grid-template-columns: minmax(132px, 0.34fr) minmax(0, 1fr)
+  column-gap: 32px
+  counter-reset: about-topic
+
+.about-page .post-body > *
+  grid-column: 1 / -1
+
+.about-page .post-body > p:first-of-type
+  margin-bottom: 12px
+  color: #536269
+
+.about-page .post-body > p:nth-of-type(2)
+  margin-bottom: 22px
+  color: #6b747a
+  line-height: 1.65
+
+.about-page .post-body .about-statement
+  display: block
+  max-width: 700px
+  margin-top: 10px
+  color: #1a1a1a
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-size: 2.05em
+  font-weight: 500
+  line-height: 1.42
+  letter-spacing: -0.015em
+
+.about-page .post-body > p:nth-of-type(3)
+  margin: 0 0 16px
+  padding-left: 15px
+  border-left: 2px solid #002fa7
+  color: #48555c
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-size: 1.12em
+
+.about-page .post-body > h2
+  margin: 56px 0 14px
+  padding-top: 19px
+  border-top: 1px solid #dfe6e9
+  border-bottom: 0
+  font-size: 1.38em
+
+.about-page .post-body > h3
+  grid-column: 1
+  display: flex
+  align-items: baseline
+  gap: 15px
+  margin: 0
+  padding: 21px 0
+  border-top: 1px solid #e5e9eb
+  border-bottom: 0
+  counter-increment: about-topic
+  font-size: 1.18em
+
+.about-page .post-body > h3::before
+  color: #819099
+  content: counter(about-topic, decimal-leading-zero)
+  font-family: Arial, sans-serif
+  font-size: 0.62em
+  font-weight: 600
+  letter-spacing: 0.06em
+
+.about-page .post-body > h3 a
+  color: #1a1a1a
+  border-bottom: 0
+
+.about-page .post-body > h3 .headerlink
+  display: none
+
+.about-page .post-body > h3 a::after
+  margin-left: 9px
+  color: #002fa7
+  content: '↗'
+  font-family: Arial, sans-serif
+  font-size: 0.72em
+
+.about-page .post-body > h3 a:hover
+  color: #002fa7
+
+.about-page .post-body > h3 + p
+  grid-column: 2
+  margin: 0
+  padding: 20px 0 22px
+  border-top: 1px solid #e5e9eb
+  color: #526169
+  line-height: 1.8
+
+.about-page .post-body > .about-social-links
+  margin: 12px 0 0
+  gap: 12px
+
+.about-page .post-body .about-social-links a
+  min-height: 52px
+  border-color: #e5e9eb
+  transition: border-color 0.18s ease, background-color 0.18s ease
+
+.about-page .post-body .about-social-links a:hover
+  border-color: #002fa7
+  background: #f8faff
+
+.about-page .post-body > h2:last-of-type + p
+  margin: 12px 0 0
+  padding: 20px 22px
+  border-left: 2px solid #002fa7
+  background: #f6f8f9
+  color: #46545b
+
+.about-page .post-body > h2:last-of-type + p a
+  font-weight: 600
+  overflow-wrap: anywhere
+
+@media (max-width: 767px)
+  .about-page .post-block
+    padding: 30px 22px 34px
+
+  .about-page .post-header
+    margin-bottom: 24px
+
+  .about-page .post-title
+    font-size: 1.95em
+
+  .about-page .post-body
+    grid-template-columns: minmax(0, 1fr)
+
+  .about-page .post-body .about-statement
+    font-size: 1.75em
+
+  .about-page .post-body > h2
+    margin-top: 45px
+
+  .about-page .post-body > h3,
+  .about-page .post-body > h3 + p
+    grid-column: 1
+
+  .about-page .post-body > h3
+    padding: 19px 0 4px
+
+  .about-page .post-body > h3 + p
+    padding: 0 0 19px 37px
+    border-top: 0

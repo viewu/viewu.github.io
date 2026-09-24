@@ -15,7 +15,7 @@
   {%- endif %}
 {% endblock %}
 
-{% block class %}page posts-expand{% endblock %}
+{% block class %}page posts-expand{% if page.type === 'about' %} about-page{% endif %}{% endblock %}
 
 {% block content %}
 
