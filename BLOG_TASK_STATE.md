@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-09-24, Asia/Taipei
+Last updated: 2026-10-04, Asia/Taipei
 
 ## Current Objective
 
@@ -10,7 +10,7 @@ The user wants ongoing assistance maintaining, modifying, rebuilding, and publis
 
 ## Current Project Snapshot
 
-- Workspace: `~/Desktop/blog/viewu.github.io` (macOS; formerly `D:\viewu_blog` on Windows)
+- Current workspace: `D:\viewu_blog` (Windows); earlier work used `~/Desktop/blog/viewu.github.io` on macOS.
 - Framework: Hexo static blog
 - Hexo: `8.1.2`
 - Theme: NexT `8.19.2`
@@ -112,6 +112,21 @@ Current source posts include:
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
+
+### 2026-10-04 - Local visual review and editorial refinement
+
+- User requests Awwwards / Webby / FWA quality as a benchmark, iterative local self-review, and an explicit preview approval before production deployment. Do not deploy or push to production before that approval.
+- User explicitly approved the revised local preview and authorized production deployment on 2026-10-04. Proceed through the protected-main PR workflow.
+- Developed the existing Klein-blue / serif / line-art identity into an editorial homepage: larger intro, illustrated five-section navigation, a latest-article feature and compact text/summary rows. Post content and ordering remain intact.
+- User reviewed the first local version positively, then requested two refinements: no cover images in any article previews, and the Music section introduction illustration on the right to match the other four sections. Both are implemented for desktop and mobile. Album covers in the Music collection remain part of the album interface.
+- Follow-up verification: `npm run check` passed; homepage, page 2, Music and Work reviewed at 320/390/1440px (12 combinations), with zero preview images or horizontal overflow and right-side Music illustration verified. Album expansion and cyclic navigation still work. Screenshots: `.cache/visual-review/revised-*`.
+- Refined sidebar social labels, article typography, category introductions/list rhythm, and the music masthead; music album notes and cyclic section navigation remain available.
+- Made the mobile navigation toggle a native button with expanded state and a 44px target; added visible focus and reduced-motion behavior for the refined elements. Removed the now-unused journal cover markup, styles and image-dimension helper after the user's refinement request.
+- `npm run check` passed. Use `node node_modules/hexo-cli/bin/hexo generate --force` after custom Stylus edits, because normal generation may retain cached CSS.
+- Local static Hexo preview: `http://127.0.0.1:4000/`, started with `node node_modules/hexo-cli/bin/hexo server --static --ip 127.0.0.1`. Rebuild to update this static preview.
+- Browser review covers 12 routes at 320/390/768/1440px, plus keyboard navigation, album expansion, PJAX navigation, image dimensions and reduced motion. Baseline and final captures are under ignored `.cache/visual-review/`.
+- Review notes and award-benchmark limitations are in `VISUAL_REVIEW.md`. Real mobile devices, Safari and external music playback remain unverified. Local improvements do not constitute an independent awards assessment.
+- User preview approval is complete; the approved source changes are being published through a PR and GitHub Pages Actions.
 
 ### 2026-09-24 - About page editorial redesign
 

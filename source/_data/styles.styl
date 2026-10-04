@@ -1532,3 +1532,513 @@ h1, h2, h3, h4, h5, h6,
   .about-page .post-body > h3 + p
     padding: 0 0 19px 37px
     border-top: 0
+
+// 2026-10-04 · Personal journal: paper, ink, and Klein blue.
+:root
+  --body-bg-color: #f5f5f2
+  --journal-rule: #dadbd6
+  --journal-muted: #60645f
+
+body
+  background: var(--body-bg-color)
+
+::selection
+  background: #002fa7
+  color: #fff
+
+a:focus-visible, button:focus-visible, summary:focus-visible, [role='button']:focus-visible
+  outline: 2px solid #002fa7
+  outline-offset: 5px
+
+.main-inner.index
+  padding-top: 0
+
+.main .header, .main .sidebar-inner, .main-inner .post-block, .main-inner .pagination
+  box-shadow: none
+
+.main .header, .main .sidebar-inner
+  border: 1px solid var(--journal-rule)
+
+.site-brand-container
+  padding: 24px 8px 18px
+
+.site-title
+  font-size: 24px
+
+.site-nav-toggle button.toggle
+  box-sizing: border-box
+  width: 44px
+  min-height: 44px
+  padding: 10px
+  border: 0
+  border-radius: 0
+  background: transparent
+  cursor: pointer
+
+.site-subtitle
+  color: var(--journal-muted)
+  line-height: 1.8
+
+.links-of-author
+  grid-template-columns: 1fr
+  gap: 0
+  border-top: 1px solid var(--journal-rule)
+
+.links-of-author-item a
+  padding: 10px 4px
+  border: 0
+  border-bottom: 1px solid #e8e9e4
+  border-radius: 0
+  font-size: 13px
+
+.links-of-author-item a:hover
+  border-color: #e8e9e4
+  color: #002fa7
+
+.links-of-author-item .social-brand-icon
+  flex-basis: 20px
+  width: 20px
+  height: 20px
+  border-radius: 0
+  box-shadow: none
+
+.site-description, .site-state-item-name
+  color: var(--journal-muted)
+
+.sidebar-nav li:hover, .sidebar-toc-active .sidebar-nav-toc, .sidebar-toc-active .sidebar-nav-toc:hover, .sidebar-overview-active .sidebar-nav-overview, .sidebar-overview-active .sidebar-nav-overview:hover, .sidebar .post-toc .nav .active > a, .sidebar .post-toc .nav .active-current > a:hover
+  color: #002fa7
+  border-bottom-color: #002fa7
+
+.index .home-intro
+  display: grid
+  grid-template-columns: minmax(0, 1fr) 180px
+  align-items: center
+  gap: 24px
+  padding: 56px 0 44px
+  margin: 0
+  border: 0
+
+.index .home-intro-kicker
+  margin: 0 0 20px
+  color: #002fa7
+  font-size: 11px
+  letter-spacing: 0.14em
+  line-height: 1.5
+
+.index .home-intro h2
+  margin: 0 0 22px
+  padding: 0
+  border: 0
+  font-size: clamp(30px, 3.1vw, 46px)
+  font-weight: 500
+  line-height: 1.45
+  letter-spacing: -0.045em
+
+.home-intro h2 span
+  color: #002fa7
+
+.index .home-intro .home-intro-deck
+  margin: 0 0 23px
+  color: var(--journal-muted)
+  font-size: 14px
+  line-height: 1.85
+
+.index .home-intro-link
+  gap: 18px
+  margin: 0
+  padding-bottom: 5px
+  border-bottom: 1px solid #002fa7
+  font-size: 13px
+
+.home-compass
+  color: #002fa7
+  text-align: center
+
+.home-compass svg
+  display: block
+  width: 100%
+  height: auto
+
+.home-compass > span
+  display: block
+  margin-top: 15px
+  color: var(--journal-muted)
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-size: 12px
+
+.index .home-sections
+  gap: 0
+  margin-bottom: 52px
+  border-top: 1px solid var(--journal-rule)
+  border-bottom: 1px solid var(--journal-rule)
+
+.index .home-section-card
+  position: relative
+  min-width: 0
+  border: 0
+  border-right: 1px solid var(--journal-rule)
+  border-radius: 0
+  background: #fff
+  transition: background-color .2s ease
+
+.index .home-section-card:last-child
+  border-right: 0
+
+.index .home-section-card:hover
+  background: #edf1fb
+
+.index .home-section-body
+  padding: 16px 15px 18px
+
+.home-section-index
+  display: block
+  color: #002fa7
+  font-size: 10px
+  font-weight: 600
+  letter-spacing: .08em
+
+.home-section-image
+  display: block
+  width: 100%
+  height: 110px
+  margin: 8px 0 12px
+  object-fit: contain
+  mix-blend-mode: multiply
+  transition: transform .25s ease
+
+.home-section-card:hover .home-section-image
+  transform: translateY(-4px)
+
+.index .home-section-body h3
+  font-size: 22px
+  line-height: 1.5
+
+.index .home-section-body p
+  font-size: 11px
+  color: var(--journal-muted)
+  white-space: normal
+
+.index .home-latest-heading
+  display: flex
+  justify-content: space-between
+  align-items: end
+  gap: 16px
+  margin: 0 0 24px
+
+.index .home-latest-heading .home-intro-kicker
+  margin: 0 0 8px
+
+.index .home-latest-heading h2
+  margin: 0
+  font-size: 30px
+
+.home-latest-heading > a
+  padding-bottom: 3px
+  color: var(--journal-muted)
+  font-size: 12px
+
+.journal-list
+  border-top: 2px solid #1a1a1a
+
+.journal-entry
+  display: block
+  padding: 28px 0
+  border-bottom: 1px solid var(--journal-rule)
+
+.journal-meta
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  align-items: center
+  gap: 14px
+  color: var(--journal-muted)
+  font-size: 11px
+  letter-spacing: .03em
+
+.journal-meta a
+  color: #002fa7
+  border: 0
+
+.journal-feature-label
+  color: #002fa7
+
+.journal-entry h2
+  margin: 10px 0 12px
+  font-size: 24px
+  line-height: 1.5
+  overflow-wrap: anywhere
+
+.journal-entry h2 a
+  border: 0
+  transition: color .2s ease
+
+.journal-entry-copy > p
+  margin: 0 0 14px
+  color: var(--journal-muted)
+  font-size: 13px
+  line-height: 1.8
+
+.journal-read-link
+  display: inline-flex
+  align-items: center
+  gap: 14px
+  border: 0
+  color: #002fa7
+  font-size: 12px
+
+.journal-read-link span
+  transition: transform .2s ease
+
+.journal-read-link:hover span
+  transform: translate(2px, -2px)
+
+.journal-entry-featured
+  padding: 30px 0
+
+.journal-entry-featured h2
+  font-size: 30px
+
+.main-inner.index .pagination
+  margin-top: 30px
+  background: transparent
+
+.posts-expand:not(.index):not(.about-page):not(.music-page) .post-block
+  padding: 46px 50px 36px
+  border-color: var(--journal-rule)
+
+.posts-expand:not(.index):not(.about-page):not(.music-page) .post-header
+  margin-bottom: 38px
+  text-align: left
+
+.posts-expand:not(.index):not(.about-page):not(.music-page) .post-meta-container
+  text-align: left
+
+.posts-expand:not(.index):not(.about-page):not(.music-page) .post-title
+  font-size: 34px
+  font-weight: 500
+  line-height: 1.45
+
+.posts-expand:not(.index):not(.about-page):not(.music-page) .post-body
+  font-size: 17px
+  line-height: 1.95
+
+.post-meta, .post-description
+  color: var(--journal-muted)
+
+.posts-expand .post-body h2, .posts-expand .post-body h3
+  padding-bottom: 8px
+  border-bottom: 0
+
+.category .section-hero
+  width: 160px
+  margin: 0
+
+.category-masthead
+  display: grid
+  grid-template-columns: minmax(0, 1fr) 160px
+  align-items: center
+  gap: 24px
+  margin: 24px 0 28px
+  padding-bottom: 24px
+  border-bottom: 1px solid var(--journal-rule)
+
+.category-intro > p:last-child
+  margin: 0
+  color: var(--journal-muted)
+  font-size: 16px
+  line-height: 1.9
+
+.category .post-content
+  margin: 0 0 28px
+
+.category .post-content::before, .category .collection-year::before, .category .post-header::before
+  display: none
+
+.category.posts-collapse .post-content .collection-year
+  margin: 24px 0 12px
+  color: #002fa7
+  font-size: 14px
+  font-weight: 500
+  letter-spacing: .08em
+
+.category.posts-collapse .post-content .collection-header
+  margin-left: 0
+
+.category.posts-collapse .post-content .post-header
+  display: grid
+  grid-template-columns: 58px minmax(0, 1fr)
+  align-items: baseline
+  gap: 12px
+  margin: 0
+  padding: 18px 0
+  border-bottom: 1px solid var(--journal-rule)
+
+.category.posts-collapse .post-content .post-meta-container
+  margin-right: 0
+  color: var(--journal-muted)
+
+.category.posts-collapse .post-content .post-title
+  font-family: "Songti SC", "STSong", "SimSun", serif
+  font-size: 20px
+
+.music-page .music-masthead
+  display: grid
+  grid-template-columns: minmax(0, 1fr) 160px
+  align-items: center
+  gap: 24px
+  margin-bottom: 30px
+  padding: 18px 0 28px
+
+.music-page .music-masthead .section-hero
+  width: 100%
+  max-width: 160px
+  margin: 0
+
+.music-page .music-masthead .section-hero img
+  width: 100%
+  max-width: 100%
+  margin: 0
+
+.music-page .music-intro
+  margin: 0
+  text-align: left
+
+.music-page .post-body .music-count
+  color: var(--journal-muted) !important
+
+.posts-collapse .post-title a
+  line-height: 1.6
+
+.main-inner.music-page .post-block, .main-inner.about-page .post-block, .posts-collapse .post-block
+  border-color: var(--journal-rule)
+
+.main-inner.about-page .post-block
+  border-top-color: #002fa7
+
+.music-count, .music-album-meta, .music-album-facts
+  color: var(--journal-muted) !important
+
+.about-page .post-body > h3::before
+  color: var(--journal-muted)
+
+@media (max-width: 991px)
+  .main-inner.index
+    padding: 0 28px
+
+@media (max-width: 767px)
+  .site-brand-container
+    padding: 10px 40px
+
+  .site-meta
+    padding: 8px 0
+
+  .main-inner.index
+    padding: 0 22px
+
+  .index .home-intro
+    grid-template-columns: minmax(0, 1fr)
+    padding: 30px 0 26px
+
+  .index .home-intro h2
+    font-size: clamp(28px, 6.8vw, 42px)
+    letter-spacing: -.045em
+
+  .home-compass
+    display: none
+
+  .index .home-intro .home-intro-deck
+    font-size: 13px
+
+  .index .home-sections
+    grid-template-columns: repeat(6, minmax(0, 1fr))
+    margin-bottom: 36px
+
+  .index .home-section-card
+    grid-column: span 2
+    border-bottom: 1px solid var(--journal-rule)
+
+  .index .home-section-card:nth-child(3)
+    border-right: 0
+
+  .index .home-section-card:nth-child(n+4)
+    grid-column: span 3
+    border-bottom: 0
+
+  .index .home-section-body
+    padding: 12px 10px
+
+  .home-section-index
+    font-size: 8px
+
+  .home-section-image
+    height: 60px
+    margin: 6px 0
+
+  .index .home-section-body h3
+    font-size: 20px
+
+  .index .home-section-body p
+    font-size: 10px
+
+  .index .home-latest-heading h2
+    font-size: 26px
+
+  .journal-entry
+    padding: 24px 0
+
+  .journal-entry h2
+    font-size: 20px
+
+  .journal-entry-featured h2
+    font-size: 26px
+
+  .journal-meta
+    gap: 9px
+    font-size: 10px
+
+  .posts-expand:not(.index):not(.about-page):not(.music-page) .post-block
+    padding: 30px 22px
+
+  .posts-expand:not(.index):not(.about-page):not(.music-page) .post-title
+    font-size: 28px
+
+  .posts-expand:not(.index):not(.about-page):not(.music-page) .post-body
+    font-size: 16px
+
+  .posts-expand .post-body img
+    max-width: 100%
+
+  .category-masthead
+    grid-template-columns: minmax(0, 1fr) 96px
+    gap: 14px
+
+  .category .section-hero
+    width: 96px
+
+  .category-intro .home-intro-kicker
+    font-size: 9px
+
+  .category-intro > p:last-child
+    font-size: 13px
+
+  .category.posts-collapse .post-content .post-title
+    font-size: 18px
+
+  .category.posts-collapse .post-content .post-header
+    grid-template-columns: 44px minmax(0, 1fr)
+    gap: 10px
+
+  .music-page .music-masthead
+    grid-template-columns: minmax(0, 1fr) 96px
+    gap: 14px
+    padding-top: 12px
+
+  .music-page .music-intro
+    font-size: 14px
+
+@media (prefers-reduced-motion: reduce)
+  .home-section-image, .journal-read-link span, .site-author-image, .social-brand-icon
+    transition: none
+
+  .home-section-card:hover .home-section-image, .journal-read-link:hover span, .site-author-image:hover, .links-of-author-item a:hover .social-brand-icon
+    transform: none

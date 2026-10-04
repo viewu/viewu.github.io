@@ -1,12 +1,12 @@
 <div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="{{ __('accessibility.nav_toggle') }}" role="button">
+    <button type="button" class="toggle" aria-label="{{ __('accessibility.nav_toggle') }}" aria-expanded="false" aria-controls="site-navigation">
       {%- if theme.menu %}
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
       {%- endif %}
-    </div>
+    </button>
   </div>
 
   <div class="site-meta">

@@ -1,0 +1,14 @@
+<article class="journal-entry{% if featured %} journal-entry-featured{% endif %}">
+  <div class="journal-entry-copy">
+    <div class="journal-meta">
+      {% if featured %}<span class="journal-feature-label">最新一篇</span>{% endif %}
+      <time datetime="{{ moment(post.date).format() }}">{{ date(post.date, 'YYYY.MM.DD') }}</time>
+      {%- for category in post.categories.toArray() %}
+        <a href="{{ url_for(category.path) }}">{{ category.name }}</a>
+      {%- endfor %}
+    </div>
+    <h2><a href="{{ url_for(post.path) }}">{{ post.title or __('post.untitled') }}</a></h2>
+    <p>{{ post.description or strip_html(post.excerpt or post.content) | truncate(120) }}</p>
+    <a class="journal-read-link" href="{{ url_for(post.path) }}" aria-label="阅读全文：{{ post.title }}">阅读全文 <span aria-hidden="true">↗</span></a>
+  </div>
+</article>

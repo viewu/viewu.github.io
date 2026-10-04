@@ -14,6 +14,7 @@ NexT.boot.registerEvents = function() {
     if (!siteNav) return;
     siteNav.style.setProperty('--scroll-height', siteNav.scrollHeight + 'px');
     document.body.classList.toggle('site-nav-on');
+    event.currentTarget.setAttribute('aria-expanded', String(document.body.classList.contains('site-nav-on')));
   });
 
   document.querySelectorAll('.sidebar-nav li').forEach((element, index) => {
