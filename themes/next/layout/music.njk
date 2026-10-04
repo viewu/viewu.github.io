@@ -16,13 +16,13 @@
 
     <div class="post-body music-body">
       <section class="music-masthead" aria-labelledby="album-notes-title">
-        <div class="section-hero">
-          <img src="{{ url_for('/images/sections/hero-music.webp') }}" alt="音乐板块线稿插画" loading="lazy" decoding="async" width="1000" height="1500">
-        </div>
         <div class="music-intro">
           <p class="music-kicker" id="album-notes-title">ALBUM NOTES</p>
           {{ page.content | safe }}
           <p class="music-count">{{ site.data.music_albums | length }} 张专辑 · 持续更新</p>
+        </div>
+        <div class="section-hero">
+          <img src="{{ url_for('/images/sections/hero-music.webp') }}" alt="音乐板块线稿插画" loading="lazy" decoding="async" width="1000" height="1500">
         </div>
       </section>
 

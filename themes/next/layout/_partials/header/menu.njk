@@ -1,7 +1,7 @@
 {% import 'menu-item.njk' as menu_item with context %}
 
 {%- if theme.menu or theme.algolia_search.enable or theme.local_search.enable %}
-<nav class="site-nav">
+<nav class="site-nav" id="site-navigation" aria-label="主导航">
   <ul class="main-menu menu">
     {%- for node in theme.main_menu %}
       {{- menu_item.render(node) | trim }}

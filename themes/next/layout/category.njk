@@ -45,6 +45,22 @@
       {%- endif %}
     </div>
 
+    <div class="category-masthead">
+      <div class="category-intro">
+        {%- if page.category == '工作' %}
+          <p class="home-intro-kicker">WORK / IN PRACTICE</p>
+          <p>AI 工作流与工程实践。<br>从真实任务里，理解工作的方式。</p>
+        {%- elif page.category == '成长' %}
+          <p class="home-intro-kicker">GROWTH / IN PROGRESS</p>
+          <p>学习与自我观察。<br>记录那些需要反复实践的问题。</p>
+        {%- elif page.category == '写作' %}
+          <p class="home-intro-kicker">WRITING / IN WORDS</p>
+          <p>文字实验。<br>把经历、想法与感受写下来。</p>
+        {%- elif page.category == '运动' %}
+          <p class="home-intro-kicker">SPORT / IN MOTION</p>
+          <p>训练、身体与数据。<br>在运动中，慢慢认识自己。</p>
+        {%- endif %}
+      </div>
     {%- if page.category == '工作' %}
     <div class="section-hero">
       <img src="{{ url_for('/images/sections/hero-work.webp') }}" alt="工作" loading="lazy" decoding="async" width="1000" height="1500">
@@ -62,6 +78,7 @@
       <img src="{{ url_for('/images/sections/hero-sport.webp') }}" alt="运动" loading="lazy" decoding="async" width="1000" height="1500">
     </div>
     {%- endif %}
+    </div>
 
     <div class="post-content">
       {{ post_template.render(page.posts) }}

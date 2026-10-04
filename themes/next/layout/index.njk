@@ -8,56 +8,77 @@
 {% block content %}
 
   <section class="home-intro" aria-labelledby="home-intro-title">
-    <p class="home-intro-kicker">AI WORKFLOW · LEARNING · WRITING</p>
-    <h2 id="home-intro-title">把 AI 用进真实工作，也把思考写下来。</h2>
-    <a class="home-intro-link" href="{{ url_for('/about/') }}">了解更多关于我 <i class="fa fa-arrow-right"></i></a>
+    <div class="home-intro-copy">
+      <p class="home-intro-kicker">VIEWU / A PERSONAL JOURNAL</p>
+      <h2 id="home-intro-title">把 AI 用进真实工作，<br>也把<span>思考写下来。</span></h2>
+      <p class="home-intro-deck">AI 工作流、学习系统与自我观察。<br>在工作与生活之间，记录正在发生的改变。</p>
+      <a class="home-intro-link" href="{{ url_for('/about/') }}">了解更多关于我 <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="home-compass" aria-hidden="true">
+      <svg viewBox="0 0 240 240" fill="none">
+        <circle cx="120" cy="120" r="94" stroke="currentColor" stroke-width="0.7"/>
+        <circle cx="120" cy="120" r="64" stroke="currentColor" stroke-width="0.7"/>
+        <path d="M120 10v220M10 120h220M42 42l156 156M42 198L198 42" stroke="currentColor" stroke-width="0.7"/>
+        <ellipse cx="120" cy="120" rx="34" ry="94" transform="rotate(40 120 120)" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="120" cy="120" r="8" fill="currentColor"/>
+        <circle cx="180" cy="48" r="5" fill="currentColor"/>
+      </svg>
+      <span>生活，不只有一个方向。</span>
+    </div>
   </section>
 
   <section class="home-sections" aria-label="网站板块">
     <a class="home-section-card" href="{{ url_for('/categories/工作/') }}">
       <div class="home-section-body">
-        <i class="fa fa-briefcase home-section-icon"></i>
+        <span class="home-section-index">01 / WORK</span>
+        <img class="home-section-image" src="{{ url_for('/images/sections/hero-work.webp') }}" alt="" width="1000" height="1500" loading="lazy" decoding="async">
         <h3>工作</h3>
         <p>AI 工作流</p>
       </div>
     </a>
     <a class="home-section-card" href="{{ url_for('/categories/成长/') }}">
       <div class="home-section-body">
-        <i class="fa fa-seedling home-section-icon"></i>
+        <span class="home-section-index">02 / GROWTH</span>
+        <img class="home-section-image" src="{{ url_for('/images/sections/hero-growth.webp') }}" alt="" width="1000" height="1500" loading="lazy" decoding="async">
         <h3>成长</h3>
         <p>学习与自我观察</p>
       </div>
     </a>
     <a class="home-section-card" href="{{ url_for('/categories/写作/') }}">
       <div class="home-section-body">
-        <i class="fa fa-feather home-section-icon"></i>
+        <span class="home-section-index">03 / WRITING</span>
+        <img class="home-section-image" src="{{ url_for('/images/sections/hero-writing.webp') }}" alt="" width="1000" height="1500" loading="lazy" decoding="async">
         <h3>写作</h3>
         <p>文字实验</p>
       </div>
     </a>
     <a class="home-section-card" href="{{ url_for('/music/') }}">
       <div class="home-section-body">
-        <i class="fa fa-music home-section-icon"></i>
+        <span class="home-section-index">04 / MUSIC</span>
+        <img class="home-section-image" src="{{ url_for('/images/sections/hero-music.webp') }}" alt="" width="1000" height="1500" loading="lazy" decoding="async">
         <h3>音乐</h3>
         <p>专辑与推荐</p>
       </div>
     </a>
     <a class="home-section-card" href="{{ url_for('/categories/运动/') }}">
       <div class="home-section-body">
-        <i class="fa fa-dumbbell home-section-icon"></i>
+        <span class="home-section-index">05 / SPORT</span>
+        <img class="home-section-image" src="{{ url_for('/images/sections/hero-sport.webp') }}" alt="" width="1000" height="1500" loading="lazy" decoding="async">
         <h3>运动</h3>
         <p>训练与分享</p>
       </div>
     </a>
   </section>
   <div class="home-latest-heading">
-    <p class="home-intro-kicker">LATEST NOTES</p>
-    <h2>最新文章</h2>
+    <div><p class="home-intro-kicker">THE JOURNAL</p><h2>最近的记录</h2></div>
+    <a href="{{ url_for('/archives/') }}">全部文章 <span aria-hidden="true">↗</span></a>
   </div>
 
-  {%- for post in page.posts.toArray() %}
-    {{ partial('_macro/post.njk', {post: post, is_index: true}) }}
-  {%- endfor %}
+  <section class="journal-list" aria-label="最新文章">
+    {%- for post in page.posts.toArray() %}
+      {{ partial('_partials/journal-entry.njk', {post: post, featured: loop.first and page.current == 1}) }}
+    {%- endfor %}
+  </section>
 
   {%- include '_partials/pagination.njk' -%}
 
