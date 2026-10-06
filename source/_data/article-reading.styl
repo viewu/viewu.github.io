@@ -1,0 +1,324 @@
+// Shared by every post. Homepage and standalone pages retain their own layouts.
+$reading-font = -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif
+
+.article-page
+  --reading-ink: #343c49
+  --reading-strong: #171e2b
+  --reading-muted: #646d7a
+  --reading-rule: #e0e5ec
+  --reading-accent: #002fa7
+
+.article-page .post-block
+  padding: 52px 54px 40px
+  border-color: var(--journal-rule)
+
+.article-page .post-content
+  width: 100%
+  max-width: 42.5rem
+  margin: 0 auto
+
+.article-page .post-header
+  margin: 0 0 34px
+  padding-bottom: 28px
+  border-bottom: 1px solid var(--reading-rule)
+  text-align: left
+
+.article-page .post-title
+  margin: 0 0 20px
+  color: var(--reading-strong)
+  font-family: Georgia, "Songti SC", "STSong", "SimSun", serif
+  font-size: 2.375rem
+  font-weight: 500
+  line-height: 1.45
+  letter-spacing: -.025em
+  overflow-wrap: anywhere
+
+.article-page .post-meta-container, .article-page .post-meta
+  color: var(--reading-muted)
+  font-family: $reading-font
+  font-size: .8125rem
+  line-height: 1.8
+  text-align: left
+
+.article-page .post-description
+  margin: 14px 0 0
+  color: var(--reading-muted)
+  font-size: .875rem
+  line-height: 1.8
+
+.article-page .post-meta
+  justify-content: flex-start
+
+.article-page .post-body
+  color: var(--reading-ink)
+  font-family: $reading-font
+  font-size: 1.125rem
+  font-weight: 400
+  line-height: 1.9
+  letter-spacing: .015em
+  text-align: left
+  overflow-wrap: anywhere
+  word-break: normal
+
+.article-page .post-body p
+  margin: 0 0 1.15em
+
+.article-page .post-content:lang(en) .post-body
+  letter-spacing: 0
+
+.article-page .post-body h2, .article-page .post-body h3, .article-page .post-body h4, .article-page .post-body h5, .article-page .post-body h6
+  padding: 0
+  border: 0
+  color: var(--reading-strong)
+  font-family: $reading-font
+  font-weight: 700
+  line-height: 1.5
+  letter-spacing: 0
+  scroll-margin-top: 28px
+  overflow-wrap: anywhere
+
+.article-page .post-body h2
+  margin: 52px 0 18px
+  padding-left: 15px
+  border-left: 3px solid var(--reading-accent)
+  font-size: 1.625rem
+
+.article-page .post-body h3
+  margin: 36px 0 14px
+  font-size: 1.3125rem
+
+.article-page .post-body h4
+  margin: 30px 0 12px
+  font-size: 1.125rem
+
+.article-page .post-body h5, .article-page .post-body h6
+  margin: 26px 0 10px
+  font-size: 1.0625rem
+
+.article-page .post-body > h2:first-child
+  margin-top: 0
+
+.article-page .post-body h2 + h3
+  margin-top: 24px
+
+.article-page .post-body h2:target, .article-page .post-body h3:target
+  color: var(--reading-accent)
+
+.article-page .post-body .headerlink:focus-visible
+  opacity: 1
+
+.article-page .post-body strong, .article-page .post-body b
+  color: var(--reading-strong)
+  font-family: inherit
+  font-weight: 700
+
+.article-page .post-body a
+  color: var(--reading-accent)
+  border-bottom: 1px solid rgba(0, 47, 167, .3)
+  text-decoration: none
+  overflow-wrap: anywhere
+
+.article-page .post-body a:hover
+  border-bottom-color: var(--reading-accent)
+
+.article-page .post-body blockquote
+  margin: 26px 0
+  padding: 18px 22px
+  border-left: 3px solid var(--reading-accent)
+  background: #f5f7fb
+  color: #4a5669
+  font-size: 1em
+  line-height: 1.85
+
+.article-page .post-body blockquote > :last-child
+  margin-bottom: 0
+
+.article-page .post-body ul, .article-page .post-body ol
+  margin: 20px 0 24px
+  padding-left: 1.65em
+
+.article-page .post-body li
+  padding-left: .15em
+  margin-bottom: .5em
+
+.article-page .post-body li::marker
+  color: var(--reading-accent)
+
+.article-page .post-body li > ul, .article-page .post-body li > ol
+  margin: 10px 0
+
+.article-page .post-body li > p
+  margin-bottom: .5em
+
+.article-page .post-body img
+  display: block
+  width: auto
+  max-width: 100%
+  height: auto
+  margin: 32px auto
+  border-radius: 3px
+
+.article-page .post-body figure:not(.highlight)
+  margin: 32px 0
+
+.article-page .post-body figure:not(.highlight) img
+  margin: 0 auto
+
+.article-page .post-body figcaption
+  margin: 10px auto 0
+  color: var(--reading-muted)
+  font-size: .8125rem
+  font-weight: 400
+  line-height: 1.65
+  text-align: center
+
+.article-page .post-body hr
+  height: 1px
+  margin: 38px 0
+  background: var(--reading-rule)
+
+.article-page .post-body :not(pre) > code
+  padding: 2px 5px
+  border-radius: 3px
+  background: #edf1f6
+  color: #16437a
+  font-family: Consolas, "SFMono-Regular", Menlo, monospace
+  font-size: .86em
+  letter-spacing: 0
+
+.article-page .post-body pre, .article-page .post-body .highlight
+  max-width: 100%
+  margin: 26px 0
+  border: 1px solid var(--reading-rule)
+  border-radius: 3px
+  background: #f6f7f9
+  font-family: Consolas, "SFMono-Regular", Menlo, monospace
+  font-size: .875rem
+  line-height: 1.7
+  letter-spacing: 0
+  overflow: auto
+
+.article-page .post-body pre
+  padding: 16px 18px
+
+.article-page .post-body pre code
+  padding: 0
+  background: transparent
+  color: inherit
+  font-size: inherit
+
+.article-page .post-body .highlight pre
+  margin: 0
+  padding: 0
+  border: 0
+  background: transparent
+  overflow: visible
+
+.article-page .post-body .highlight table
+  width: 100%
+  margin: 0
+  border: 0
+  border-collapse: collapse
+
+.article-page .post-body .highlight td
+  border: 0
+  background: transparent
+
+.article-page .post-body .highlight .gutter
+  width: 1%
+  padding: 14px 12px 14px 14px
+  border-right: 1px solid var(--reading-rule)
+  color: var(--reading-muted)
+  text-align: right
+  user-select: none
+
+.article-page .post-body .highlight .code
+  padding: 14px 18px
+  text-align: left
+
+.article-page .post-body > .table-container
+  margin: 26px 0
+  overflow-x: auto
+
+.article-page .post-body > table, .article-page .post-body > .table-container > table
+  width: 100%
+  margin: 0
+  border-collapse: collapse
+  font-size: .9375rem
+  line-height: 1.7
+
+.article-page .post-body > .table-container > table th, .article-page .post-body > .table-container > table td, .article-page .post-body > table th, .article-page .post-body > table td
+  padding: 12px 14px
+  border: 1px solid var(--reading-rule)
+  text-align: left
+  vertical-align: top
+
+.article-page .post-body > .table-container > table th, .article-page .post-body > table th
+  background: #f2f5fa
+  color: var(--reading-strong)
+  font-weight: 700
+
+.article-page .post-footer
+  margin-top: 38px
+  padding-top: 22px
+  border-top: 1px solid var(--reading-rule)
+  font-family: $reading-font
+
+.article-page .post-tags
+  margin-top: 0
+
+.article-page .post-tags a, .article-page .post-nav-item a
+  font-size: .875rem
+  line-height: 1.7
+
+.main:has(.article-page) .post-toc .nav-item
+  overflow: visible
+  text-overflow: clip
+  white-space: normal
+
+.main:has(.article-page) .post-toc .nav a
+  display: block
+  padding: 5px 7px
+  border: 0
+  border-left: 2px solid transparent
+  color: #596474
+  line-height: 1.65
+
+.main:has(.article-page) .post-toc .nav .active-current > a
+  border-left-color: #002fa7
+  background: #edf2fd
+  color: #002fa7
+  font-weight: 600
+
+@media (max-width: 767px)
+  .article-page .post-block
+    padding: 30px 22px 32px
+
+  .article-page .post-header
+    margin-bottom: 28px
+    padding-bottom: 23px
+
+  .article-page .post-title
+    font-size: 1.8125rem
+
+  .article-page .post-body
+    font-size: 1.0625rem
+    line-height: 1.9
+
+  .article-page .post-body h2
+    margin-top: 40px
+    padding-left: 12px
+    font-size: 1.375rem
+
+  .article-page .post-body h3
+    margin-top: 30px
+    font-size: 1.1875rem
+
+  .article-page .post-body blockquote
+    padding: 15px 17px
+
+  .article-page .post-body img
+    margin: 26px auto
+
+  .article-page .post-body > .table-container > table th, .article-page .post-body > .table-container > table td
+    padding: 10px

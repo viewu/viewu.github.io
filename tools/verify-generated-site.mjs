@@ -156,6 +156,20 @@ if (!existsSync(publicRoot)) {
       failures.push(`${page}: post body contains an H1 heading; use the theme-rendered post title as the only H1.`);
     }
 
+    if (/^\/\d{4}\/\d{2}\/\d{2}\//.test(page)) {
+      const body = html.split(/<div\b[^>]*\bclass=["'][^"']*\bpost-body\b[^"']*["'][^>]*>/i)[1]?.split(/<footer\b[^>]*\bclass=["']post-footer["']/i)[0] || '';
+      for (const paragraph of body.matchAll(/<(?:p|li)\b[^>]*>[\s\S]*?<\/(?:p|li)>/gi)) {
+        const prose = paragraph[0].replace(/<code\b[^>]*>[\s\S]*?<\/code>/gi, '').replace(/<[^>]+>/g, '');
+        if (/\*\*[^*\n]+\*\*/.test(prose)) {
+          failures.push(`${page}: unrendered Markdown emphasis in prose; fix the delimiter boundary or use <strong>.`);
+          break;
+        }
+      }
+      if (/<img\b[^>]*\bstyle=["'][^"']*\bzoom\s*:/i.test(body)) {
+        failures.push(`${page}: inline image zoom bypasses the shared reading layout.`);
+      }
+    }
+
     for (const match of html.matchAll(/<a\b[^>]*\btarget=["']_blank["'][^>]*>/gi)) {
       if (!/\brel=["'][^"']*\bnoopener\b[^"']*["']/i.test(match[0])) {
         failures.push(`${page}: target=_blank link is missing rel=noopener.`);

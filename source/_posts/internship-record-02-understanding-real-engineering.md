@@ -60,7 +60,7 @@ claude
 
 它们本身就是开发环境的一部分。
 
-<img src="/images/internship-record-02-understanding-real-engineering/2.webp" style="zoom:60%;" />
+<img src="/images/internship-record-02-understanding-real-engineering/2.webp" />
 
 尤其开始使用 Claude Code 以后，这一点变得更加明显。
 
@@ -140,7 +140,7 @@ http://192.168.x.x:xxxx
 
 这两个错误看起来都是“Claude 用不了了”，但实际上完全不是同一个层级的问题。
 
-<img src="/images/internship-record-02-understanding-real-engineering/3.webp" style="zoom:60%;" />
+<img src="/images/internship-record-02-understanding-real-engineering/3.webp" />
 
 `ConnectionRefused` 更接近：
 
@@ -210,7 +210,7 @@ API Key 应该写在哪里？`settings.json` 在哪里？Windows 和 macOS 的�
 
 **到底是哪一层坏了。**
 
-<img src="/images/internship-record-02-understanding-real-engineering/4.webp" style="zoom:60%;" />
+<img src="/images/internship-record-02-understanding-real-engineering/4.webp" />
 
 这也是为什么很多有经验的工程师处理问题特别快。
 
@@ -272,7 +272,7 @@ workflow
 写代码->commit->push->Pull Request->CI / GitHub Actions->自动测试->检查->合并->部署
 ```
 
-<img src="/images/internship-record-02-understanding-real-engineering/5.webp" style="zoom:60%;" />
+<img src="/images/internship-record-02-understanding-real-engineering/5.webp" />
 
 代码仓库并不是一个静态文件夹。
 
@@ -351,7 +351,7 @@ SELECT name FROM users ...
 
 ORM 就是在两种世界之间做映射。
 
-<img src="/images/internship-record-02-understanding-real-engineering/6.webp" style="zoom:60%;" />
+<img src="/images/internship-record-02-understanding-real-engineering/6.webp" />
 
 理解这个以后，再去读后端项目，很多代码突然就不再是孤立的语法了。
 
@@ -464,7 +464,7 @@ C 为什么更加贴近底层？
 
 然后三个月过去，项目可能还没有开始。
 
-<img src="/images/internship-record-02-understanding-real-engineering/7.webp" style="zoom:60%;" />
+<img src="/images/internship-record-02-understanding-real-engineering/7.webp" />
 
 真实的实习经历让我越来越认可另一种学习方式：
 

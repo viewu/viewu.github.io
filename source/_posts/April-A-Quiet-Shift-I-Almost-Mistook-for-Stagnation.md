@@ -1,5 +1,6 @@
 ---
 layout: post
+content_lang: en
 title: 'A Quiet Shift I Almost Mistook for Stagnation'
 date: 2026-05-03 13:23:38
 description: Summary of April,2026

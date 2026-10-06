@@ -1,5 +1,6 @@
 ---
 layout: post
+content_lang: en
 title: July Reflection — The Month Theory Became Reality
 date: 2026-08-05 16:45:58
 description: A July reflection on internship, structure, AI learning, humility, and turning theory into real-world experience.

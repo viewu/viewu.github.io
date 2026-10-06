@@ -1,5 +1,6 @@
 ---
 layout: post
+content_lang: en
 title: August — Learning to Carry More
 date: 2026-08-28 16:05:00
 description: An August reflection on internship pressure, money, AI learning, gratitude, responsibility, and growing into a stronger container.
