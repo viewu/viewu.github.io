@@ -40,7 +40,7 @@ GitHub Pages is configured for Actions publishing. The pre-migration generated s
 
 - `scripts/native-image-performance.js` adds native lazy loading, asynchronous decoding, and intrinsic dimensions to rendered content images without changing the source image files.
 - NexT preconnects to configured font and vendor origins to reduce connection setup latency.
-- `npm run check` rejects missing canonical/title/viewport metadata, unsafe `target="_blank"` links, unoptimized content-image markup, individual generated assets above 2 MiB, and generated sites above 55 MiB.
+- `npm run check` rejects missing canonical/title/viewport metadata, unsafe `target="_blank"` links, unoptimized content-image markup, individual generated assets above 2 MiB, and generated sites above 65 MiB.
 
 ## Image workflow
 

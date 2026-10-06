@@ -109,7 +109,7 @@ Existing tags observed:
 - `scripts/native-image-performance.js` modifies rendered post/page HTML only. It adds native lazy loading and asynchronous decoding, and reads local PNG/JPEG/GIF/WebP headers to add intrinsic dimensions when the source markup does not already specify a size.
 - Keep source images unchanged unless the user explicitly approves compression or format conversion. Existing article assets were migrated to pixel-identical lossless WebP with recoverable originals.
 - NexT resource preconnect is enabled in `themes/next/_config.yml`.
-- `npm run check` starts with the source-image audit, then enforces core metadata, `rel="noopener"` for new-window links, native content-image attributes, a 2 MiB per-generated-file limit, and a 55 MiB total generated-site limit.
+- `npm run check` starts with the source-image audit, then enforces core metadata, `rel="noopener"` for new-window links, native content-image attributes, a 2 MiB per-generated-file limit, and a 65 MiB total generated-site limit.
 
 ## Production Health Monitoring
 
