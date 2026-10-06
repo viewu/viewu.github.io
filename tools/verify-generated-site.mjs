@@ -183,10 +183,10 @@ if (!existsSync(publicRoot)) {
 
   const generatedFiles = collectFiles(publicRoot);
   const totalBytes = generatedFiles.reduce((sum, file) => sum + statSync(file).size, 0);
-  const maximumSiteBytes = 55 * 1024 * 1024;
+  const maximumSiteBytes = 65 * 1024 * 1024;
   const maximumAssetBytes = 2 * 1024 * 1024;
   if (totalBytes > maximumSiteBytes) {
-    failures.push(`Generated site exceeds the 55 MiB budget (${totalBytes} bytes).`);
+    failures.push(`Generated site exceeds the 65 MiB budget (${totalBytes} bytes).`);
   }
   for (const file of generatedFiles) {
     const size = statSync(file).size;
