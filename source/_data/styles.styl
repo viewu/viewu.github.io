@@ -1802,26 +1802,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [role='button']:fo
   margin-top: 30px
   background: transparent
 
-.posts-expand:not(.index):not(.about-page):not(.music-page) .post-block
-  padding: 46px 50px 36px
-  border-color: var(--journal-rule)
-
-.posts-expand:not(.index):not(.about-page):not(.music-page) .post-header
-  margin-bottom: 38px
-  text-align: left
-
-.posts-expand:not(.index):not(.about-page):not(.music-page) .post-meta-container
-  text-align: left
-
-.posts-expand:not(.index):not(.about-page):not(.music-page) .post-title
-  font-size: 34px
-  font-weight: 500
-  line-height: 1.45
-
-.posts-expand:not(.index):not(.about-page):not(.music-page) .post-body
-  font-size: 17px
-  line-height: 1.95
-
 .post-meta, .post-description
   color: var(--journal-muted)
 
@@ -1996,15 +1976,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [role='button']:fo
     gap: 9px
     font-size: 10px
 
-  .posts-expand:not(.index):not(.about-page):not(.music-page) .post-block
-    padding: 30px 22px
-
-  .posts-expand:not(.index):not(.about-page):not(.music-page) .post-title
-    font-size: 28px
-
-  .posts-expand:not(.index):not(.about-page):not(.music-page) .post-body
-    font-size: 16px
-
   .posts-expand .post-body img
     max-width: 100%
 
@@ -2042,3 +2013,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [role='button']:fo
 
   .home-section-card:hover .home-section-image, .journal-read-link:hover span, .site-author-image:hover, .links-of-author-item a:hover .social-brand-icon
     transform: none
+
+// Article typography has one scoped source of truth.
+@import 'article-reading'
