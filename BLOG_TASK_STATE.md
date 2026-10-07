@@ -109,11 +109,28 @@ Current source posts include:
   - Tags: `运动`, `身体数据`, `智能手表`
   - Assets: `source/images/smartwatch-health-data-reliability/` (`0.webp` cover plus body images `1.webp`-`4.webp`)
 
+- `september-learning-to-return.md`
+  - Title: `September 2026 — Learning to Return`
+  - Date: `2026-10-07 18:05:07`
+  - Description: `A September reflection on uncertainty, basketball, honest conversations, ambition, and learning how to return.`
+  - Categories: `成长`
+  - Tags: `SelfGrowth`, `EnglishDiary`, `Internship`
+  - Assets: `source/images/september-learning-to-return/` (`1.webp` cover plus body images `1.webp`-`3.webp`)
+
 Recent image-backed articles use site-absolute paths under their respective `/images/<slug>/` folders.
 
 ## Maintenance Log
 
-### 2026-10-06 - Unified article reading layout, approved for deployment
+### 2026-10-07 - September English reflection upload
+
+- User requested uploading `D:\viewu_writing\english\2026-10-07-September-Learning to Return\September_2026_Learning_to_Return.md` into the blog under `成长`; this request authorizes article production publishing.
+- Inserted the three source images into the source Markdown at content-matched reading breaks: basketball court (`3.png`, the basketball evening), two chairs (`2.png`, the space between two people), bench and notebook (`1.png`, the road back before the closing coda).
+- Imported `source/_posts/september-learning-to-return.md`, titled `September 2026 — Learning to Return`, dated `2026-10-07 18:05:07` (source Markdown LastWriteTime, Asia/Taipei), with tags `SelfGrowth`, `EnglishDiary`, `Internship`.
+- Moved the opening H1 into Hexo title metadata; preserved article wording exactly (body equality check passed) and replaced the three source references with site-absolute `/images/september-learning-to-return/` WebP paths.
+- Converted source `1.png`-`3.png` to 800px-wide lossless WebP in `source/images/september-learning-to-return/` (1,763,396 bytes total, each below the 2 MiB limit); `1.webp` is the cover. Original writing-folder PNGs remain unchanged.
+- Local `npm run check` passed: image audit, build (73 files), and generated-site verification; generated site 65,773,922 bytes, within the 65 MiB budget.
+
+### 2026-10-06 - Unified article reading layout, published
 
 - User requested consistent typography and reading comfort across all posts, clearer section headings and bold emphasis, with awards quality as a benchmark. User reviewed this local preview and explicitly approved formal deployment on 2026-10-06. Publish through the protected-main PR workflow.
 - Added `source/_data/article-reading.styl`, imported from `styles.styl`, scoped through `.article-page` in `layout/post.njk`. Removed the older article-only overrides from the general styles. Shared typography covers title, metadata, body, H2–H6, bold, quotes, lists, links, images, code, tables, footer and full wrapping TOC.
@@ -123,7 +140,10 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Baseline: 18 articles, 83 light-weight headings, 11 zoom overrides, two broken emphasis paragraphs. Final browser checks: 18 articles at 320/390/768/1440px (72 combinations), shared body styles, explicit heading/bold contrast, no horizontal overflow, TOC navigation and 200% text reflow passed. Source wording comparison passed. Ephemeral component fixture covered data tables and deep heading levels absent from current posts; unrelated pages retained their layout.
 - Local static preview: `http://127.0.0.1:4001/`, served with `node node_modules/hexo-cli/bin/hexo server --static --ip 127.0.0.1 --port 4001`. Rebuild with `hexo generate --force` after Stylus changes.
 - Review document: `READING_REVIEW.md`; measurement scripts and screenshots: ignored `.cache/reading-review/`. Windows Chrome only; real mobile browsers and audio playback remain unverified. No award or full accessibility certification is claimed.
-- Final preview approval is complete; the approved reading-layout changes are being published through a PR and GitHub Pages Actions. The earlier publishing attempt was interrupted by an automatic approval-review usage limit before any commit or PR was created; work resumed at the user's request.
+- Published following explicit preview approval via PR #36: `https://github.com/viewu/viewu.github.io/pull/36`. Source commit `76db2e285ee009f8cfe4db4bbac479939d1c28f2`; production merge `6354515fa12b6065ec864ea4b1dcc63335cef3ce`. Local `main` was fast-forwarded to the production merge. The initial attempt was interrupted by an automatic approval-review usage limit before a commit or PR was created; resumed and completed at the user's request.
+- GitHub Pages build and deploy both succeeded: `https://github.com/viewu/viewu.github.io/actions/runs/37466117309`; Pages publishing mode remains `workflow`.
+- Live verification passed: all 18 article routes returned HTTP 200 and contained the shared reading-layout class. Eight browser checks at 390px and 1440px confirmed consistent type, color, 1.9 line height, 700-weight headings/bold, repaired emphasis, no inline image zoom, bounded reading width and no page overflow. Homepage, Music, About, Atom and sitemap also returned HTTP 200. Evidence: `.cache/reading-review/production-results.json` and `production-*.png`.
+- This final deployment result update is local documentation; deployed source is the production merge above.
 
 ### 2026-10-05 - Publish first-internship reflection
 
