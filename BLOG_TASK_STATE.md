@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-10-06, Asia/Taipei
+Last updated: 2026-10-14, Asia/Taipei
 
 ## Current Objective
 
@@ -121,6 +121,14 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-10-14 - Publish Beyond the Itinerary in Growth
+
+- User requested importing and publishing `D:\viewu_writing\公众号\2026-10-11-行程之外\行程之外_v04.md` under `成长`.
+- Imported `source/_posts/beyond-the-itinerary.md`, titled `行程之外`, dated `2026-10-14 14:58:37` (source Markdown LastWriteTime, Asia/Taipei), with existing tags `SelfGrowth`, `生活方式`.
+- Preserved author wording and four image placements; moved the opening H1 into Hexo title metadata and replaced Windows-local image paths with site-absolute `/images/beyond-the-itinerary/` URLs.
+- Converted `0.jpg`-`4.jpg` to 800px-wide lossless WebP as in the preceding article workflow; decoded pixels verified against the resized blog copy. `0.webp` supplies cover metadata; body image order is `3.webp`, `2.webp`, `4.webp`, `1.webp`. Source Markdown and original JPEG photos remain unchanged. Manifest: `.cache/beyond-the-itinerary-image-manifest.json`.
+- Homepage/category previews remain text-only. `npm run check` passed; original wording equality, four image URLs/order/lazy loading, Growth category, homepage, sitemap and Atom verified. Generated site: 68,004,372 bytes (64.85 MiB), within the unchanged 65 MiB budget. Protected-main PR deployment pending.
+
 ### 2026-10-07 - September English reflection upload
 
 - User requested uploading `D:\viewu_writing\english\2026-10-07-September-Learning to Return\September_2026_Learning_to_Return.md` into the blog under `成长`; this request authorizes article production publishing.
@@ -129,6 +137,10 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 - Moved the opening H1 into Hexo title metadata; preserved article wording exactly (body equality check passed) and replaced the three source references with site-absolute `/images/september-learning-to-return/` WebP paths.
 - Converted source `1.png`-`3.png` to 800px-wide lossless WebP in `source/images/september-learning-to-return/` (1,763,396 bytes total, each below the 2 MiB limit); `1.webp` is the cover. Original writing-folder PNGs remain unchanged.
 - Local `npm run check` passed: image audit, build (73 files), and generated-site verification; generated site 65,773,922 bytes, within the 65 MiB budget.
+- Published after the user's upload request via PR #37: `https://github.com/viewu/viewu.github.io/pull/37`. Source commit `35e53e3`; production merge `248896e`. Local `main` was fast-forwarded to the production merge.
+- GitHub Pages build and deploy both succeeded: `https://github.com/viewu/viewu.github.io/actions/runs/37606923460`; publishing mode remains `workflow`.
+- Live verification passed: article `https://viewu.github.io/2026/10/07/september-learning-to-return/`, Growth category (成长) page, homepage and Atom returned HTTP 200 and included the new article; all three WebP assets returned HTTP 200 and matched local files byte-for-byte.
+- This final deployment result update is local documentation; deployed source is the merge commit above.
 
 ### 2026-10-06 - Unified article reading layout, published
 
