@@ -5,7 +5,7 @@ date: 2026-10-14 14:58:37
 description: 一段关于济州徒步、旅途中遇见的人，以及如何承担出发的麻烦、靠近想要生活的回望。
 cover: /images/beyond-the-itinerary/0.webp
 categories:
-  - 成长
+  - 写作
 tags:
   - SelfGrowth
   - 生活方式
