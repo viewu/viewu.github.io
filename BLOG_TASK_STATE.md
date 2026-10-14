@@ -121,13 +121,23 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-10-14 - Move Beyond the Itinerary to Writing
+
+- User reconsidered the article taxonomy and requested moving `行程之外` from `成长` to `写作`; Writing is the current intended category, superseding the initial Growth assignment below.
+- Updated only `categories` in `source/_posts/beyond-the-itinerary.md`; article wording, tags, photos, date and permalink remain intact.
+- `npm run check` passed. Verified that only the post category changed, Writing lists the article, Growth no longer lists it, and the article permalink is preserved. Protected-main PR deployment pending.
+
 ### 2026-10-14 - Publish Beyond the Itinerary in Growth
 
 - User requested importing and publishing `D:\viewu_writing\公众号\2026-10-11-行程之外\行程之外_v04.md` under `成长`.
 - Imported `source/_posts/beyond-the-itinerary.md`, titled `行程之外`, dated `2026-10-14 14:58:37` (source Markdown LastWriteTime, Asia/Taipei), with existing tags `SelfGrowth`, `生活方式`.
 - Preserved author wording and four image placements; moved the opening H1 into Hexo title metadata and replaced Windows-local image paths with site-absolute `/images/beyond-the-itinerary/` URLs.
 - Converted `0.jpg`-`4.jpg` to 800px-wide lossless WebP as in the preceding article workflow; decoded pixels verified against the resized blog copy. `0.webp` supplies cover metadata; body image order is `3.webp`, `2.webp`, `4.webp`, `1.webp`. Source Markdown and original JPEG photos remain unchanged. Manifest: `.cache/beyond-the-itinerary-image-manifest.json`.
-- Homepage/category previews remain text-only. `npm run check` passed; original wording equality, four image URLs/order/lazy loading, Growth category, homepage, sitemap and Atom verified. Generated site: 68,004,372 bytes (64.85 MiB), within the unchanged 65 MiB budget. Protected-main PR deployment pending.
+- Homepage/category previews remain text-only. `npm run check` passed; original wording equality, four image URLs/order/lazy loading, Growth category, homepage, sitemap and Atom verified. Generated site: 68,004,372 bytes (64.85 MiB), within the unchanged 65 MiB budget. Published via PR #39: `https://github.com/viewu/viewu.github.io/pull/39`; source commit `7b9674a`; production merge `4a116194f2e662463a7af0db39e39f372ae58d56`. Local `main` fast-forwarded to that merge.
+- GitHub Pages build and deploy succeeded: `https://github.com/viewu/viewu.github.io/actions/runs/38526178630`; publishing mode remains `workflow`.
+- Live verification passed: `https://viewu.github.io/2026/10/14/beyond-the-itinerary/`, homepage, Growth category, sitemap and Atom returned HTTP 200 and included the new article. All five WebP assets returned HTTP 200 and matched local files byte-for-byte. Body image order remains 3, 2, 4, 1. Evidence: `.cache/beyond-the-itinerary-live-verification.json`.
+- Generated site is close to the 65 MiB aggregate cap (64.85 MiB); future image-heavy imports may need a deliberate content-budget review. Current per-file and site checks all pass.
+- This final deployment result update is local documentation; deployed source is the merge commit above.
 
 ### 2026-10-07 - September English reflection upload
 
