@@ -121,12 +121,18 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-11-05 - Refresh October English reflection
+
+- Replaced the post body with the revised Markdown supplied by the user. Preserved title, date, permalink, Growth category, tags, and existing Turner WebP and alt text; normalized the local artwork URL to the existing blog URL.
+- The source revision adds a visible italic artwork credit at the end of the post. npm run check passed, and the generated HTML contains both the visible credit and existing artwork. Revision deployment pending.
+
 ### 2026-11-05 - Publish October English reflection in Growth
 
 - Imported `source/_posts/october-what-quiet-makes-visible.md` from the supplied English Markdown as `October 2026 - What Quiet Makes Visible` under `成长`, using the source modification time (Asia/Taipei) and existing `SelfGrowth`, `EnglishDiary` tags.
 - Preserved the article wording and opening Turner artwork credit and placement; moved its H1 to Hexo metadata and replaced its local image reference with `/images/october-what-quiet-makes-visible/calais-pier.webp`. The original Markdown and JPEG remain unchanged.
 - Added an 800 × 575 WebP blog copy (quality 86, 73,636 bytes) and used it as cover metadata. The first generated build was 9,789 bytes over the 65 MiB cap; optimized only this new WebP to retain its dimensions within the existing budget.
-- npm run check passed; verified original body wording, Turner image reference and attribution, Growth listing, homepage, sitemap and Atom. Generated site: 68,154,375 bytes within the unchanged 65 MiB limit. Protected-main PR deployment pending.
+- npm run check passed; verified original body wording, Turner image reference and attribution, Growth listing, homepage, sitemap and Atom. Generated site: 68,154,375 bytes within the unchanged 65 MiB limit. Published via PR #41 (https://github.com/viewu/viewu.github.io/pull/41), merge 248bfbb96cde386d0d5cf7ebeedbd3973ded6c10. Local main is synced. Pages deployment succeeded: https://github.com/viewu/viewu.github.io/actions/runs/41985647819.
+- Live verification passed: article https://viewu.github.io/2026/11/05/october-what-quiet-makes-visible/, Growth category, homepage, sitemap, Atom and the Turner artwork all returned HTTP 200; the artwork matched the blog copy. Evidence: .cache/october-quiet-live-verification.json.
 
 ### 2026-10-14 - Move Beyond the Itinerary to Writing
 

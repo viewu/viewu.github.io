@@ -98,3 +98,5 @@ October began with the unfamiliar feeling that nothing was asking anything of me
 It ended with a more difficult realization.
 
 I would have to learn what to ask of myself.
+
+*The image for this post is by Joseph Mallord William Turner，“ Calais Pier, with French Poissards preparing for Sea an English Packet arriving ”*
