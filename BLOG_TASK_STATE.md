@@ -2,7 +2,7 @@
 
 This file preserves the working state for the personal blog in `D:\viewu_blog`.
 
-Last updated: 2026-10-14, Asia/Taipei
+Last updated: 2026-11-05, Asia/Taipei
 
 ## Current Objective
 
@@ -121,11 +121,21 @@ Recent image-backed articles use site-absolute paths under their respective `/im
 
 ## Maintenance Log
 
+### 2026-11-05 - Publish October English reflection in Growth
+
+- Imported `source/_posts/october-what-quiet-makes-visible.md` from the supplied English Markdown as `October 2026 - What Quiet Makes Visible` under `成长`, using the source modification time (Asia/Taipei) and existing `SelfGrowth`, `EnglishDiary` tags.
+- Preserved the article wording and opening Turner artwork credit and placement; moved its H1 to Hexo metadata and replaced its local image reference with `/images/october-what-quiet-makes-visible/calais-pier.webp`. The original Markdown and JPEG remain unchanged.
+- Added an 800 × 575 WebP blog copy (quality 86, 73,636 bytes) and used it as cover metadata. The first generated build was 9,789 bytes over the 65 MiB cap; optimized only this new WebP to retain its dimensions within the existing budget.
+- npm run check passed; verified original body wording, Turner image reference and attribution, Growth listing, homepage, sitemap and Atom. Generated site: 68,154,375 bytes within the unchanged 65 MiB limit. Protected-main PR deployment pending.
+
 ### 2026-10-14 - Move Beyond the Itinerary to Writing
 
 - User reconsidered the article taxonomy and requested moving `行程之外` from `成长` to `写作`; Writing is the current intended category, superseding the initial Growth assignment below.
 - Updated only `categories` in `source/_posts/beyond-the-itinerary.md`; article wording, tags, photos, date and permalink remain intact.
-- `npm run check` passed. Verified that only the post category changed, Writing lists the article, Growth no longer lists it, and the article permalink is preserved. Protected-main PR deployment pending.
+- `npm run check` passed. Verified that only the post category changed, Writing lists the article, Growth no longer lists it, and the article permalink is preserved. Published via PR #40: `https://github.com/viewu/viewu.github.io/pull/40`; production merge `d20166da339b76cbc8ee2338f61acc00569ac253`. Local `main` fast-forwarded to the merge.
+- GitHub Pages build and deploy succeeded: `https://github.com/viewu/viewu.github.io/actions/runs/38528197456`; publishing mode remains `workflow`.
+- Live verification passed: unchanged article URL returns HTTP 200; Writing lists the article and Growth excludes it, with both category pages returning HTTP 200. Evidence: `.cache/move-itinerary-to-writing-live.json`.
+- This final result update is local documentation; deployed source is the merge commit above.
 
 ### 2026-10-14 - Publish Beyond the Itinerary in Growth
 
