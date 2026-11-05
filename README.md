@@ -40,7 +40,13 @@ GitHub Pages is configured for Actions publishing. The pre-migration generated s
 
 - `scripts/native-image-performance.js` adds native lazy loading, asynchronous decoding, and intrinsic dimensions to rendered content images without changing the source image files.
 - NexT preconnects to configured font and vendor origins to reduce connection setup latency.
-- `npm run check` rejects missing canonical/title/viewport metadata, unsafe `target="_blank"` links, unoptimized content-image markup, individual generated assets above 2 MiB, and generated sites above 65 MiB.
+- `npm run check` rejects missing canonical/title/viewport metadata, unsafe `target="_blank"` links, unoptimized content-image markup, individual generated assets above 2 MiB, and generated sites above 66 MiB.
+
+## Photography collection
+
+Put new JPG, PNG or WebP files in the local year folder and ask for a gallery update. From this repository, `npm run photography:import -- "D:\view_picture\blog\2026"` uses local FFmpeg to add optimized WebP copies to `source/images/photography/`. Use numeric names for a specific order (`1.jpg`, `2.jpg`, etc.). The importer leaves originals and existing copies untouched. Ask explicitly for replacements or removals.
+
+The gallery discovers its images and reads their dimensions at build time. No title or caption is required. `source/_data/photography_alt.yml` is optional and only adds text for screen readers. Run `npm run check` and review the local gallery before publishing through the usual approval process.
 
 ## Image workflow
 
