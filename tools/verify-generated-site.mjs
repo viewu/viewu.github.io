@@ -44,6 +44,7 @@ if (!existsSync(publicRoot)) {
     'categories/运动/index.html',
     'tags/index.html',
     'music/index.html',
+    'photography/index.html',
     '404.html',
     '2024/04/03/最后的终点/index.html',
     '2026/07/13/gpt-5-6-chatgpt-direction-workflow/index.html'
@@ -95,11 +96,12 @@ if (!existsSync(publicRoot)) {
   }
 
   const sectionNavigation = [
-    ['categories/工作/index.html', '/categories/%E8%BF%90%E5%8A%A8/', '/categories/%E6%88%90%E9%95%BF/'],
+    ['categories/工作/index.html', '/photography/', '/categories/%E6%88%90%E9%95%BF/'],
     ['categories/成长/index.html', '/categories/%E5%B7%A5%E4%BD%9C/', '/categories/%E5%86%99%E4%BD%9C/'],
     ['categories/写作/index.html', '/categories/%E6%88%90%E9%95%BF/', '/music/'],
     ['music/index.html', '/categories/%E5%86%99%E4%BD%9C/', '/categories/%E8%BF%90%E5%8A%A8/'],
-    ['categories/运动/index.html', '/music/', '/categories/%E5%B7%A5%E4%BD%9C/']
+    ['categories/运动/index.html', '/music/', '/photography/'],
+    ['photography/index.html', '/categories/%E8%BF%90%E5%8A%A8/', '/categories/%E5%B7%A5%E4%BD%9C/']
   ];
   for (const [page, previousUrl, nextUrl] of sectionNavigation) {
     const html = readFileSync(join(publicRoot, ...page.split('/')), 'utf8');
@@ -197,10 +199,10 @@ if (!existsSync(publicRoot)) {
 
   const generatedFiles = collectFiles(publicRoot);
   const totalBytes = generatedFiles.reduce((sum, file) => sum + statSync(file).size, 0);
-  const maximumSiteBytes = 65 * 1024 * 1024;
+  const maximumSiteBytes = 66 * 1024 * 1024;
   const maximumAssetBytes = 2 * 1024 * 1024;
   if (totalBytes > maximumSiteBytes) {
-    failures.push(`Generated site exceeds the 65 MiB budget (${totalBytes} bytes).`);
+    failures.push(`Generated site exceeds the 66 MiB budget (${totalBytes} bytes).`);
   }
   for (const file of generatedFiles) {
     const size = statSync(file).size;

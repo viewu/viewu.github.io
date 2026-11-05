@@ -1,0 +1,58 @@
+{% extends 'page.njk' %}
+
+{% block class %}page posts-expand photography-page{% endblock %}
+
+{% block content %}
+  {%- set currentSectionTitle = page.title %}
+  {%- set sectionTitleClass = 'category-title' %}
+  {%- set previousSectionTitle = '运动' %}
+  {%- set previousSectionUrl = '/categories/运动/' %}
+  {%- set nextSectionTitle = '工作' %}
+  {%- set nextSectionUrl = '/categories/工作/' %}
+  {%- set photos = photography_images() %}
+  <div class="post-block" lang="{{ page.lang }}">
+    <div class="category-title-wrap">
+      {%- include '_partials/section-switcher.njk' -%}
+    </div>
+    <div class="category-masthead">
+      <div class="category-intro">
+        <p class="home-intro-kicker">PHOTOGRAPHY / IN FRAME</p>
+        {{ page.content | safe }}
+      </div>
+      <div class="section-hero">
+        <img src="{{ url_for('/images/sections/hero-photography.webp') }}" alt="" loading="lazy" decoding="async" width="1024" height="1536">
+      </div>
+    </div>
+
+    <section aria-labelledby="photo-collection-title">
+      <div class="photo-collection-heading">
+        <div>
+          <p class="home-intro-kicker">THE PHOTO JOURNAL</p>
+          <h2 id="photo-collection-title">镜头里的片刻</h2>
+        </div>
+        <span class="photo-collection-count">{{ photos | length }} 幅</span>
+      </div>
+      <div class="photo-collection{% if photos | length == 1 %} photo-collection-single{% endif %}">
+        {%- for photo in photos %}
+          {# This PJAX version intercepts same-origin target=_blank links unless explicitly skipped. #}
+          <a class="photo-frame photo-view" href="{{ url_for(photo.image) }}" target="_blank" rel="noopener" data-pjax-state="skip" aria-label="查看大图：{{ (photo.alt or ('照片 ' + loop.index)) | escape }}">
+            <img src="{{ url_for(photo.image) }}" alt="{{ photo.alt | escape }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy" decoding="async">
+          </a>
+        {%- endfor %}
+      </div>
+    </section>
+    <dialog class="photo-viewer" aria-label="照片浏览">
+      <div class="photo-viewer-top">
+        <button type="button" data-photo-action="close" aria-label="关闭照片浏览" autofocus>×</button>
+      </div>
+      <button type="button" class="photo-viewer-prev" data-photo-action="previous" aria-label="上一张">‹</button>
+      <div class="photo-viewer-stage"><img class="photo-viewer-image" alt="" decoding="async" draggable="false"></div>
+      <button type="button" class="photo-viewer-next" data-photo-action="next" aria-label="下一张">›</button>
+      <output class="photo-viewer-position" aria-live="polite"></output>
+    </dialog>
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  {{ sidebar_template.render(false) }}
+{% endblock %}
